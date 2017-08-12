@@ -1,0 +1,12 @@
+
+.navbar-default .navbar-nav>li>a{
+    color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #cccccc;
+}
+.navbar-header{
+    background-image:url(../img/logo.png);
+    background-size:contain;
+    width: 234px;
+}
