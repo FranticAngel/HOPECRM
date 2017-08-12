@@ -10,20 +10,3 @@
     background-size:contain;
     width: 234px;
 }
-#main{
-    background-color: #f5f5f5;;
-    padding-top: 28px;
-}
-.text-left {
-    margin-top: 12px;
-    margin-left: 9px;
-    margin-bottom: 4px;
-}
-#main .span3{
-    background-color: white;
-    margin-bottom: 20px;
-    margin-left: 12px;
-}
-.row-fluid{
-    width: 85%;
-}
