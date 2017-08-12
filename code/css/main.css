@@ -3101,7 +3101,7 @@ textarea {
 
 @media screen and (min-width: 992px) {
   .main-navigation {
-    float: right; } }
+    float: left; } }
 
 @media screen and (max-width: 991px) {
   .menu-primary:not(.side-menu-primary) {
