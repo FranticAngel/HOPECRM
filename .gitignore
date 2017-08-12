@@ -1,3 +1,2 @@
-
-*.xml
+# 添加到这里的文件名在commit的时候会被忽略
 code/.idea/workspace.xml
