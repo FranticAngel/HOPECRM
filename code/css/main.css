@@ -2882,7 +2882,7 @@ textarea {
     width: 100%; } }
 
 .header-full-width, .header-full-width .container {
-  width: 100%; }
+  width: 80%; }
 
 .header-sticky {
   background-color: #333; }
@@ -2903,8 +2903,8 @@ textarea {
 
 @media (min-width: 1200px) {
   .header-two, .header-three, .header-four {
-    padding-top: 27px;
-    padding-bottom: 27px; } }
+    padding-top: 0px;
+    padding-bottom: 0px; } }
 
 .header-two .menu-primary > li > a, .header-three .menu-primary > li > a, .header-four .menu-primary > li > a {
   color: #fff; }
@@ -2928,6 +2928,8 @@ textarea {
   background-color: #fff; }
 
 .header-three {
+	width: 100%;
+	background-color: black;
   border-top: none; }
 
 .header-three .menu-primary > li {
