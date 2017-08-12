@@ -2918,7 +2918,7 @@ textarea {
 
 .header-two .search-toggle, .header-three .search-toggle, .header-four .search-toggle {
   background-color: transparent;
-  color: #fff; }
+  color: #fff;    padding-top: 0px; }
 
 .header-two .search-toggle:hover, .header-three .search-toggle:hover, .header-four .search-toggle:hover {
   background-color: transparent;
