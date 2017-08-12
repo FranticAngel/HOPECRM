@@ -2933,7 +2933,9 @@ textarea {
   border-top: none; }
 
 .header-three .menu-primary > li {
-  margin-right: 20px; }
+  margin-right: 20px;
+
+}
 
 @media (min-width: 1200px) {
   .header-three .menu-primary > li {
@@ -2941,7 +2943,9 @@ textarea {
 
 .header-three .menu-primary > li > a {
   padding-left: 1px;
-  padding-right: 1px; }
+  padding-right: 1px;
+  font-size: 16px;
+}
 
 .header-three .menu-primary > li.current-menu-item > a, .header-three .menu-primary > li:hover > a {
   color: #fff; }
