@@ -4,12 +4,12 @@
 
 function gotoMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-    $("#main").load("client.html");
+    $("#main").load("client_chart.html");
 }
 
 function gotoUnMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-    $("#main").load("client.html");
+    $("#main").load("client_chart.html");
 }
 function gotoProductLifeCyclePage(){
 	$("#sliders").html("");
