@@ -109,6 +109,9 @@ ul,ol{
 .container {
     width: 100%;
 }
+.containers {
+    width: 100%;
+}
 .main-container {
     padding:0;
 }

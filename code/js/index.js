@@ -21,7 +21,7 @@ function gotoMemberLifeCyclePage(){
 }
 function gotoWorkPage(){
 	$("#sliders").load("common/commonEchart.html");
-	$("#main").load("circlework/management.html");
+	$("#main").load("criclework/management.html");
 }
 
 function hideSubMenu(obj){

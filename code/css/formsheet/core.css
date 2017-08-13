@@ -982,7 +982,7 @@ pre {
 }
 /* Carousel */
 .carousel-control {
-  width: 10%;
+  width: 0;
 }
 .carousel-control span {
   position: absolute;
