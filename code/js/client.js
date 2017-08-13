@@ -50,7 +50,10 @@ $(function(){
     });
     $(".content").append(select_html);
 
-
+    $(".select_all").click(function(e){
+        $(this).toggleClass('blue');
+        e.stopPropagation();
+    });
 
     $(".select").click(function(e){
         $(this).toggleClass('open');

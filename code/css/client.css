@@ -1,21 +1,34 @@
 @charset "utf-8";
 /* CSS Document */
 
-*{padding: 0px; margin: 0px;}
 .content{
     width: 100%;
-    height: 53px;
+    height: 49px;
     margin-top: 12px;
 }
-.content .select{
-    width: 9%;
-    height: 31px;
+.content .select_all{
+    width: 70px;
+    height: 29px;
     background: #FFFFFF;
     margin: 1px 6px 1px 1px;
     position: relative;
     cursor: pointer;
     display: inline-grid;
-    border: 1px solid rgba(56, 54, 22, 0.55);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+}
+.blue{
+    background-color: rgba(26, 203, 228, 0.6) !important;
+}
+.content .select{
+    width: 8%;
+    height: 29px;
+    background: #FFFFFF;
+    margin: 1px 6px 1px 1px;
+    position: relative;
+    cursor: pointer;
+    display: inline-grid;
+    border: 1px solid rgb(221, 221, 221);
     border-radius: 6px;
 }
 .content .select::after{
@@ -25,19 +38,19 @@
     height: 10px;
     border-left: 1px solid #D0D0D0;
     border-bottom: 1px solid #D0D0D0;
-    top: 7px;
+    top: 6px;
     right: 12px;
     position: absolute;
     transform: rotate(-46deg);
     transition: all .3s ease-in;
 }
-.content .select p{
-    width: 40%;
+.content p{
     line-height: 40px;
-    font-size: 16px;
+    font-size: 14px;
     color: #666666;
     padding: 0px 15px;
-    margin-top: -4px;
+    margin-top: -6px;
+    height: 30px;
 }
 .content .select ul{
     width: 85%;
@@ -84,9 +97,21 @@
 .content .select.open::after{
     transform: rotate(134deg);
     transition: all .3s ease-in;
-    top: 18px;
+    top: 12px;
 
 }
 ul,ol{
     margin: 0;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.container {
+    width: 100%;
+}
+.main-container {
+    padding:0;
+}
+.tab-content {
+    display: block;
 }
