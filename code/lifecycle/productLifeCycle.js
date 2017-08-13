@@ -74,7 +74,7 @@ option = {
         }
     }]
 }
-var myChart = echarts.init(document.getElementById('main'));
+var myChart = echarts.init(document.getElementById('mainContainer'));
 myChart.setOption(option);
 
 
