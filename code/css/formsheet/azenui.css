@@ -1,6 +1,6 @@
 /**
  * 整站通用css
- * @caocao
+ * @caochang
  * @date 2017-08-13
  **/
 /*********** css reset start****************/
@@ -29,8 +29,10 @@ table { border-collapse: collapse; border-spacing: 0;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .clearfix { zoom: 1; }
 body {background-color:#edeff0;}
-
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0px;
     padding: 0px;
+}
+lis {
+    display: inline-block;
 }
