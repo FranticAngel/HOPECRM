@@ -41,9 +41,43 @@ $(function(){
         ["黄金","钻石","K金","铂金","珍珠","银饰","宝石"],
         ["黄金","钻石","K金","铂金","珍珠","银饰","宝石"]
     ];
+    var client_filter_data=[
+        ["性别","年龄","职业","收入"],
+        ["价值取向","消费频次","会员等级","忠诚度","客户来源渠道"]
+    ];
+    var client_filter_option=[
+        [
+            ["男","女"],
+            ["20岁以下","21-25岁","26-30岁","31-35岁","36-45岁","46-50岁","51岁以上"],
+            ["国家机关","党群组织","企业","事业单位负责人","专业技术人员 ","办事人员","商业","服务业人员 ","农林牧渔水利业生产人员 ","生产","运输设备操作人员及有关人员 ","军人 ","其他"],
+            ["5000元以下","5001-8000元","8001-12000元","12001-20000元","20001元以上"]
+        ],
+        [
+            ["象征性价值观","体验性价值观","享乐型价值观","经济型价值观","功能型价值观"],
+            ["一年3次以上","一年2次","一年一次","两年一次","三年以上一次"],
+            ["铁牌会员","铜牌会员","银牌会员","金牌会员","钻石会员","皇冠会员"],
+            ["高","中","低"],
+            ["朋友介绍","自主逛街","电视广告","社交平台","品牌忠诚者"]
+        ]
+    ];
+
+    function showOption(type) {
+        var client_filter_html=client_filter_data[type].map(function (item,index) {
+            var html= '<div class="title"><div></div>{0}</div>'.format(item);
+            html+='<div class="option">'+client_filter_option[type][index].join('</div><div class="option">')+"<div>";
+            return html;
+        });
+        var div = $("#client_filter_div");
+        div.html("");
+        div.append(client_filter_html);
+    }
+
+    $("#client_filter_button").click(function(e){
+        showOption(0)
+    });
 
     var select_html=select_data.map(function (item,index) {
-        var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(select_data[index]);
+        var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(item);
         html+="<li>"+select_options[index].join("</li><li>")+"<li>";
         html+= '</ul></div>';
         return html;
@@ -57,6 +91,10 @@ $(function(){
 
     $(".select").click(function(e){
         $(this).toggleClass('open');
+        e.stopPropagation();
+    });
+    $(".modal-body").on("click",".option",function(e){
+        $(this).toggleClass('option_selected');
         e.stopPropagation();
     });
 

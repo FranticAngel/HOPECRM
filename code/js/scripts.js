@@ -272,4 +272,5 @@
         validateForm(".home-contact-form");
     }
 
+
 })(jQuery);

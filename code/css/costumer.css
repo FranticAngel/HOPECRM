@@ -158,6 +158,7 @@ body{
 	height:320px;
 	background-color:#fff;
 	margin-left:1%;
+	color:#000;
 }
 
 .single-info-label{
@@ -165,15 +166,18 @@ body{
 	height:114px;
 	background-color:#fff;
 	margin-top:-113px;
+	padding:2px 0 0 5px;
+	color:#000;
 }
 
 .buy-sug{
 	width:35%;
 	height:114px;
 	background-color:#fff;
-	
+	padding:2px 0 0 5px;
 	margin-top:-113px;
 	margin-left: 1%;
+	color:#000;
 }
 
 
@@ -184,6 +188,63 @@ body{
 	margin-top:10px;
 }
 
+.cst-header-td{
+	margin-top:10px;
+	width:170px;
+	height:160px;
+	
+}
+
+.cst-header-td img{
+	border:solid 1px #000;
+	width:160px;
+	height:160px;
+	padding:60px;
+	border-radius:80px;
+}
+
+.info-tab{
+	margin-top:20px;
+	width:99%;
+}
+
+.item-flag{
+	width:1px;
+	height:5px;
+	background-color:#3ed0ef;
+}
+
+.cst-key{
+	padding:0 0 0 3px;
+	font-size:12px;
+	font-family:微软雅黑;
+	color:#000;
+}
+
+.cst-value{
+	font-size:10px;
+	font-family:微软雅黑;
+	color:#ccc;
+}
+
+
+.game-record-tab{
+	margin:auto;
+	margin-top:20px;
+	width:90%;
+	font-size:15px;
+	font-family:微软雅黑;
+}
+
+
+.game-info-name{
+	color:#3ed0ef;
+	
+}
+
+.game-info-date{	
+	color:#000;	
+}
 
 
 
