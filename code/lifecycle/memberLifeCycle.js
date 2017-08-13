@@ -1,6 +1,15 @@
 (function ($) {
 
-
+var myDate = new Date(); //获取今天日期
+myDate.setDate(myDate.getDate() - 7);
+var dateArray = []; 
+var dateTemp; 
+var flag = 1; 
+for (var i = 0; i < 7; i++) {
+    dateTemp = (myDate.getMonth()+1)+"-"+myDate.getDate();
+    dateArray.push(dateTemp);
+    myDate.setDate(myDate.getDate() + flag);
+}
 option = {
     color: ['#3398DB'],
     tooltip : {
@@ -31,17 +40,135 @@ option = {
     ],
     series : [
         {
-            name:'直接访问',
+            name:'会员生命周期走势图',
             type:'bar',
             barWidth: '60%',
             data:[10, 52, 200, 334, 390, 330]
         }
     ]
 };
+optionLine1 = {
+    color: ['#3398DB'],
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : dateArray,
+            axisTick: {
+                alignWithLabel: true
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'最近七天新增用户走势图',
+            type:'line',
+            barWidth: '60%',
+            data:[10, 52, 200, 334, 390,22, 330]
+        }
+    ]
+};
+optionLine2 = {
+    color: ['#3398DB'],
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : dateArray,
+            axisTick: {
+                alignWithLabel: true
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'最近七天客户流量走势图',
+            type:'line',
+            barWidth: '60%',
+            data:[10, 52, 200, 334, 390, 330,33]
+        }
+    ]
+};
 
+optionLine3 = {
+    color: ['#3398DB'],
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : dateArray,
+            axisTick: {
+                alignWithLabel: true
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'最近七天成交量走势图',
+            type:'line',
+            barWidth: '60%',
+            data:[10, 52, 200, 334, 390, 330,33]
+        }
+    ]
+};
 var myChart = echarts.init(document.getElementById('mainContainer'));
 myChart.setOption(option);
 
+var myChart1 = echarts.init(document.getElementById('line1'));
+myChart1.setOption(optionLine1);
+
+var myChart2 = echarts.init(document.getElementById('line2'));
+myChart2.setOption(optionLine2);
+var myChart3 = echarts.init(document.getElementById('line3'));
+myChart3.setOption(optionLine2);
 
 })(jQuery);
 
