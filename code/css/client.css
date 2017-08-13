@@ -115,3 +115,10 @@ ul,ol{
 .tab-content {
     display: block;
 }
+.footer {
+    background-color: #f5f5f5;
+     padding-top: 0;
+}
+.band{
+    display: block;
+}

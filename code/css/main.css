@@ -6590,3 +6590,9 @@ textarea {
 
 .tab-content.current {
   display: inherit; }
+
+.band{
+  background-color: rgba(13, 86, 146, 0.89);
+  height: 53px;
+  display: none;
+}
