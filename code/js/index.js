@@ -4,12 +4,12 @@
 
 function gotoMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-	$("#main").html("");
+    $("#main").load("client_chart.html");
 }
 
 function gotoUnMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-	$("#main").html("");
+    $("#main").load("client_chart.html");
 }
 function gotoProductLifeCyclePage(){
 	$("#sliders").html("");
@@ -21,7 +21,7 @@ function gotoMemberLifeCyclePage(){
 }
 function gotoWorkPage(){
 	$("#sliders").load("common/commonEchart.html");
-	$("#main").html("");
+	$("#main").load("circlework/management.html");
 }
 
 function hideSubMenu(obj){

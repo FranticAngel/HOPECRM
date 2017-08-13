@@ -600,6 +600,12 @@ pre code {
   padding-left: 15px;
   padding-right: 15px; }
 
+.container-flu {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10%;
+  padding-right: 10%; }
+
 .container-fluid:before, .container-fluid:after {
   content: " ";
   display: table; }
@@ -6584,3 +6590,9 @@ textarea {
 
 .tab-content.current {
   display: inherit; }
+
+.band{
+  background-color: rgba(13, 86, 146, 0.89);
+  height: 53px;
+  display: none;
+}

@@ -9,7 +9,9 @@
 .azen-navion a:hover {background-color:#0e90d2; text-decoration:none;}
 .current {background-color:#0e90d2;}
 .top-social {
-	text-align: right;
+    line-height:60px;
+    text-align:center;
+    margin-right:5px;
 }
 .pull-right {
     float: right!important;
