@@ -10,6 +10,10 @@ function gotoMemberLifeCyclePage(){
 	$("#sliders").html("");
 	$("#main").load("lifecycle/memberLifeCycle.html");
 }
+function gotoWorkPage(){
+	$("#sliders").load("common/commonEchart.html");
+	//$("#main").load("lifecycle/memberLifeCycle.html");
+}
 
 function hideSubMenu(obj){
 	$(obj).next().css("display","none")
