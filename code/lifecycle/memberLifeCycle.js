@@ -18,7 +18,7 @@ option = {
     xAxis : [
         {
             type : 'category',
-            data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            data : ['消费者', '顾客', '新会员', '活跃会员', '沉默会员', '休眠会员'],
             axisTick: {
                 alignWithLabel: true
             }
@@ -34,7 +34,7 @@ option = {
             name:'直接访问',
             type:'bar',
             barWidth: '60%',
-            data:[10, 52, 200, 334, 390, 330, 220]
+            data:[10, 52, 200, 334, 390, 330]
         }
     ]
 };
