@@ -122,3 +122,74 @@ ul,ol{
 .band{
     display: block;
 }
+.modal-body .option{
+    height: 29px;
+    background: #FFFFFF;
+    cursor: pointer;
+    display: inline-grid;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    text-align: center;
+    padding: 1px 1% 1px 1%;
+    margin-left: 13px;
+    margin-bottom: 11px;
+}
+.modal-body .option_selected {
+    border: 1px solid #04befc;
+}
+.title>div{
+    width: 5px;
+    height: 17px;
+    margin-right: 10px;
+    margin-bottom: -3px;
+    display: inline-block;
+    background-color: #04befc;
+}
+.modal {
+    left: auto;
+}
+#client_filter_modal{
+    width: 70%;
+}
+.modal-body {
+    height: 440px;
+}
+#myModalLabel{
+    margin-top: 11px;
+    margin-bottom: 8px;
+    display: inline;
+}
+
+/*关闭按钮*/
+.close_button::after {
+    transform: rotate(-45deg);
+}
+.close_button::before {
+    transform: rotate(45deg);
+}
+.close_button::before, .close_button::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    top: 50%;
+    left: 15%;
+    margin-top: -1px;
+    background: #000;
+}
+
+.close_button {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    display: inline;
+    float: right;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 42px;
+    width: 30px;
+    text-align: center;
+    margin-top: 0;
+}
+.close_button:hover::before, .close_button:hover::after{
+    background: #ff586d;
+}
