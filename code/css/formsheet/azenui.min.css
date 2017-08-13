@@ -8,3 +8,20 @@
 .azen-navion li {float:right; }
 .azen-navion a:hover {background-color:#0e90d2; text-decoration:none;}
 .current {background-color:#0e90d2;}
+.top-social {
+	text-align: right;
+}
+.pull-right {
+    float: right!important;
+}
+.top-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #3498db;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    text-align: center;
+}
