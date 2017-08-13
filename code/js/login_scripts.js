@@ -25,10 +25,10 @@ jQuery(document).ready(function() {
         }
         if(password2 == '') {
             $(this).find('.error').fadeOut('fast', function(){
-                $(this).css('top', '96px');
+                $(this).css('top', '165px');
             });
             $(this).find('.error').fadeIn('fast', function(){
-                $(this).parent().find('.password').focus();
+                $(this).parent().find('.password2').focus();
             });
             return false;
         }
