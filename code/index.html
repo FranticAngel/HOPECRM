@@ -45,7 +45,7 @@
                     <div class="navigation-top clearfix">
                         <div class="search-form-wrap">
                             <div id="search-toggle" class="search-toggle"> <a style="color:#f5f5f5" href="#">欢迎您 0123456	</a> 
-							<button id="fat-btn" style="width:50px;height:20px;padding-top: 0px;padding-left: 11px;" class="btn btn-primary">注销</button>
+							<button onclick="window.location.href='login.html';" id="fat-btn" style="width:50px;height:20px;padding-top: 0px;padding-left: 11px;" class="btn btn-primary">注销</button>
 							</div>
                         </div>
                         <nav id="site-navigation" class="main-navigation">
@@ -54,8 +54,8 @@
                                     <li><a href="index.html">首页</a></li>
                                     <li><a href="#" >客户人群</a>
 										<ul >
-										<li><a href="#" style="color: white;"  onclick="gotoProductLifeCyclePage()">会员</a></li>
-										<li><a href="#" style="color: white;" onclick="gotoProductLifeCyclePage()">非会员</a></li>
+										<li><a href="#" style="color: white;"  onclick="gotoMemberPage()">会员</a></li>
+										<li><a href="#" style="color: white;" onclick="gotoUnMemberPage()">非会员</a></li>
 									</ul>
 									</li>
                                     <li><a href="#" >生命周期</a>
@@ -65,7 +65,7 @@
 										</ul>
 									</li>
                                     <li><a href="#">终身价值</a></li>
-                                    <li><a href="#">工作圈</a></li>
+                                    <li><a href="#"  onclick="gotoWorkPage()">工作圈</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -131,57 +131,44 @@
     <footer id="footer" class="footer">
         <div class="container-fluid" id="main" style="background: white;min-height:500px;width: 80%;">
             <div class="row-fluid center-block">
-                <div class="span3">
+                <div class="span3" style="width: 30%;    padding-left: 100px;">
                     <img alt="140x140" src="img/clients.png" />
                     <h5 class="text-left">客户人群</h5>
                     <ul>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
-                <div class="span3">
+                <div class="span3" style="width: 30%;    padding-left: 100px;">
                     <img alt="140x140" src="img/clients.png" />
                     <h5 class="text-left">客户人群</h5>
                     <ul>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
-                <div class="span3">
+                <div class="span3" style="width: 30%;    padding-left: 100px;">
                     <img alt="140x140" src="img/clients.png" />
                     <h5 class="text-left">客户人群</h5>
                     <ul>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;'><a href="#">产品购买率与平均值之差</a></li>
                         </ul>
-                </div>
-                <div class="span3">
-                    <img alt="140x140" src="img/clients.png" />
-                    <h5 class="text-left">客户人群</h5>
-                    <ul>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                            <li><a href="#">产品购买率与平均值之差</a></li>
-                    </ul>
                 </div>
             </div>
         </div>

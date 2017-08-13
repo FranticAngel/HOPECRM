@@ -2,6 +2,15 @@
 	
 })(jQuery);
 
+function gotoMemberPage(){
+	$("#sliders").load("common/commonEchart.html");
+	$("#main").html("");
+}
+
+function gotoUnMemberPage(){
+	$("#sliders").load("common/commonEchart.html");
+	$("#main").html("");
+}
 function gotoProductLifeCyclePage(){
 	$("#sliders").html("");
 	$("#main").load("lifecycle/productLifeCycle.html");
@@ -9,6 +18,10 @@ function gotoProductLifeCyclePage(){
 function gotoMemberLifeCyclePage(){
 	$("#sliders").html("");
 	$("#main").load("lifecycle/memberLifeCycle.html");
+}
+function gotoWorkPage(){
+	$("#sliders").load("common/commonEchart.html");
+	$("#main").html("");
 }
 
 function hideSubMenu(obj){
