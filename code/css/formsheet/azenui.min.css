@@ -1,0 +1,10 @@
+#azen-header {width:100%; height:60px; background-color:#0b76ac;}
+#azen-produc {width:1003px; margin:0 auto;  margin-top:20px;}
+#azen-linker {width:1003px; margin:0 auto; margin-top:10px; margin-bottom:30px;}
+.azen-conter {width:1003px; height:60px; margin:0 auto;}
+.azen-footer {width:1003px; height:60px;margin:0 auto; color:#8e8e8e;}
+.azen-logoer {width:140px;  height:60px; margin:0 ;}
+.azen-navion a {display:block; color:#fff;font-family:Arial, 微软雅黑, 'Microsoft YaHei';font-size:14px; padding:0 24px; line-height:60px; height:60px; margin-right:5px; transition:all 0.3s ease 0s;}
+.azen-navion li {float:right; }
+.azen-navion a:hover {background-color:#0e90d2; text-decoration:none;}
+.current {background-color:#0e90d2;}
