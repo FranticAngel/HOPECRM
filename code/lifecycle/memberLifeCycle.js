@@ -12,6 +12,12 @@ for (var i = 0; i < 7; i++) {
 }
 option = {
     color: ['#3398DB'],
+	 title: {
+        text: '会员生命周期走势图'
+    },
+    legend: {
+        data:['人数']
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -49,6 +55,12 @@ option = {
 };
 optionLine1 = {
     color: ['#3398DB'],
+	 title: {
+        text: '最近七天新增用户走势图'
+    },
+    legend: {
+        data:['新增用户']
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -86,6 +98,12 @@ optionLine1 = {
 };
 optionLine2 = {
     color: ['#3398DB'],
+	 title: {
+        text: '最近七天客户流量走势图'
+    },
+    legend: {
+        data:['客户流量人数']
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -124,6 +142,12 @@ optionLine2 = {
 
 optionLine3 = {
     color: ['#3398DB'],
+	 title: {
+        text: '最近七天成交量走势图'
+    },
+    legend: {
+        data:['成交量']
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -168,7 +192,7 @@ myChart1.setOption(optionLine1);
 var myChart2 = echarts.init(document.getElementById('line2'));
 myChart2.setOption(optionLine2);
 var myChart3 = echarts.init(document.getElementById('line3'));
-myChart3.setOption(optionLine2);
+myChart3.setOption(optionLine3);
 
 })(jQuery);
 
