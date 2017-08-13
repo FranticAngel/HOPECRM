@@ -22,13 +22,12 @@
     <link href="../css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/formsheet/basic.css" type="text/css" rel="stylesheet" />
-    <link href="../css/formsheet/visualize.css" type="text/css" rel="stylesheet" />
-    <link href="../css/formsheet/visualize-dark.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="../js/formsheet/excanvas.js"></script>
-    <script type="text/javascript" src="../js/formsheet/visualize.jQuery.js"></script>
+    <link href="../css/formsheet/amazeui.css" rel="stylesheet">
+    <link href="../css/formsheet/menu.css" rel="stylesheet">
+    <link href="themes/icon/favicon.png" type="image/x-icon" rel="icon">
+    <link rel="stylesheet" type="text/css" href="../css/formsheet/azenui.css">
+    <link rel="stylesheet" type="text/css" href="../css/formsheet/azenui.min.css">
 <style>    
-
 
 table {
     *border-collapse: collapse; /* IE7 and lower */
@@ -178,19 +177,16 @@ table {
 
 .zebra tfoot td:only-child{
     -moz-border-radius: 0 0 6px 6px;
-    -webkit-border-radius: 0 0 6px 6px
+    -webkit-border-radius: 0 0 6px 6px;
     border-radius: 0 0 6px 6px
 }
   
 </style>
 </head>
-<body class="home">
-
-<div id="fakeLoader" class="fakeLoader"></div>
-
+    
+<body>
 <!-- Page Wrapper -->
 <div class="page-wrapper">
-
     <!-- Header -->
     <header id="header" class="header header-three header-sticky header-full-width clearfix">
         <div class="container">
@@ -215,10 +211,20 @@ table {
                             <div class="menu-primary-container">
                                 <ul class="menu-primary clearfix">
                                     <li><a href="index.html">首页</a></li>
-                                    <li><a href="about-us.html">客户人群</a></li>
-                                    <li><a href="services.html">生命周期</a></li>
-                                    <li><a href="portfolio.html">终身价值</a></li>
-                                    <li><a href="blog.html">工作圈</a></li>
+                                    <li><a href="#" >客户人群</a>
+                                        <ul >
+                                            <li><a href="#" style="color: white;"  onclick="gotoProductLifeCyclePage()">会员</a></li>
+                                            <li><a href="#" style="color: white;" onclick="gotoProductLifeCyclePage()">非会员</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" >生命周期</a>
+                                        <ul >
+                                            <li><a href="#" style="color: white;"  onclick="gotoMemberLifeCyclePage()">会员生命周期</a></li>
+                                            <li><a href="#" style="color: white;" onclick="gotoProductLifeCyclePage()">产品生命周期</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">终身价值</a></li>
+                                    <li><a href="#">工作圈</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -227,6 +233,7 @@ table {
             </div>
         </div>
     </header>
+         
 
 	<!-- Slider One -->
     <div class="flexslider sliders slider-one">
@@ -278,10 +285,56 @@ table {
             </li>
         </ul>
     </div>
-    <br><br>
-    
-            <div class="container-fluid">
-  <table class="bordered">
+	<!-- 二级子页面 -->
+<header id="azen-header">
+    <div class="azen-conter">
+        <nav class="azen-navion fl">
+            <ul>                
+                <li><a href="pages.html" title="设置">设置</a></li>
+                <li><a href="pages.html" title="客户关怀">客户关怀</a></li>
+                <li><a href="pages.html" title="店员">店员</a></li>
+                <li><a href="pages.html" class="联系人">联系人</a></li>
+                <li><a href="pages.html"  title="市场营销活动">市场营销活动</a></li>
+                <li><a href="pages.html" title="发布动态">发布动态</a></li>
+                <li><a class="current" href="index.html" title="个人信息">个人信息</a></li>
+            </ul>
+        </nav>
+  		<div class="pull-right">
+  			<div class="top-social">
+  				<ul>
+  					<lis>
+  						<a href="#" class="top-icon fa fa-facebook"></a>
+  					</lis>
+  					<lis>
+  						<a href="#" class="top-icon fa fa-twitter"></a>
+  					</lis>
+  					<lis>
+  						<a href="#" class="top-icon fa fa-linkedin"></a>
+  					</lis>
+  				</ul>
+  			</div>
+  		</div>
+    </div>
+</header>
+                                        
+    <div class="container-fl">
+        <ul class="am-nav am-navbar-nav am-navbar-left">
+            <li><h4 class="page-title">基本表格</h4></li>
+        </ul>
+        <ul class="am-nav am-navbar-nav am-navbar-right">
+            <li class="inform"><i class="am-icon-bell-o" aria-hidden="true"></i></li>
+            <li class="hidden-xs am-hide-sm-only">
+                <form role="search" class="app-search">
+                    <input type="text" placeholder="Search..." class="form-control">
+                    <a href=""><img src="../img/search.png"></a>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container-fluid">
+    <table class="bordered">
     <thead>
 
     <tr>
@@ -348,32 +401,7 @@ table {
     </tr> 
 
 </table>
-
 <br><br>
-    
-        <div class="sub-footer text-left">
-            <div class="container" style="height:100px">
-                <div style="float: left;text-align: -webkit-left;">
-				<div style="">
-				客户关系管理系统
-				<br>系统简介系统简介系统简介系统简介
-				</div>
-					<div style="">@法律声明<br>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源。
-					<br> 
-					</div>
-				</div>
-                <div style="float: right;text-align: -webkit-right;">
-				<div style="">友情链接
-				<br><a href="#">黑璞官网</a><a style="padding-left: 10px;" href="#">黑璞企业公众号</a>
-				</div>
-				<div style="">深圳好多银有限公司深圳好多银有限公司
-				<br>深圳好多银有限公司深圳好多银有限公司深圳好多银有限公司深圳好多银有限公司
-					<br> 限公司深圳好多银有限公司
-					</div>
-				</div>
-            </div>
-        </div>
-    </footer>
 </div>
 
 <!-- Required Plugins and Scripts -->
@@ -388,5 +416,7 @@ table {
 <script src="../js/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
 <script src="../js/lightcase/js/lightcase.js"></script>
 <script src="../js/scripts.js"></script>
+<script src="../js/formsheet/amazeui.min.js"></script>  
+<script src="../js/formsheet/jquery-2.1.0.js"></script>
 </body>
 </html>
