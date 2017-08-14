@@ -2157,7 +2157,8 @@ button.close {
 
 /* 09 responsive-utilities */
 @-ms-viewport {
-  width: device-width; }
+  width: device-width;
+}
 
 .visible-xs {
   display: none !important; }
@@ -6593,7 +6594,7 @@ textarea {
   display: inherit; }
 
 .band{
-  background-color: rgba(13, 86, 146, 0.89);
+  background-color:#0088cc;
   height: 53px;
   display: none;
 }
