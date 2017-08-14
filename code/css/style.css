@@ -10,3 +10,9 @@
     background-size:contain;
     width: 234px;
 }
+.page-wrapper{
+    height: 435px;
+}
+.main-container {
+    padding:0;
+}

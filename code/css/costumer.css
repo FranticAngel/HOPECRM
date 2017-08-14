@@ -1,0 +1,253 @@
+body{
+	background-color:#e5e5e5 !important;
+}
+.costumer-bar{
+	height:50px;
+	width:100%;
+	background-color:#6779a7;
+	color:#fff;
+}
+
+.costumer-title{
+	width:230px;
+	font-size:20px;
+	margin-top:15px;
+}
+
+
+.costumer-bar-ul{
+	position:relative;
+	height:60px;
+	list-style:none;
+	width:60%;
+	margin:auto;
+	
+	
+}
+.costumer-bar-ul li{
+	float:left;
+}
+.customer-bar-li-search{
+	margin-top:12px;
+}
+
+.app-search .form-control, .app-search .form-control:focus {
+    border: 1px solid #fff;
+    font-size: 13px;
+    height: 26px;
+    color: #435966;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 40px;
+    margin-left: 20px;
+    box-shadow: none;
+    border-radius: 13px;
+    width: 240px;
+}
+.app-search a{
+	right: 29px;
+    position: relative;
+    top: -5px;
+}
+
+.costumer-bar-showtab{
+	float:right !important;
+	margin-left:20px;
+	color:#fff;
+	font-size:15px;
+	background-color:#ead81f;
+	margin-top:14px;
+	width:80px;
+	height:25px;
+	padding:3px 0 0 8px;
+	cursor:pointer;
+	    margin-right: 1%;
+}
+
+.costumer-bar-tip{
+	width:25px;
+	height:25px;
+	margin-top:14px;
+	background-color:#ccc;
+	margin-left:10px;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+
+.costumer-bar-info-img{
+	width:25px;
+	height:25px;
+	background-color:#ccc;
+	margin-right:10px;
+}
+
+.detail-info{
+	width:60%;
+	height:680px;
+	margin:auto;
+}
+
+.detail-info div{
+	float:left;
+	position:relative;
+}
+
+
+
+.info-sort-selection{
+	height:30px;
+	font-size:12px;
+	background-color:#6779a7;
+}
+
+.detail-info-sort{
+	position:relative;
+	height:30px;
+	list-style:none;
+	float:left;
+	margin:0px;
+	
+}
+
+.detail-info-sort li{
+	cursor:pointer;
+	float:left;
+	color:#fff;
+}
+
+.detail-info-sort-li{
+	padding:4px 0 0 5px;
+	height:30px;
+	width:70px;
+}
+
+
+
+.detail-info-sort-select{
+	padding:4px 0 0 5px;
+	height:30px;
+	width:70px;
+	background-color:#fff;
+	color:#3ed0ef !important;
+}
+
+.detail-info-back-li{
+	width:60px;
+	height:30px;
+	margin-left:600px;
+	background-color:#3ed0ef;
+	padding: 5px 0 0 15px;
+	    border-radius: 2px
+}
+
+.detail-info-back{
+	display:block;
+}
+
+.single-info-bar{
+	width:70%;
+	height:200px;
+	background-color:#fff;
+	
+}
+
+
+.game-record-bar{
+	width:28%;
+	height:320px;
+	background-color:#fff;
+	margin-left:1%;
+	color:#000;
+}
+
+.single-info-label{
+	width:34%;
+	height:114px;
+	background-color:#fff;
+	margin-top:-113px;
+	padding:2px 0 0 5px;
+	color:#000;
+}
+
+.buy-sug{
+	width:35%;
+	height:114px;
+	background-color:#fff;
+	padding:2px 0 0 5px;
+	margin-top:-113px;
+	margin-left: 1%;
+	color:#000;
+}
+
+
+.custome-record-chart{
+	width:99%;
+	height:300px;
+	background-color:#fff;
+	margin-top:10px;
+}
+
+.cst-header-td{
+	margin-top:10px;
+	width:170px;
+	height:160px;
+	
+}
+
+.cst-header-td img{
+	border:solid 1px #000;
+	width:160px;
+	height:160px;
+	padding:60px;
+	border-radius:80px;
+}
+
+.info-tab{
+	margin-top:20px;
+	width:99%;
+}
+
+.item-flag{
+	width:1px;
+	height:5px;
+	background-color:#3ed0ef;
+}
+
+.cst-key{
+	padding:0 0 0 3px;
+	font-size:12px;
+	font-family:微软雅黑;
+	color:#000;
+}
+
+.cst-value{
+	font-size:10px;
+	font-family:微软雅黑;
+	color:#ccc;
+}
+
+
+.game-record-tab{
+	margin:auto;
+	margin-top:20px;
+	width:90%;
+	font-size:15px;
+	font-family:微软雅黑;
+}
+
+
+.game-info-name{
+	color:#3ed0ef;
+	
+}
+
+.game-info-date{	
+	color:#000;	
+}
+
+
+
+
+
+
