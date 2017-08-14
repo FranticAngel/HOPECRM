@@ -30,8 +30,13 @@ function gotoWorkPage(){
 }
 
 function gotoContact(){
-    $("#azen-header").load("criclework/2.html");
+    $("#azen-header").load("criclework/con_bt.html");
 	$("#main").load("criclework/contact.html");
+}
+
+function gotoEmp(){
+    $("#azen-header").load("criclework/emp_bt.html");
+	$("#main").load("criclework/employee.html");
 }
 
 function hideSubMenu(obj){
