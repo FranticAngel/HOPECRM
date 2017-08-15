@@ -123,9 +123,7 @@ ul,ol{
     background-color: #f5f5f5;
      padding-top: 0;
 }
-.band{
-    display: block;
-}
+
 .modal-body .option{
     height: 29px;
     background: #FFFFFF;
@@ -197,7 +195,6 @@ ul,ol{
 }
 .close_button:hover::before, .close_button:hover::after{
     background: #ff586d;
-
 }
 
 
@@ -251,11 +248,3 @@ ul,ol{
 /*.band .pull-right ul{*/
     /*margin-top: 15px;*/
 /*}*/
-
-#client_filter_modal .modal-header{
-    background: #ccc -webkit-linear-gradient(top, #fff, #ccc);
-    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
-    border-top: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    border-radius: 10px 10px 0 0;
-}
