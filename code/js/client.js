@@ -64,7 +64,7 @@ $(function(){
     function showOption(type) {
         var client_filter_html=client_filter_data[type].map(function (item,index) {
             var html= '<div class="title"><div></div>{0}</div>'.format(item);
-            html+='<div class="option">'+client_filter_option[type][index].join('</div><div class="option">')+"<div>";
+            html+='<div class="option">'+client_filter_option[type][index].join('</div><div class="option">')+"</div>";
             return html;
         });
         var div = $("#client_filter_div");
@@ -78,7 +78,7 @@ $(function(){
 
     var select_html=select_data.map(function (item,index) {
         var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(item);
-        html+="<li>"+select_options[index].join("</li><li>")+"<li>";
+        html+="<li>"+select_options[index].join("</li><li>")+"</li>";
         html+= '</ul></div>';
         return html;
     });
