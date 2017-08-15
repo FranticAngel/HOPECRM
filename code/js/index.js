@@ -4,23 +4,23 @@
 
 function gotoMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-    $("#course").html("#");
+    $("#course").html("");
     $("#main").load("client_chart.html");
 }
 
 function gotoUnMemberPage(){
 	$("#sliders").load("common/commonEchart.html");
-    $("#course").html("#");
+    $("#course").html("");
     $("#main").load("client_chart.html");
 }
 function gotoProductLifeCyclePage(){
-	$("#sliders").html("#");
-    $("#course").html("#");
+	$("#sliders").html("");
+    $("#course").html("");
 	$("#main").load("lifecycle/productLifeCycle.html");
 }
 function gotoMemberLifeCyclePage(){
-	$("#sliders").html("#");
-    $("#course").html("#");
+	$("#sliders").html("");
+    $("#course").html("");
 	$("#main").load("lifecycle/memberLifeCycle.html");
 }
 function gotoWorkPage(){
