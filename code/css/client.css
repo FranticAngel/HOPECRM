@@ -123,9 +123,7 @@ ul,ol{
     background-color: #f5f5f5;
      padding-top: 0;
 }
-.band{
-    display: block;
-}
+
 .modal-body .option{
     height: 29px;
     background: #FFFFFF;
@@ -198,3 +196,55 @@ ul,ol{
 .close_button:hover::before, .close_button:hover::after{
     background: #ff586d;
 }
+
+
+/*.band{*/
+    /*height: 60px;*/
+    /*display: none;*/
+    /*background-color: #27689e;*/
+/*}*/
+/*.band .center-block{*/
+    /*width: 80%;*/
+/*}*/
+/*.band ul{*/
+    /*float:left;*/
+/*}*/
+/*.band .band_nav a{*/
+    /*display: block;*/
+    /*color: #fff;*/
+    /*font-size: 14px;*/
+    /*padding: 0 24px;*/
+    /*line-height: 60px;*/
+    /*height: 60px;*/
+    /*margin-right: 5px;*/
+    /*transition: all 0.3s ease 0s;*/
+/*}*/
+/*.band .band_nav a:hover{*/
+    /*background-color: #0e90d2;*/
+/*}*/
+/*.band .band_nav .current{*/
+    /*background-color: #0e90d2;*/
+/*}*/
+
+/*.band li{*/
+    /*list-style:none;*/
+    /*float: right;*/
+/*}*/
+
+/*.top-icon {*/
+    /*background-color: #ffffff;*/
+    /*border-radius: 50%;*/
+    /*color: #3498db;*/
+    /*display: inline-block;*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    /*margin-right: 10px;*/
+    /*text-align: center;*/
+/*}*/
+/*.fa-facebook-f:before, .fa-facebook:before {*/
+    /*content: "\f09a";*/
+/*}*/
+/*.band .pull-right ul{*/
+    /*margin-top: 15px;*/
+/*}*/
