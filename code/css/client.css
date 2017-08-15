@@ -198,14 +198,14 @@ ul,ol{
 }
 
 
-/*.band{*/
-    /*height: 60px;*/
-    /*display: none;*/
-    /*background-color: #27689e;*/
-/*}*/
-/*.band .center-block{*/
-    /*width: 80%;*/
-/*}*/
+.band{
+    height: 60px;
+    display: block;
+    background-color: #27689e;
+}
+.band .center-block{
+    width: 80%;
+}
 /*.band ul{*/
     /*float:left;*/
 /*}*/
