@@ -12,11 +12,11 @@ function gotoUnMemberPage(){
     $("#main").load("client_chart.html");
 }
 function gotoProductLifeCyclePage(){
-	$("#sliders").html("#");
+	$("#sliders").html("");
 	$("#main").load("lifecycle/productLifeCycle.html");
 }
 function gotoMemberLifeCyclePage(){
-	$("#sliders").html("#");
+	$("#sliders").html("");
 	$("#main").load("lifecycle/memberLifeCycle.html");
 }
 function gotoWorkPage(){
