@@ -123,7 +123,9 @@ ul,ol{
     background-color: #f5f5f5;
      padding-top: 0;
 }
-
+.band{
+    display: block;
+}
 .modal-body .option{
     height: 29px;
     background: #FFFFFF;
@@ -195,6 +197,7 @@ ul,ol{
 }
 .close_button:hover::before, .close_button:hover::after{
     background: #ff586d;
+
 }
 
 
