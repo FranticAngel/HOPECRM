@@ -1,2 +1,4 @@
 # 添加到这里的文件名在commit的时候会被忽略
 code/.idea/workspace.xml
+code/js/index.js
+code/css/client.css
