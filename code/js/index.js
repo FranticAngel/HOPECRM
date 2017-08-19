@@ -21,7 +21,12 @@ function gotoProductLifeCyclePage(){
 function gotoMemberLifeCyclePage(){
 	$("#sliders").html("");
     $("#course").html("");
-	$("#main").load("lifecycle/memberLifeCycle.html");
+	$("#main").load("lifecycle/memberLifeCycle.html?"+new Date().getTime());
+}
+function gotoMemberAgeChart(){
+	$("#sliders").html("");
+    $("#course").html("");
+	$("#main").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
 }
 function gotoWorkPage(){
 	$("#sliders").load("common/commonEchart.html");

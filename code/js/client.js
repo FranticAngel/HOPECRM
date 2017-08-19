@@ -61,19 +61,30 @@ $(function(){
         ]
     ];
 
-    function showOption(type) {
-        var client_filter_html=client_filter_data[type].map(function (item,index) {
+    function showOption(filter_type) {
+        var filter_type_index=0;
+        if(filter_type==="行为特征"){
+            filter_type_index=1;
+        }
+        var button_html ='<div class="center-block"><button type="button" class="btn btn-primary" id="filter_reset">重置</button><button type="button" class="btn btn-info" data-dismiss="modal">取消 </button></div>';
+        var client_filter_html=client_filter_data[filter_type_index].map(function (item,index) {
             var html= '<div class="title"><div></div>{0}</div>'.format(item);
-            html+='<div class="option">'+client_filter_option[type][index].join('</div><div class="option">')+"</div>";
+            html+='<div class="option">'+client_filter_option[filter_type_index][index].join('</div><div class="option">')+"</div>";
             return html;
         });
         var div = $("#client_filter_div");
         div.html("");
-        div.append(client_filter_html);
+        div.append(button_html+client_filter_html.join(""));
     }
 
-    $("#client_filter_button").click(function(e){
-        showOption(0)
+
+
+    $("#client_filter_button").click(function(){
+        showOption()
+    });
+    $(".filter_type").click(function(){
+        showOption($(this).text());
+        $(".filter_type").toggleClass('filter_type_selected');
     });
 
     var select_html=select_data.map(function (item,index) {
@@ -93,10 +104,16 @@ $(function(){
         $(this).toggleClass('open');
         e.stopPropagation();
     });
-    $(".modal-body").on("click",".option",function(e){
+    var modal_body=$(".modal-body");
+    modal_body.on("click","#filter_reset",function(e){
+        $(".option").removeClass("option_selected")
+    });
+    modal_body.on("click",".option",function(e){
         $(this).toggleClass('option_selected');
         e.stopPropagation();
     });
+
+    $(".option").removeClass("option_selected")
 
     $(".content .select ul li").click(function(e){
         var _this=$(this);

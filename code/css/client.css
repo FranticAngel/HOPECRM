@@ -148,7 +148,7 @@ ul,ol{
     margin-bottom: 11px;
 }
 .modal-body .option_selected {
-    border: 1px solid #04befc;
+    border: 1px solid #00a9e0;
 }
 .title>div{
     width: 5px;
@@ -166,7 +166,7 @@ ul,ol{
     display: none;
 }
 .modal-body {
-    height: 440px;
+    max-height: 500px;
 }
 #myModalLabel{
     margin-top: 11px;
@@ -189,7 +189,7 @@ ul,ol{
     top: 50%;
     left: 15%;
     margin-top: -1px;
-    background: #000;
+    background: #f9f9f9;;
 }
 
 .close_button {
@@ -198,7 +198,7 @@ ul,ol{
     overflow: hidden;
     display: inline;
     float: right;
-    border: 1px solid rgb(221, 221, 221);
+    border: 1px solid #f9f9f9;
     border-radius: 42px;
     width: 30px;
     text-align: center;
@@ -285,10 +285,56 @@ ul,ol{
     width: 41px;
     display: inline-block;
 }
+.bust{
+    background: url(../img/bust.png);
+    height: 38px;
+    width: 38px;
+    display: inline-block;
+}
+#client_filter_modal .modal-header{
+    height: 53px;
+    background-color: #3a72a6;
+}
 .client_info{
     margin-top: -1px;
     /* padding-top: 9px; */
     font-size: 20px;
     float: right;
     color: white;
+}
+#client_filter_modal .pull-left
+{
+    height: 29px;
+}
+#client_filter_modal .modal_title
+{
+    margin-top: 2px;
+/* padding-top: 9px; */
+    font-size: 17px;
+    float: right;
+    color: #f9f9f9;
+    margin-left: 13px;
+}
+#client_filter_div .center-block{
+    width: 155px;
+}
+#client_filter_modal .pull-right
+{
+}
+#client_filter_modal .filter_type{
+    color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    float: right;
+    border-radius: 3px;
+    margin: 1px 25px 0px 0px;
+    padding: 3px 20px 3px 20px;
+    font-size: 12px;
+}
+#client_filter_modal .filter_type_selected{
+    background-color: #00a9e0;
+    border-color: #00a9e0;
+}
+#client_filter_modal .filter_type:hover{
+    background-color: #00a9e0;
+
 }
