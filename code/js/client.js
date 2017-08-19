@@ -98,6 +98,15 @@ $(function(){
     $(".select_all").click(function(e){
         $(this).toggleClass('blue');
         e.stopPropagation();
+        //清空或全选
+        var options =$(".content .select ul li");
+        options.removeClass("Selected");
+        if($(this).hasClass("blue")){
+            options.addClass("Selected");
+            $(this).find("p").text("清空")
+        }else {
+            $(this).find("p").text("全选")
+        }
     });
 
     $(".select").click(function(e){
