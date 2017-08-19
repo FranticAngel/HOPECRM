@@ -98,6 +98,15 @@ $(function(){
     $(".select_all").click(function(e){
         $(this).toggleClass('blue');
         e.stopPropagation();
+        //清空或全选
+        var options =$(".content .select ul li");
+        options.removeClass("Selected");
+        if($(this).hasClass("blue")){
+            options.addClass("Selected");
+            $(this).find("p").text("清空")
+        }else {
+            $(this).find("p").text("全选")
+        }
     });
 
     $(".select").click(function(e){
@@ -113,13 +122,14 @@ $(function(){
         e.stopPropagation();
     });
 
-    $(".option").removeClass("option_selected")
+    // $(".option").removeClass("option_selected")
 
     $(".content .select ul li").click(function(e){
-        var _this=$(this);
+        // var _this=$(this);
 //                $(".select > p").text(_this.attr('data-value'));
-        _this.addClass("Selected").siblings().removeClass("Selected");
+//         _this.addClass("Selected").siblings().removeClass("Selected");
 //                $(".select").removeClass("open");
+        $(this).toggleClass('Selected');
         e.stopPropagation();
     });
 
