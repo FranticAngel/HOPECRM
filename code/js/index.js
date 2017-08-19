@@ -19,7 +19,7 @@ function gotoProductLifeCyclePage(){
 	$("#main").load("lifecycle/productLifeCycle.html");
 }
 function gotoMemberLifeCyclePage(){
-	$("#sliders").load("lifeValue/memberLifeChart.html");
+	$("#sliders").load("lifecycle/memberLifeChart.html");
     $("#course").html("");
 	$("#main").load("lifecycle/memberLifeCycle.html?"+new Date().getTime());
 }
