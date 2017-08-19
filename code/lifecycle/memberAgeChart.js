@@ -35,11 +35,11 @@ optionbar11 = {
         {
             name:'各年龄消费占比',
             type:'bar',
-            data:[320, 332, 301, 334, 390, 330]
+            data:[320, 332, 301, 120, 90, 30]
         },
 
         {
-            center: [660,60],
+            center: [400,120],
             radius : [0, 50],
             itemStyle :　{
                 normal : {
@@ -102,11 +102,11 @@ optionbar12 = {
         {
             name:'不同学历消费人群',
             type:'bar',
-            data:[320, 332, 301, 334, 390, 330]
+            data:[320, 332, 301, 120, 90, 30]
         },
 
         {
-            center: [660,60],
+            center: [400,120],
             radius : [0, 50],
             itemStyle :　{
                 normal : {
@@ -169,11 +169,11 @@ optionbar21 = {
         {
             name:'不同城市消费人群',
             type:'bar',
-            data:[320, 332, 301, 334, 390, 330]
+            data:[320, 332, 301, 120, 90, 30]
         },
 
         {
-            center: [660,60],
+            center: [400,120],
             radius : [0, 50],
             itemStyle :　{
                 normal : {
@@ -235,11 +235,11 @@ optionbar22 = {
         {
             name:'不同职业消费人群',
             type:'bar',
-            data:[320, 332, 301, 334, 390, 330]
+            data:[320, 332, 301, 120, 90, 30]
         },
 
         {
-            center: [660,60],
+            center: [400,120],
             radius : [0, 50],
             itemStyle :　{
                 normal : {
