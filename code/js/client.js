@@ -113,13 +113,14 @@ $(function(){
         e.stopPropagation();
     });
 
-    $(".option").removeClass("option_selected")
+    // $(".option").removeClass("option_selected")
 
     $(".content .select ul li").click(function(e){
-        var _this=$(this);
+        // var _this=$(this);
 //                $(".select > p").text(_this.attr('data-value'));
-        _this.addClass("Selected").siblings().removeClass("Selected");
+//         _this.addClass("Selected").siblings().removeClass("Selected");
 //                $(".select").removeClass("open");
+        $(this).toggleClass('Selected');
         e.stopPropagation();
     });
 
