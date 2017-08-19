@@ -2,6 +2,8 @@
  * Created by Administrator on 2017/8/13.
  */
 
+
+/*字符串格式化函数*/
 String.prototype.format = function(args) {
     if (arguments.length > 0) {
         var result = this;
@@ -28,6 +30,7 @@ String.prototype.format = function(args) {
 
 
 $(function(){
+    /*商品信息筛选条件*/
     var select_data=["黄金","钻石","K金","铂金","珍珠","银饰","宝石","时期","价格"];
     var select_options=[
         ["黄金","钻石","K金","铂金","珍珠","银饰","宝石"],
@@ -41,6 +44,7 @@ $(function(){
         ["黄金","钻石","K金","铂金","珍珠","银饰","宝石"],
         ["黄金","钻石","K金","铂金","珍珠","银饰","宝石"]
     ];
+    /*个人信息筛选条件*/
     var client_filter_data=[
         ["性别","年龄","职业","收入"],
         ["价值取向","消费频次","会员等级","忠诚度","客户来源渠道"]
@@ -61,6 +65,51 @@ $(function(){
         ]
     ];
 
+
+    /* 显示店铺商品筛选选项 */
+    var select_html=select_data.map(function (item,index) {
+        var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(item);
+        html+="<li>"+select_options[index].join("</li><li>")+"</li>";
+        html+= '</ul></div>';
+        return html;
+    });
+    //个人信息筛选按钮
+    var person_filter_btn='<div class="person_filter_btn" data-toggle="modal" data-target="#client_filter_modal" id="client_filter_button">个人信息筛选</div>';
+    $(".content").append(select_html.join("")+person_filter_btn);
+
+    /*全选按钮*/
+    $(".select_all").click(function(e){
+        $(this).toggleClass('blue');
+        e.stopPropagation();
+        //清空或全选
+        var options =$(".content .select ul li");
+        options.removeClass("Selected");
+        if($(this).hasClass("blue")){
+            options.addClass("Selected");
+            $(this).find("p").text("清空")
+        }else {
+            $(this).find("p").text("全选")
+        }
+    });
+
+    /*商品品类下拉框*/
+    $(".select").click(function(e){
+        $(this).toggleClass('open');
+        e.stopPropagation();
+    });
+    /*商品品类下拉框选项勾选与取消*/
+    $(".content .select ul li").click(function(e){
+        // var _this=$(this);
+//                $(".select > p").text(_this.attr('data-value'));
+//         _this.addClass("Selected").siblings().removeClass("Selected");
+//                $(".select").removeClass("open");
+        $(this).toggleClass('Selected');
+        e.stopPropagation();
+    });
+
+
+
+    /* 显示个人信息筛选选项到弹出框*/
     function showOption(filter_type) {
         var filter_type_index=0;
         if(filter_type==="行为特征"){
@@ -77,74 +126,40 @@ $(function(){
         div.append(button_html+client_filter_html.join(""));
     }
 
-
-
+    /*点击按钮显示个人信息筛选选项到弹出框*/
     $("#client_filter_button").click(function(){
         showOption()
     });
+    /*切换个人信息筛选类型*/
     $(".filter_type").click(function(){
         showOption($(this).text());
         $(".filter_type").toggleClass('filter_type_selected');
     });
-
-    var select_html=select_data.map(function (item,index) {
-        var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(item);
-        html+="<li>"+select_options[index].join("</li><li>")+"</li>";
-        html+= '</ul></div>';
-        return html;
-    });
-    $(".content").append(select_html);
-
-    $(".select_all").click(function(e){
-        $(this).toggleClass('blue');
-        e.stopPropagation();
-        //清空或全选
-        var options =$(".content .select ul li");
-        options.removeClass("Selected");
-        if($(this).hasClass("blue")){
-            options.addClass("Selected");
-            $(this).find("p").text("清空")
-        }else {
-            $(this).find("p").text("全选")
-        }
-    });
-
-    $(".select").click(function(e){
-        $(this).toggleClass('open');
-        e.stopPropagation();
-    });
+    /*弹出框内按钮*/
     var modal_body=$(".modal-body");
-    modal_body.on("click","#filter_reset",function(e){
+    modal_body.on("click","#filter_reset",function(){//取消清空
         $(".option").removeClass("option_selected")
     });
-    modal_body.on("click",".option",function(e){
+    modal_body.on("click",".option",function(e){//勾选与取消勾选
         $(this).toggleClass('option_selected');
         e.stopPropagation();
     });
 
-    // $(".option").removeClass("option_selected")
-
-    $(".content .select ul li").click(function(e){
-        // var _this=$(this);
-//                $(".select > p").text(_this.attr('data-value'));
-//         _this.addClass("Selected").siblings().removeClass("Selected");
-//                $(".select").removeClass("open");
-        $(this).toggleClass('Selected');
-        e.stopPropagation();
-    });
-
+    /*点击空白收回下拉框*/
     $(document).on('click',function(){
         $(".select").removeClass("open");
     });
 
-
+     /*图表与表格切换*/
     var change_sheet=$(".change_sheet");
     change_sheet.click(function(){
         $(".client_container").toggleClass('client_hide');
         if(change_sheet.text().trim()==="显示表格"){
             change_sheet.text("显示图表");
+            $(".operation ").show();
         }else{
             change_sheet.text("显示表格");
+            $(".operation ").hide();
         }
     });
 
