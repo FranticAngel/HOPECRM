@@ -28,6 +28,11 @@ function gotoMemberAgeChart(){
     $("#course").html("");
 	$("#main").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
 }
+function gotoMemberLifeChart(){
+	$("#sliders").load("lifeValue/memberLifeChart.html");
+    $("#course").html("");
+	$("#main").html("");
+}
 function gotoWorkPage(){
 	$("#sliders").load("common/commonEchart.html");
     $("#course").load("criclework/biaotou.html");
