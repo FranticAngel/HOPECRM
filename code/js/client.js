@@ -135,7 +135,18 @@ $(function(){
 
     $(document).on('click',function(){
         $(".select").removeClass("open");
-    })
+    });
+
+
+    var change_sheet=$(".change_sheet");
+    change_sheet.click(function(){
+        $(".client_container").toggleClass('client_hide');
+        if(change_sheet.text().trim()==="显示表格"){
+            change_sheet.text("显示图表");
+        }else{
+            change_sheet.text("显示表格");
+        }
+    });
 
 });
 

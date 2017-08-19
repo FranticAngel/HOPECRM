@@ -295,7 +295,7 @@ ul,ol{
     padding: 5px 16px 5px 16px;
     border-radius: 4px;
     margin-top: 15%;
-    color: black;
+    /*color: black;*/
     /* font-family: "黑体"; */
     font-size: 14px;
 }
@@ -363,4 +363,8 @@ ul,ol{
 #client_filter_modal .filter_type:hover{
     background-color: #00a9e0;
 
+}
+
+.client_hide{
+    display: none;
 }
