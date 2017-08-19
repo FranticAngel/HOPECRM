@@ -5,13 +5,13 @@
 function gotoMemberPage(){
 	$("#sliders").load("common/commonEchart.html?"+new Date().getTime());
     $("#course").html("");
-    $("#main").load("client_chart.html");
+    $("#main").load("client.html");
 }
 
 function gotoUnMemberPage(){
 	$("#sliders").load("common/commonEchart.html?"+new Date().getTime());
     $("#course").html("");
-    $("#main").load("client_chart.html");
+    $("#main").load("client.html");
 }
 function gotoProductLifeCyclePage(){
 	$("#sliders").html("");
