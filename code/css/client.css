@@ -435,3 +435,8 @@ ul,ol{
     position: relative;
     margin-right: 13px;
 }
+
+
+#myTab{
+    font-size: 15px;
+}
