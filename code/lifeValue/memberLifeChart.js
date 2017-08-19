@@ -59,7 +59,7 @@ option = {
     ]
 };
                     
-var myChart = echarts.init(document.getElementById('mainContainer'));
+var myChart = echarts.init(document.getElementById('mainContainer33'));
 myChart.setOption(option);
 
 
