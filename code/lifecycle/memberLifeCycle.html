@@ -24,7 +24,9 @@
 			<button type="button" class="btn btn-default" onclick="changeDate(2)">近一个季度</button>
 			<button type="button" class="btn btn-default" onclick="changeDate(3)">近半年</button>
 			<button type="button" class="btn btn-default" onclick="changeDate(4)">近一年</button>
-			<br>
+			<input id="startDate" class="laydate-icon" onclick="laydate()">
+			<input id="endDate" class="laydate-icon" onclick="laydate()">
+			<button type="button" class="btn btn-default" onclick="changeDate(100)">查询</button>
 			<main  style="min-height:400px;width:50%;float: left;background-color: white;">
 				<main id="line1" class="main" style="min-height:400px;width:100%;">
 				</main>
