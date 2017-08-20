@@ -247,7 +247,16 @@ body{
 }
 
 
+.add_info_tab{
+	width:66%;
+	height:60px;
+	margin:auto;
+	
+}
 
-
+.add_info_tab input{
+	width:80px;
+	border-style:none;
+}
 
 

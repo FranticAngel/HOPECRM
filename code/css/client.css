@@ -186,7 +186,7 @@ ul,ol{
     text-align: center;
     padding: 1px 1% 1px 1%;
     margin-left: 13px;
-    margin-bottom: 11px;
+    margin-bottom: 20px;
 }
 .modal-body .option_selected {
     border: 1px solid #00a9e0;
@@ -198,6 +198,10 @@ ul,ol{
     margin-bottom: -3px;
     display: inline-block;
     background-color: #04befc;
+}
+.title{
+    margin-bottom: 20px;
+    margin-left: 14px;
 }
 .modal {
     left: auto;
