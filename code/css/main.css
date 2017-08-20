@@ -2879,7 +2879,8 @@ textarea {
 
 /* 17 Header */
 .header {
-  position: relative; }
+  position: relative;
+}
 
 @media (min-width: 768px) {
   .header {
@@ -2901,7 +2902,7 @@ textarea {
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 10000;
+    z-index: 500;
     background-color: transparent; } }
 
 .header-one {
