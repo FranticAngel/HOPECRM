@@ -9,6 +9,7 @@
     <!-- Stylesheet -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="js/flexslider/flexslider.css" rel="stylesheet">
+	
     <!--<link href="js/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">-->
     <!--<link href="js/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet">-->
     <!--<link href="js/slicknav/slicknav.min.css" rel="stylesheet">-->
@@ -86,12 +87,42 @@
                             <a href=""><img src="img/search.png"></a>
                         </form>
                     </li>
-					<li class="costumer-bar-tip"><img src="" alt=""/></li>
-					<li class="costumer-bar-tip"><img src="" alt=""/></li>
-					<li class="costumer-bar-tip"><img src="" alt=""/></li>
-					<li class="costumer-bar-tip"><img src="" alt=""/></li>
+					<li class="costumer-bar-tip" id="flush_info"><img src="" alt=""/></li>
+					<li class="costumer-bar-tip" id="edit_info"><img src="" alt=""/></li>
+					<li class="costumer-bar-tip" id="flush_info"><img src="" alt=""/></li>
+					<li class="costumer-bar-tip" id="add_info" data-toggle="modal" data-target="#addinfo"><img src="" alt=""/></li>
 					<li class="costumer-bar-showtab"><div>显示图表</div></li>
 				</ul>
+			</div>
+			<div class="" id="addinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<table id="add_info_tab" class="add_info_tab" border="1" cellspacing="1">
+								<tr>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>年龄</th>
+									<th>电话</th>
+									<th>学历</th>
+									<th>职业</th>
+									<th>消费门店</th>
+									<th>注册门店</th>
+									<th>地区</th>
+									<th>省份</th>
+									<th>城市</th>
+								</tr>
+								<tr>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+									<td><input /></td>
+								</tr>
+							</table>
 			</div>
 		<div style="height:400px;">
 		</div>
@@ -137,5 +168,7 @@
 <script src="js/index.js"></script>
 <script src="js/echarts/echarts.min.js"></script>
 <script src="js/echarts/echarts-gl.min.js"></script>
+<script src="js/cstinfo.js"></script>
+
 </body>
 </html>
