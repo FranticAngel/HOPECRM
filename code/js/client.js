@@ -27,7 +27,13 @@ String.prototype.format = function(args) {
         return this;
     }
 };
-
+/*数组移除方法*/
+Array.prototype.remove = function(val) {
+    var index = this.indexOf(val);
+    if (index > -1) {
+        this.splice(index, 1);
+    }
+};
 
 $(function(){
     /*商品信息筛选条件*/
@@ -66,51 +72,178 @@ $(function(){
     ];
 
 
+    /*已勾选商品数组*/
+    var selected_commodity_data = {};
+    select_data.forEach(function (first_category,index) {
+        selected_commodity_data[first_category]=select_options[index].slice();
+    });//初始化已选中数据为 全选
+    var selected_commodity_data_backup = JSON.parse(JSON.stringify(selected_commodity_data));
+
     function initCommoditySelect() {
         /* 显示店铺商品筛选选项 */
-        var select_html=select_data.map(function (item,index) {
-            var html= '<div class="select"><p data-value="{0}">{0}</p><ul>'.format(item);
-            html+="<li>"+select_options[index].join("</li><li>")+"</li>";
-            html+= '</ul></div>';
-            return html;
-        });
-        //个人信息筛选按钮
-        var person_filter_btn='<div class="person_filter_btn" data-toggle="modal" data-target="#client_filter_modal" id="client_filter_button">个人信息筛选</div>';
-        $(".content").append(select_html.join("")+person_filter_btn);
+        function show_select_option() {
+            var select_html=select_data.map(function (item,index) {
+                var html= '<div class="select commodity_blue"><p data-value="{0}">{0}</p><ul>'.format(item);
+                html+="<li class='selected'>"+select_options[index].join("</li><li class='selected'>")+"</li>";
+                html+= '</ul></div>';
+                return html;
+            });
+            var person_filter_btn='<div class="person_filter_btn" data-toggle="modal" data-target="#client_filter_modal" id="client_filter_button">个人信息筛选</div>';        //个人信息筛选按钮
+            var client_chart_content= $(".content");
+            client_chart_content.append(select_html.join("")+person_filter_btn);
+        }
+        show_select_option();
 
 
         /*全选按钮*/
         $(".select_all").click(function(e){
             $(this).toggleClass('blue');
+            selected_commodity_div.find(".op_btn").css("display","inline-block");//显示确认取消按钮
             e.stopPropagation();
             //清空或全选
             var options =$(".content .select ul li");
-            options.removeClass("Selected");
-            if($(this).hasClass("blue")){
-                options.addClass("Selected");
-                $(this).find("p").text("清空")
-            }else {
-                $(this).find("p").text("全选")
+            var commodity_dropDown=$(".content .select");
+            options.removeClass("selected");
+            if($(this).hasClass("blue")){//点击全选
+                options.addClass("selected");
+                $(this).find("p").text("清空");
+                //commodity_blue
+                commodity_dropDown.removeClass("commodity_blue").addClass("commodity_blue");
+            }else {//点击清空
+                $(this).find("p").text("全选");
+                commodity_dropDown.removeClass("commodity_blue");
+                $(".selected_data").remove();
             }
         });
 
-        /*商品品类下拉框*/
+        var selected_commodity_div=$("#selected_commodity_div");//显示已选中选项的div
+
+
+        /*勾选栏与勾选数据的同步*/
+        function sync_selected_commodity_option(data) {
+            var selected_data = !!data?data:selected_commodity_data;
+            var option_li = $(".select li");
+            option_li.removeClass("selected");
+            option_li.each(function () {
+                var first_category=$(this).parent().prev().text();
+                var second_category=$(this).text();
+                if(selected_data[first_category].indexOf(second_category)>=0){
+                    $(this).addClass("selected");
+                }
+            })
+        }
+
+
+
+        /*显示已勾选的选项到快速取消栏*/
+        function show_selected_commodity_data(data) {
+            var first_category;
+            var html ="";
+            var selected_data = !!data?data:selected_commodity_data;
+            for( first_category in selected_data){
+                if(selected_data[first_category].length===select_options[select_data.indexOf(first_category)].length){//如果长度一样说明该一级分类为全选
+                    html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+"全部");
+
+                }else {
+                    selected_data[first_category].forEach(function (second_category) {
+                        html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+second_category);
+                    })
+                }
+            }
+            selected_commodity_div.html("");
+            var btn='<div class="selected_opt"><a class="op_btn blue">确定</a><a class="op_btn gray">取消</a></div>';
+            selected_commodity_div.append(html+btn);
+
+        }
+        /*操作存储数据的数组的函数*/
+        function sync_selected_commodity_data(type,first_category,second_category) {
+            // $(".select").each(function () {
+            //     var secondary_category=$(this).children();//二级分类
+            //     secondary_category.filter("selected")
+            //
+            // });
+            if(type==="add"){
+                selected_commodity_data[first_category].push(second_category);//添加选项到已勾选商品数组
+            }else {
+                if(second_category==='全部'){
+                    selected_commodity_data[first_category].splice(0,selected_commodity_data[first_category].length)
+                }else{
+                    selected_commodity_data[first_category].remove(second_category);//删除选项已勾选商品数组
+                }
+                sync_selected_commodity_option(selected_commodity_data);
+            }
+            show_selected_commodity_data();
+        }
+        /*商品品类下拉框点击下拉*/
         $(".select").click(function(e){
             $(this).toggleClass('open');
             e.stopPropagation();
         });
-        /*商品品类下拉框选项勾选与取消*/
+        /*商品品类下拉框选项勾选与取消事件*/
         $(".content .select ul li").click(function(e){
             // var _this=$(this);
 //                $(".select > p").text(_this.attr('data-value'));
-//         _this.addClass("Selected").siblings().removeClass("Selected");
+//         _this.addClass("selected").siblings().removeClass("selected");
 //                $(".select").removeClass("open");
-            $(this).toggleClass('Selected');
+            $(this).toggleClass('selected');
+            var first_category = $(this).parent().prev().text();
+            var second_category = $(this).text();
+            if( $(this).hasClass('selected')){
+                sync_selected_commodity_data('add',first_category,second_category)
+            }else{
+                sync_selected_commodity_data('remove',first_category,second_category)
+            }
+            selected_commodity_div.find(".op_btn").css("display","inline-block");//显示确认取消按钮
             e.stopPropagation();
         });
+        // client_chart_content.click(function () {
+        //
+        // });
+        /*点击空白收回下拉框*/
+        $(document).on('click',function(){
+            $(".select").removeClass("open");
+        });
+
+
+        /*选中商品显示*/
+
+        //确定,取消按钮
+        selected_commodity_div.on('click',".blue,.gray",function () {
+            selected_commodity_div.find(".op_btn").hide();
+            if($(this).hasClass("blue")){//确定
+                selected_commodity_data_backup = JSON.parse(JSON.stringify(selected_commodity_data));//保存备份,取消的时候显示备份数组的数据
+            }else {//取消
+                show_selected_commodity_data(selected_commodity_data_backup);
+                /*用备份数据还原之前的勾选项*/
+                sync_selected_commodity_option(selected_commodity_data_backup);
+                // var option_li = $(".select li");
+                // option_li.removeClass("selected");
+                // option_li.each(function () {
+                //     var first_category=$(this).parent().prev().text();
+                //     var second_category=$(this).text();
+                //     if(selected_commodity_data_backup[first_category].indexOf(second_category)>=0){
+                //         $(this).addClass("selected");
+                //     }
+                // })
+            }
+        });
+
+        //快速取消x按钮
+        selected_commodity_div.on('click',".selected_data",function () {
+            var first_category=$(this).text().split(':')[0];
+            var second_category=$(this).text().split(':')[1].slice(0,-1);
+            sync_selected_commodity_data('remove',first_category,second_category);
+            selected_commodity_div.find(".op_btn").css("display","inline-block");
+            $(this).remove();
+        })
+
+
+
     }
 
     initCommoditySelect();
+
+
 
 
     /* 显示个人信息筛选选项到弹出框*/
@@ -149,10 +282,6 @@ $(function(){
         e.stopPropagation();
     });
 
-    /*点击空白收回下拉框*/
-    $(document).on('click',function(){
-        $(".select").removeClass("open");
-    });
 
 
 
