@@ -14,11 +14,12 @@
     <!--<link href="js/slicknav/slicknav.min.css" rel="stylesheet">-->
     <!--<link href="js/lightcase/css/lightcase.css" rel="stylesheet">-->
     <link href="js/fakeLoader/fakeLoader.css" rel="stylesheet">
-    <link href="css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="css/bootstrap-combined.min.css" rel="stylesheet"  media="screen">
     <!--通用css-->
     <link href="css/main.css" rel="stylesheet">
     <!--页面专用css-->
     <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
 
 </head>
 <body class="home">
@@ -44,7 +45,7 @@
                 <div class="col-xs-6 col-md-9">
                     <div class="navigation-top clearfix">
                         <div class="search-form-wrap">
-                            <div id="search-toggle" class="search-toggle"> <a style="color:#f5f5f5" href="#">欢迎您 0123456	</a> 
+                            <div id="search-toggle" class="search-toggle"> <a style="color:#f5f5f5" href="#">欢迎您<img src="img/person.png" /> 0123456	</a> 
 							<button onclick="window.location.href='login.html';" id="fat-btn" style="width:50px;height:20px;padding-top: 0px;padding-left: 11px;" class="btn btn-primary">注销</button>
 							</div>
                         </div>
@@ -61,10 +62,9 @@
                                     <li><a href="#" >生命周期</a>
 										<ul class="dropdown-menu"  style="display: block;background: #222;min-width:100%;">
 											<li><a href="#" style="color: white;"  onclick="gotoMemberLifeCyclePage()">会员生命周期</a></li>
-											<li><a href="#" style="color: white;" onclick="gotoProductLifeCyclePage()">产品生命周期</a></li>
 										</ul>
 									</li>
-                                    <li><a href="#">终身价值</a></li>
+                                    <li><a href="#" onclick="gotoMemberLifeChart()">终身价值</a></li>
                                     <li><a href="#"  onclick="gotoWorkPage()">工作圈</a></li>
                                 </ul>
                             </div>
@@ -76,52 +76,16 @@
     </header>
 
 	<!-- Slider One -->
-    <div id="sliders" class="flexslider sliders slider-one">
+    <div id="sliders" class="flexslider sliders slider-one" style="padding-top: 80px;">
         <ul class="slides">
             <li>
-                <div class="slide-caption">
-                    <div class="slide-text">
-                        <span>We Built Design Smart</span>
-                        <h2><a href="#">welcome to smart antarctica</a></h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean conv
-                            pretium laoreet proin et mauris ac massa.
-                        </p>
-                        <!--a href="#" class="btn btn-default">Read More</a>
-                        <a href="#" class="btn btn-primary">Buy Now</a-->
-                    </div>
-                </div>
-                <img src="images/slider/slider-v1-img-1.jpg" alt="Slider Image">
+                <img src="images/slider/slider-v1-img-1.png" alt="Slider Image">
             </li>
             <li>
-                <div class="slide-caption">
-                    <div class="slide-text">
-                        <span>We Built Design Smart</span>
-                        <h2><a href="#">welcome to smart antarctica</a></h2>
-                        <p>
-                            Sed gravida congue elit, ac vehicula ex facilisis ac. Etiam faucibus eros
-                            in eros rhoncus, id condimentum lacus semper.
-                        </p>
-                        <!--a href="#" class="btn btn-default">Read More</a>
-                        <a href="#" class="btn btn-primary">Buy Now</a-->
-                    </div>
-                </div>
-                <img src="images/slider/slider-v1-img-2.jpg" alt="Slider Image">
+                <img src="images/slider/slider-v1-img-2.png" alt="Slider Image">
             </li>
             <li>
-                <div class="slide-caption">
-                    <div class="slide-text">
-                        <span>We Built Design Smart</span>
-                        <h2><a href="#">welcome to smart antarctica</a></h2>
-                        <p>
-                            Nulla maximus feugiat lorem, vel mattis risus fermentum at. Nulla facilisi.
-                            Donec eget metus id massa iaculis porttitor justo.
-                        </p>
-                        <!--a href="#" class="btn btn-default">Read More</a>
-                        <a href="#" class="btn btn-primary">Buy Now</a-->
-                    </div>
-                </div>
-                <img src="images/slider/slider-v1-img-3.jpg" alt="Slider Image">
+                <img src="images/slider/slider-v1-img-3.png" alt="Slider Image">
             </li>
         </ul>
     </div>
@@ -140,63 +104,74 @@
                    显示表格
                </div>
            </div>
+           <div class="operation pull-right">
+               <label class="search">
+                   <input class="search_input">
+                   <div class="input_search"></div>
+               </label>
+
+               <div class="operate" style="background-image: url(img/1.png)"></div>
+               <div class="operate" style="background-image: url(img/4.png)"></div>
+               <div class="operate" style="background-image: url(img/6.png)"></div>
+               <div class="operate" style="background-image: url(img/9.png)"></div>
+           </div>
        </div>
    </div>
 
     <!-- Footer -->
-    <footer id="footer" class="footer">
-        <div class="container-fluid" id="main" style="background: white;min-height:500px;width: 80%;">
+    <footer id="footer" class="footer" style="padding-top: 20px;">
+        <div class="container-fluid" id="main" style="min-height:500px;width: 80%;">
             <div class="row-fluid center-block">
-                <div class="span3">
-                    <img alt="140x140" src="img/clients.png" />
-                    <h5 class="text-left">客户人群</h5>
+                <div class="span3" style="background-color: white;">
+                    <img alt="140x140" src="img/clients2.png" />
+                    <h4 class="text-left" style="padding-top: 20px;padding-left: 20px;">客户人群</h4>
                     <ul>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberPage()">产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
-                <div class="span3">
-                    <img alt="140x140" src="img/clients.png" />
-                    <h5 class="text-left">客户人群</h5>
+                <div class="span3" style="background-color: white;">
+                    <img alt="140x140" src="img/clients1.png" />
+                    <h4 class="text-left" style="padding-top: 20px;padding-left: 20px;">生命周期</h4>
                     <ul>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeCyclePage()">产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
-                <div class="span3" >
-                    <img alt="140x140" src="img/clients.png" />
-                    <h5 class="text-left">客户人群</h5>
+                <div class="span3" style="background-color: white;">
+                    <img alt="140x140" src="img/clients3.png" />
+                    <h4 class="text-left" style="padding-top: 20px;padding-left: 20px;">终身价值</h4>
                     <ul>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="#" onclick="gotoMemberLifeChart()">产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
-                <div class="span3">
-                    <img alt="140x140" src="img/clients.png" />
-                    <h5 class="text-left">客户人群</h5>
+                <div class="span3" style="background-color: white;">
+                    <img alt="140x140" src="img/clients4.png" />
+                    <h4 class="text-left" style="padding-top: 20px;padding-left: 20px;">热点专题</h4>
                     <ul>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
-                            <li style="padding-bottom: 19px;"><a href="#">产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
+                            <li style="padding-bottom: 19px;"><a href="pdf/pdf.html" target="_blank" >产品购买率与平均值之差</a></li>
                         </ul>
                 </div>
             </div>
@@ -205,23 +180,21 @@
         <div class="sub-footer text-left" style="margin-bottom:0px">
             <div class="container" style="height:100px;width: 80%;">
                 <div style="float: left;text-align: -webkit-left;">
-				<div style="">
-				客户关系管理系统
-				<br>系统简介系统简介系统简介系统简介
-				</div>
-					<div style="">@法律声明<br>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源。
-					<br> 
+					<div style="">
+					关于黑璞CRM
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国内首个垂直于奢侈品零售行业的智能数据分析品牌。
+					</div>
+					<div style="">HOPECRM专注会员研究，将来源不同的数据整合进行独立的客户行为跟踪。<br>可以帮助品牌商有效延长客户生命周期，提高客户价值，构建全新的客户管理模式
 					</div>
 				</div>
-                <div style="float: right;text-align: -webkit-right;">
-				<div style="">友情链接
-				<br><a href="#">黑璞官网</a><a style="padding-left: 10px;" href="#">黑璞企业公众号</a>
+				
+				<div  style="float: right;">
+					<div><img src="img/phone.png" />&nbsp;&nbsp;&nbsp;&nbsp;电话：0755-xxxxxx</div>
+						<div><img src="img/mail.png"/>&nbsp;&nbsp;&nbsp;&nbsp;邮箱：@hopesz.cn</div>
+						<div><img src="img/postion.png"/>&nbsp;&nbsp;&nbsp;&nbsp;地址：深圳罗湖区罗湖商务中心2028号
+						</div>
 				</div>
-				<div style="">深圳好多银有限公司深圳好多银有限公司
-				<br>深圳好多银有限公司深圳好多银有限公司深圳好多银有限公司深圳好多银有限公司
-					</div>
-				</div>
-            </div>
+			</div>	
         </div>
     </footer>
 </div>
@@ -230,6 +203,7 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/pdfobject.min.js"></script>
 <script src="js/flexslider/jquery.flexslider-min.js"></script>
 <!--<script src="js/owl.carousel/owl.carousel.min.js"></script>-->
 <!--<script src="js/jquery-countTo/jquery.countTo.js"></script>-->
@@ -242,5 +216,6 @@
 <script src="js/index.js"></script>
 <script src="js/echarts/echarts.min.js"></script>
 <script src="js/echarts/echarts-gl.min.js"></script>
+<script type="text/javascript" src="js/laydate/laydate.js" charset="UTF-8"></script>
 </body>
 </html>

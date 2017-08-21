@@ -79,23 +79,22 @@
 	<div style="width:100%;height:500px;">图表放置区</div>
 		<div class="costumer-bar">
 				<ul class="costumer-bar-ul" >
-					<li class="costumer-title"><img src="" alt="info" class="costumer-bar-info-img"/><span>客户信息</span></li>
+					<li class="costumer-title"><img src="img/cstinfo/card.png" alt="info" class="costumer-bar-info-img"/><span>客户信息</span></li>
 					<li class="costumer-bar-showtab"><div>显示图表</div></li>
 				</ul>
 			</div>
 		<div class="detail-info">
 			<div class="info-sort-selection">
 				<ul class="detail-info-sort">
-					<li class="detail-info-sort-li"><label>基本信息</label></li>
-					<li class="detail-info-sort-select"><label >消费信息</label></li>
+					<li class="detail-info-sort-select" onclick="exchange_info_bar(this);"><label>基本信息</label></li>
+					<li class="detail-info-sort-li" onclick="exchange_info_bar(this);"><label >消费信息</label></li>
 					<li class="detail-info-back-li"><label class="detail-info-back">返回</label></li>
-				
 				</ul>
 			</div>
 			<div class="single-info-bar">
-				<table class="info-tab">
+				<table class="info-tab" style="display:none;" id="cstinfo">
 					<tr>
-						<td rowspan="7" class="cst-header-td"><img src="" alt="IMG"/></td>
+						<td rowspan="7" class="cst-header-td"><img src="img/baseinfo/header.png" alt="IMG"/></td>
 						<td><span class="item-flag">&nbsp;</span><span class="cst-key">会员等级:&nbsp;</span><span class="cst-value">LV3</span></td>
 						<td><span class="item-flag">&nbsp;</span><span class="cst-key">注册门店:&nbsp;</span><span class="cst-value">深圳罗湖店</span></td>
 						<td><span class="item-flag">&nbsp;</span><span class="cst-key">会员号:&nbsp;</span><span class="cst-value">666666</span></td>
@@ -133,6 +132,49 @@
 					</tr>
 									
 				</table>
+				
+				<table class="info-tab" id="baseinfo">
+					<tr>
+						<td rowspan="7" class="cst-header-td"><img src="img/baseinfo/header.png" alt="IMG"/></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">姓名:&nbsp;</span><span class="cst-value">杨贵妃</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">年龄:&nbsp;</span><span class="cst-value">20岁</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">职业:&nbsp;</span><span class="cst-value">网红主播</span></td>
+					</tr>
+					<tr>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">性别:&nbsp;</span><span class="cst-value">女</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">学历:&nbsp;</span><span class="cst-value">本科</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">城市:&nbsp;</span><span class="cst-value">深圳</span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						
+					</tr>
+					<tr>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">会员编号:&nbsp;</span><span class="cst-value">008888</span></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">微信号:&nbsp;</span><span class="cst-value">13324565618</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">手机号码:&nbsp;</span><span class="cst-value">13324565618</span></td>
+						<td><span class="item-flag">&nbsp;</span><span class="cst-key">QQ号:&nbsp;</span><span class="cst-value">14322565618</span></td>
+					</tr>
+									
+				</table>
 			</div>
 			<div class="game-record-bar">
 				<table class="game-record-tab">
@@ -150,14 +192,94 @@
 			<div class="single-info-label"> 
 				标签
 			</div>
-			<div class="buy-sug">
+			<div class="buy-sug" style="display:none;" id="baseinfo-sug">
 				导购建议
+			</div>
+			<div class="buy-sug" id="cstinfo-sug">
+				<div>沟通方式</div>
+				<div class="com-way"> <img src="img/cstinfo/phone.png" alt="" /> <img src="" alt="" /> <img src="" alt="" /></div>
 			</div>
 			<div class="custome-record-chart">
 			
 			</div>
 		</div>
-	
+		<div class="single-baseinfo-bar">
+			<div class="single-baseinfo-selection">
+				<div class="single-baseinfo-selection-selected">动态记录</div>
+				<div>销售计划</div>
+				<div>相关联系人</div>
+			</div>
+			<div>
+				<div class="single-baseinfo-record-summit">
+					<textarea class="single-baseinfo-record-summit-textarea" placeholder="请输入客户跟进记录，不超过两百字。" rows="4" cols="50"></textarea>
+				</div>
+				<div class="single-baseinfo-record-summit-div">
+					确认添加
+				</div>
+			</div>
+			<div class="single-baseinfo-record-sort">
+				<div class="single-baseinfo-record-sort-seleted">电话记录</div>
+				<div>短信记录</div>
+				<div>客户来访记录</div>
+				<div>微信动态</div>
+			</div>
+			<div class="this-quater">
+				本季度
+			</div>
+			<div class="single-baseinfo-record-list">
+				<table >
+					<tr>
+						<td rowspan="4" class="single-baseinfo-record-list-img"><img src="img/baseinfo/header.png" alt="photo"></td><td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr-un"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td style="color:#f98f11;">未接通</td><td style="color:#f98f11;">关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+				</table>
+			</div>
+			<div class="single-baseinfo-record-list">
+				<table >
+					<tr>
+						<td rowspan="4" class="single-baseinfo-record-list-img"><img src="img/baseinfo/header.png" alt="photo"></td><td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr-un"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td style="color:#f98f11;">未接通</td><td style="color:#f98f11;">关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+				</table>
+			</div>
+			<div class="this-quater">
+				上个季度
+			</div>
+			<div class="single-baseinfo-record-list">
+				<table >
+					<tr>
+						<td rowspan="4" class="single-baseinfo-record-list-img"><img src="img/baseinfo/header.png" alt="photo"></td><td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr-un"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td style="color:#f98f11;">未接通</td><td style="color:#f98f11;">关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+					<tr>
+						<td><div class="single-baseinfo-record-list-circlr"></div></td><td>2017/6/23</td><td>10:30:54</td><td>星期五</td><td>通话10分钟</td><td>关于刘女士以前购买L2015号金链断裂修缮问题售后回访</td>
+					</tr>
+				</table>
+			</div>
+			<div style="height:10px;"></div>
+		</div>
+		<div style="height:10px;"></div>
 	<!-- Slider One -->
 
         <div class="sub-footer text-left" style="margin-bottom:0px">
@@ -199,5 +321,6 @@
 <script src="js/index.js"></script>
 <script src="js/echarts/echarts.min.js"></script>
 <script src="js/echarts/echarts-gl.min.js"></script>
+<script src="js/cstinfo.js"></script>
 </body>
 </html>

@@ -3,25 +3,35 @@
 })(jQuery);
 
 function gotoMemberPage(){
-	$("#sliders").load("common/commonEchart.html");
+	$("#sliders").load("common/commonEchart.html?"+new Date().getTime());
     $("#course").html("");
-    $("#main").load("client_chart.html");
+    $("#main").load("client.html");
 }
 
 function gotoUnMemberPage(){
-	$("#sliders").load("common/commonEchart.html");
+	$("#sliders").load("common/commonEchart.html?"+new Date().getTime());
     $("#course").html("");
-    $("#main").load("client_chart.html");
+    $("#main").load("client.html");
 }
 function gotoProductLifeCyclePage(){
 	$("#sliders").html("");
     $("#course").html("");
-	$("#main").load("lifecycle/productLifeCycle.html");
+	$("#main").load("lifecycle/productLifeCycle.html?"+new Date().getTime());
 }
 function gotoMemberLifeCyclePage(){
+	$("#sliders").load("lifecycle/memberLifeChart.html?"+new Date().getTime());
+    $("#course").html("");
+	$("#main").load("lifecycle/memberLifeCycle.html?"+new Date().getTime());
+}
+function gotoMemberAgeChart(){
 	$("#sliders").html("");
     $("#course").html("");
-	$("#main").load("lifecycle/memberLifeCycle.html");
+	$("#main").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
+}
+function gotoMemberLifeChart(){
+	$("#sliders").load("lifeValue/memberLifeChart.html?"+new Date().getTime());
+    $("#course").html("");
+	$("#main").html("");
 }
 function gotoWorkPage(){
 	$("#sliders").load("common/commonEchart.html");

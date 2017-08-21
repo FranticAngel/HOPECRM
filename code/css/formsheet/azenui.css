@@ -5,7 +5,7 @@
  **/
 /*********** css reset start****************/
 body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑"; }
-body, a { line-height: 1.5; }
+/*body, a { line-height: 1.5; }*/
 a {	color: #262626; text-decoration: none; }
 a:hover { text-decoration:none; }
 img { color: transparent; font-size: 0; vertical-align: middle; -ms-interpolation-mode: bicubic;}

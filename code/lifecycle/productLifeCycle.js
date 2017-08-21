@@ -60,7 +60,6 @@ option = {
         itemStyle: {
             opacity: 0.4
         },
-
         emphasis: {
             label: {
                 textStyle: {
