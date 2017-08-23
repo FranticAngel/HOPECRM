@@ -49,6 +49,11 @@ function gotoEmp(){
 	$("#main").load("criclework/employee.html");
 }
 
+function gotoTrends(){
+    $("#azen-header").load("criclework/emp_bt.html");
+	$("#main").load("criclework/trends.html");
+}
+
 function hideSubMenu(obj){
 	$(obj).next().css("display","none")
 }

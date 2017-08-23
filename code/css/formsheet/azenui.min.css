@@ -17,14 +17,40 @@
     float: right!important;
 }
 .top-icon {
-    background-color: #ffffff;
-    border-radius: 50%;
-    color: #3498db;
     display: inline-block;
     width: 30px;
     height: 30px;
-    line-height: 30px;
-    margin-right: 10px;
-    text-align: center;
+    margin: 4px 4px 4px 0;
+    transform: scale(0.9);
+    cursor: pointer;
+    margin:0 auto;
+    margin-right:10px;
 }
 
+.top-icon:hover{
+    transform: scale(1);
+}
+
+.top-icon a {
+    display: inline-block;
+}
+
+.am-icon-pencil-square-f {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 4px 4px 4px 0;
+    transform: scale(0.9);
+    cursor: pointer;
+    margin:0 auto;
+    margin-right:10px;
+}
+
+
+#test {
+    }
+.test li{float:left;width:50%;background:#CCC;margin-left:3px;line-height:30px;}
+.test a{display:block;text-align:center;height:30px;}
+.test a:link{color:#666;background:url(arrow_off.gif) #CCC no-repeat 5px 12px;text-decoration:none;}
+.test a:visited{color:#666;text-decoration:underline;}
+.test a:hover{color:#FFF; font-weight:bold;text-decoration:none;background:url(arrow_on.gif) #F00 no-repeat 5px 12px;}
