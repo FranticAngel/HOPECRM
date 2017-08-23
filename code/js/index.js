@@ -40,17 +40,17 @@ function gotoWorkPage(){
 }
 
 function gotoContact(){
-    $("#azen-header").load("criclework/con_bt.html");
+    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/contact.html");
 }
 
 function gotoEmp(){
-    $("#azen-header").load("criclework/emp_bt.html");
+    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/employee.html");
 }
 
 function gotoTrends(){
-    $("#azen-header").load("criclework/emp_bt.html");
+    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/trends.html");
 }
 

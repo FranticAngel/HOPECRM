@@ -1,56 +1,25 @@
-#azen-header {width:100%; height:60px; background-color:#27689e;}
-#azen-produc {width:1003px; margin:0 auto;  margin-top:20px;}
-#azen-linker {width:1003px; margin:0 auto; margin-top:10px; margin-bottom:30px;}
-.azen-conter {width:1003px; height:60px; margin:0 auto;}
-.azen-footer {width:1003px; height:60px;margin:0 auto; color:#8e8e8e;}
-.azen-logoer {width:140px;  height:60px; margin:0 ;}
-.azen-navion a {display:block; color:#fff;font-family:Arial, 微软雅黑, 'Microsoft YaHei';font-size:14px; padding:0 24px; line-height:60px; height:60px; margin-right:5px; transition:all 0.3s ease 0s;}
-.azen-navion li {float:right; }
-.azen-navion a:hover {background-color:#0e90d2; text-decoration:none;}
-.current {background-color:#0e90d2;}
-.top-social {
-    line-height:60px;
-    text-align:center;
-    margin-right:5px;
-}
-.pull-right {
-    float: right!important;
-}
+body,div,ul,li{margin:0;padding:0}
+ol,ul{list-style:none}
+ins,a{text-decoration:none}
+textarea {resize: none;}
+ul,ol {list-style:none;}
+.wrapper02 {position:relative;height: 70px;width: 100%;overflow: hidden;margin:0 auto;background:#0D5293}
+.wrapper02 .scrollers {position:absolute;margin-left:11%;width=1000px}
+.wrapper02 .scrollers li {height: 70px;color:#fff;float: left;line-height:70px;font-size: 14px;text-align: center}
+.wrapper02 .scrollers li a{color:#fff;display:block;padding:0 16px;}
+.wrapper02 .scrollers li.cur{background:#00A9E0}
+.wrapper02 .scrollers li.cur a{color:#000;}
+
 .top-icon {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 4px 4px 4px 0;
+    width: 41px;
+    height: 40px;
     transform: scale(0.9);
     cursor: pointer;
-    margin:0 auto;
-    margin-right:10px;
+    margin-right:8px;
+    margin-top: 18px;
 }
 
 .top-icon:hover{
     transform: scale(1);
 }
-
-.top-icon a {
-    display: inline-block;
-}
-
-.am-icon-pencil-square-f {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 4px 4px 4px 0;
-    transform: scale(0.9);
-    cursor: pointer;
-    margin:0 auto;
-    margin-right:10px;
-}
-
-
-#test {
-    }
-.test li{float:left;width:50%;background:#CCC;margin-left:3px;line-height:30px;}
-.test a{display:block;text-align:center;height:30px;}
-.test a:link{color:#666;background:url(arrow_off.gif) #CCC no-repeat 5px 12px;text-decoration:none;}
-.test a:visited{color:#666;text-decoration:underline;}
-.test a:hover{color:#FFF; font-weight:bold;text-decoration:none;background:url(arrow_on.gif) #F00 no-repeat 5px 12px;}
