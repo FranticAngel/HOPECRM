@@ -252,7 +252,6 @@ $(function(){
         if(filter_type==="行为特征"){
             filter_type_index=1;
         }
-        var button_html ='<div class="center-block"><button type="button" class="btn btn-primary" id="filter_reset">重置</button><button type="button" class="btn btn-info" data-dismiss="modal">取消 </button></div>';
         var client_filter_html=client_filter_data[filter_type_index].map(function (item,index) {
             var html= '<div class="title"><div></div>{0}</div>'.format(item);
             html+='<div class="option">'+client_filter_option[filter_type_index][index].join('</div><div class="option">')+"</div>";
@@ -260,7 +259,7 @@ $(function(){
         });
         var div = $("#client_filter_div");
         div.html("");
-        div.append(button_html+client_filter_html.join(""));
+        div.append(client_filter_html.join(""));
     }
 
     /*点击按钮显示个人信息筛选选项到弹出框*/
@@ -287,6 +286,8 @@ $(function(){
 
      /*图表与表格切换*/
     var change_sheet=$(".change_sheet");
+    change_sheet.text("显示表格");
+    $(".operation ").hide();
     change_sheet.unbind("click");
     change_sheet.click(function(){
         $(".client_container").toggleClass('client_hide');

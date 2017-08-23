@@ -6597,3 +6597,6 @@ textarea {
 .band{
   display: none;
 }
+#footer{
+  padding-top: 20px;
+}
