@@ -34,8 +34,7 @@ function gotoMemberLifeChart(){
 	$("#main").html("");
 }
 function gotoWorkPage(){
-	$("#sliders").load("common/commonEchart.html");
-    $("#course").load("criclework/biaotou.html");
+    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/management.html");
 }
 
@@ -52,6 +51,12 @@ function gotoEmp(){
 function gotoTrends(){
     $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/trends.html");
+}
+
+function gotoGeren(){
+    $("#sliders").load("common/commonEchart.html");
+    $("#course").load("criclework/biaotou.html");
+	$("#main").load("criclework/huiyuan.html");
 }
 
 function hideSubMenu(obj){
