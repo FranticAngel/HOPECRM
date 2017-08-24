@@ -4,19 +4,20 @@
 .content{
     width: 100%;
     height: 49px;
-    margin-top: 12px;
+    padding-top: 12px;
+    background-color: #ffffff;
 }
 .content .select_all{
-    width: 70px;
-    height: 29px;
+    width: 65px;
+    height: 28px;
     background: #FFFFFF;
-    margin: 1px 6px 1px 1px;
     position: relative;
     cursor: pointer;
     display: inline-grid;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 6px;
+    /*border: 1px solid rgb(221, 221, 221);*/
+    border-radius: 2px;
     text-align: center;
+    margin: 1px 6px 1px 15px;
 }
 .blue{
     background-color: #00a9e0 !important;
@@ -26,15 +27,15 @@
     color: #f9f9f9 !important;
 }
 .content .select{
-    width: 8%;
-    height: 29px;
+    width: 7.5%;
+    height: 28px;
     background: #FFFFFF;
     margin: 1px 6px 1px 1px;
     position: relative;
     cursor: pointer;
     display: inline-grid;
     border: 1px solid rgb(221, 221, 221);
-    border-radius: 6px;
+    border-radius: 2px;
 }
 
 .content .select:hover::after{
@@ -75,7 +76,7 @@
     font-size: 14px;
     color: #666666;
     padding: 0 15px;
-    margin-top: -6px;
+    margin-top: -7px;
     height: 30px;
 }
 .content .select ul{
@@ -206,6 +207,7 @@ ul,ol{
 .title{
     margin-bottom: 20px;
     margin-left: 14px;
+    font-size: 15px;
 }
 .modal {
     /*left: auto;*/
@@ -253,7 +255,8 @@ ul,ol{
     border-radius: 42px;
     width: 30px;
     text-align: center;
-    margin-top: 0;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 .close_button:hover::before, .close_button:hover::after{
     background: #ff586d;
@@ -263,7 +266,7 @@ ul,ol{
 .band{
     height: 60px;
     display: block;
-    background-color: #0d5293;
+    background-color: #0084e0;
 }
 .band .center-block{
     width: 80%;
@@ -331,7 +334,7 @@ ul,ol{
     cursor: pointer;
 }
 .card{
-    background: url(../img/card.png);
+    background: url(../img/card_g.png);
     height: 31px;
     width: 41px;
     display: inline-block;
@@ -343,8 +346,8 @@ ul,ol{
     display: inline-block;
 }
 #client_filter_modal .modal-header{
-    height: 53px;
-    background-color: #3a72a6;
+    height: 42px;
+    background-color: #00a9e0;
     border-radius: 4px 4px 0 0;
 }
 .client_info{
@@ -357,6 +360,8 @@ ul,ol{
 #client_filter_modal .pull-left
 {
     height: 29px;
+    padding: 3px 0 0 23px;
+    transform: scale(0.8);
 }
 #client_filter_modal .modal_title
 {
@@ -376,20 +381,22 @@ ul,ol{
 }
 #client_filter_modal .filter_type{
     color: #f9f9f9;
-    border: 1px solid #f9f9f9;
+    /* border: 1px solid #f9f9f9; */
     float: right;
-    border-radius: 3px;
-    margin: 4px 25px 0 0;
-    padding: 3px 20px 3px 20px;
-    font-size: 12px;
+    /* border-radius: 3px; */
+    /* margin: 0px 25px 0 0; */
+    padding: 7px 20px 3px 20px;
+    font-size: 17px;
     cursor: pointer;
+    height: 42px;
+    text-align: center;
+    margin-right: 10px;
 }
 #client_filter_modal .filter_type_selected{
-    background-color: #00a9e0;
-    border-color: #00a9e0;
+    background-color: #ffffff;
+    color: #00a9e0;
 }
 #client_filter_modal .filter_type:hover{
-    background-color: #00a9e0;
 
 }
 
@@ -406,6 +413,7 @@ ul,ol{
     margin: 0 4px 4px 0;
     transform: scale(0.9);
     cursor: pointer;
+    background-repeat: no-repeat;
 }
 .operate:hover{
     transform: scale(1);
@@ -421,23 +429,25 @@ ul,ol{
     width: 250px;
     height: 37px;
     display: inline-block;
-    border: 1px solid #f9f9f9;
-    border-radius: 22px;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
     margin: 12px 21px 1px 0;
     float: left;
-    background-color: #0d5293;
+    background-color: #ffffff;
     color: #f9f9f9;
     padding-left:10px;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 .operation .input_search{
-    width: 29px;
-    height: 28px;
-    background-image: url(../img/15.png);
+    width: 24px;
+    height: 27px;
     float: right;
     position: absolute;
     right: 11px;
-    top: 16px;
+    top: 19px;
     transform: scale(0.9);
+    background: url(../img/15.png) no-repeat;
 
 }
 .search{
@@ -447,9 +457,6 @@ ul,ol{
 }
 
 
-#myTab{
-    font-size: 15px;
-}
 .commodity_blue{
     border-color: #00a9e0 !important;
 }
@@ -487,7 +494,7 @@ ul,ol{
 }
 
 #selected_commodity_div{
-    margin-bottom: 20px;
+    background-color: #ffffff;
 }
 .selected_data{
     display: inline-block;
@@ -497,6 +504,7 @@ ul,ol{
     border: 1px solid #00a9e0;
     cursor: pointer;
     background-color: white;
+    margin-bottom: 4px;
 }
 
 .selected_data .x{
@@ -528,5 +536,89 @@ ul,ol{
     border-color: #f23030 ;
 }
 .selected_opt{
-    margin-top: 13px;
+    padding-bottom: 5px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #dedede;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#dedede;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:#dedede;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:#dedede;
+}
+
+
+
+.bordered {
+    border: solid #fff 0;
+    box-shadow: 0 4px 7px #BFBFBF;
+}
+#footer{
+    padding-top: 0;
+}
+
+.bordered th {
+    background-color: #00a9e0;
+    background-image: inherit;
+    color: #e9f5fb;
+    text-shadow: 0 0 0 rgba(255,255,255,.5);
+    font-weight: 400;
+    box-shadow: none;
+}
+.bordered th:last-child {
+    -moz-border-radius: 0 3px 0 0;
+    -webkit-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+.bordered th:first-child {
+    -moz-border-radius: 3px 0 0 0;
+    -webkit-border-radius:3px 0  0 0;
+    border-radius: 3px 0 0 0;
+}
+body {
+    font-size: inherit;
+}
+#client_table{
+    color: #6d6d6d;
+}
+.am-pagination > .am-active > a{
+    background-color: #00a9e0;
+    border-color:#00a9e0;
+}
+
+#myTab{
+    font-size: 15px;
+    background-color: #00a9e0;
+    padding-left: 0;
+}
+#myTab li{
+
+}
+#myTab a{
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.94);
+    padding: 10px 20px 10px 20px;
+    font-family: serif;
+    font-weight: bolder;
+    margin-left: -2px;
+}
+#myTab a:hover{
+    background-color: #ffffff;
+    color: #00a9e0;
+
+}
+
+#myTab .active a{
+    color: #00a9e0;
+}
+.modal-header {
+    padding: 0;
+
 }

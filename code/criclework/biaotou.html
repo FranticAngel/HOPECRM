@@ -6,24 +6,35 @@
     <title>HOPE CRM</title>    
     <!--通用css-->
     <link rel="stylesheet" type="text/css" href="css/formsheet/azenui.min.css">
-</head>  
+</head>
 <body>
-<!-- Page Wrapper -->
-<header id="azen-header">
-    <div class="azen-conter">
-        <nav class="azen-navion f">
-            <ul>                
-                <lis><a href="pages.html" href="index.html" title="个人信息">个人信息</a></lis>
-                <lis><a href="pages.html" title="发布动态">发布动态</a></lis>
-                <lis><a class="current" href="#" title="市场营销活动">市场营销活动</a></lis>
-                <lis><a href="#" title="联系人" onclick="gotoContact()">联系人</a></lis>
-                <lis><a href="#" title="门店工作人员" onclick="gotoEmp()">门店工作人员</a></lis>
-                <lis><a href="pages.html" title="客户关怀">客户关怀</a></lis>
-                <lis><a href="pages.html" title="设置">设置</a></lis>
-            </ul>
-        </nav>
+
+<div class="wrapper wrapper02" id="wrapper02">
+<div class="scrollers">
+	<ul class="clearfix" style="width:800px">
+		<li><a href="pages.html" href="index.html" title="个人信息">个人信息</a></li>
+        <li><a href="#" title="发布动态" onclick="gotoTrends()">发布动态</a></li>
+        <li><a href="#" title="市场营销活动">市场营销活动</a></li>
+        <li><a href="#" title="联系人" onclick="gotoContact()">联系人</a></li>
+        <li><a href="#" title="门店工作人员" onclick="gotoEmp()">门店工作人员</a></li>
+        <li><a href="pages.html" title="客户关怀">客户关怀</a></li>
+        <li><a href="pages.html" title="设置">设置</a></li>
+	</ul>          
+</div>
+    <div style="margin-left:70%;">
+     <a class="top-icon" style="background-image: url(img/1.png);"></a>
+     <a class="top-icon" style="background-image: url(img/4.png);"></a>
+     <a class="top-icon" style="background-image: url(img/6.png);"></a>
+     <a class="top-icon" style="background-image: url(img/9.png);"></a>
     </div>
-</header>
-<div id="danyuan"></div>
+</div>
+<script type="text/javascript" src="js/formsheet/iscroll.js"></script>
+<script type="text/javascript" src="js/formsheet/navbarscroll.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.wrapper').navbarscroll();
+	
+});
+</script>
 </body>
 </html>
