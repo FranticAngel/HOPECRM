@@ -286,19 +286,39 @@ $(function(){
 
      /*图表与表格切换*/
     var change_sheet=$(".change_sheet");
+    var client_chart=$("#client_chart");
+    var client_table=$("#client_table");
+    var client_info=$("#client_info");
+    var operation=$(".operation ");
     change_sheet.text("显示表格");
-    $(".operation ").hide();
+    operation.hide();
     change_sheet.unbind("click");
     change_sheet.click(function(){
-        $(".client_container").toggleClass('client_hide');
         if(change_sheet.text().trim()==="显示表格"){
             change_sheet.text("显示图表");
-            $(".operation ").show();
+            operation.show();
+            client_table.show();
+            client_table.siblings(".client_container").hide();
         }else{
             change_sheet.text("显示表格");
-            $(".operation ").hide();
+            operation.hide();
+            client_chart.show();
+            client_chart.siblings(".client_container").hide();
+
         }
     });
+
+    /*客户记录点击切换到详细客户信息页面*/
+    client_table.on('click','tr',function () {
+        client_info.show();
+        client_info.siblings(".client_container").hide();
+    });
+
+
+
+
+
+
 	showPie('population');
 });
 
