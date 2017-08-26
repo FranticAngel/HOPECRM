@@ -57,8 +57,13 @@ function gotoGhxq(){
     $("#main").load("criclework/ghxq.html");
 }
 
+function gotoConfig(){
+    $("#main").load("criclework/config.html");
+}
+
 function gotoGeren(){
-    $("#sliders").load("common/commonEchart.html");
+    // $("#sliders").load("common/commonEchart.html");
+    $("#sliders").html("");
     $("#course").load("criclework/biaotou.html");
 	$("#main").load("criclework/huiyuan.html");
 }

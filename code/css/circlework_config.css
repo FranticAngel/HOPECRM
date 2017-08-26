@@ -1,0 +1,325 @@
+/*苹方字体*/
+@font-face
+{
+    font-family: PF;
+    src: url('PF.ttf')
+}
+
+
+.config_tab{
+    background-color: #00a9e0;
+    min-width: 855px;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+.nav-tabs>li {
+    width: 14.285%;
+}
+.config_container_div .tab-content{
+    display: block;
+    min-height: 638px;
+    background-color: #f5f5f5;
+    padding: 0;
+    letter-spacing: 3px;
+    font-family: PF, serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 102%;
+    margin-left: -2%;
+}
+
+.config_container_div .config_tab a{
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    color: rgba(255, 255, 255, 0.94);
+    font-weight: bolder;
+    margin: 0;
+    height: 40px;
+    text-align: center;
+    padding-top: 9px;
+}
+.config_container_div .config_tab a:hover{
+    background-color: #00e0a7;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.config_container_div .config_tab>.active a{
+    border: none;
+    background-color: #00e0a7;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+
+.config_left{
+    float: left;
+    width:30% ;
+    padding-top: 22px;
+    margin-left: 2%;
+    min-height: 638px;
+    background-color: #ffffff;
+}
+.config_left>div{
+    padding-top: 7px;
+    padding-left: 21px;
+    padding-bottom: 7px;
+}
+.config_left .depart{
+    cursor: pointer;
+}
+.config_left .depart div{
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 4px 0 4px 15px;
+    width: 91%;
+
+}
+.config_left .active div{
+    background-color: #ffffff;
+}
+.config_left .active{
+    color: #00a9e0;
+    box-shadow: 0 3px 25px #BFBFBF;
+    width: 105%;
+    position: relative;
+    background-color: #ffffff;
+    margin-left: -2%;
+    margin-bottom: 11px;
+}
+.config_left .depart:hover{
+    color: #00a9e0;
+}
+
+.config_right{
+    float: right;
+    width:66% ;
+    padding-top: 22px;
+    background-color: #ffffff;
+    min-height: 638px;
+}
+.config_mid_stripe{
+    background-color: #f3f3f3;
+    width:2%;
+    min-height: 635px;
+    float: left;
+}
+.config_title{
+    background-color: #f3f3f3;
+    color: #050505;
+    padding-top: 4px;
+}
+.company_name{
+    font-weight: bold;
+    color: #050505;
+}
+.config_left .depart .operation{
+    float: right;
+    width: 118px;
+    height: 33px;
+    background-color: #FFFFFF;
+    margin: 0 -7px 0 0;
+}
+.config_left .operation div{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+.operation .del{
+    background-image: url("../img/config/1.png");
+}
+.operation .edit{
+    background-image: url("../img/config/2.png");
+}
+.operation .add{
+    background-image: url("../img/config/3.png");
+}
+.operation .download{
+    background-image: url("../img/config/4.png");
+}
+.operation .del:hover{
+    background-image: url("../img/config/01.png");
+}
+.operation .edit:hover{
+    background-image: url("../img/config/02.png");
+}
+.operation .add:hover{
+    background-image: url("../img/config/03.png");
+}
+.operation .download:hover{
+    background-image: url("../img/config/04.png");
+}
+
+
+.config_right .config_title{
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    padding-top: 7px;
+    padding-left: 21px;
+    padding-bottom: 7px;
+}
+.config_right .config_title div,.config_right .config_title label{
+    float: right;
+    cursor: pointer;
+}
+.config_right .config_title input{
+    border-style: none;
+    border-radius: 3px 0 0 3px;
+    height: 30px;
+    letter-spacing: 2px;
+    padding-left: 12px;
+}
+.config_right .config_title ::placeholder{
+    color: #e7e7e7;
+    font-weight: normal;
+}
+.config_right .config_title .add_user{
+    background-color: #e0a700;
+    color: #ffffff;
+    padding: 6px 11px 0 11px;
+    border-radius: 4px;
+    height: 42px;
+    margin-top: -6px;
+}
+.config_right .config_title .query{
+    background-color: #00e0a7;
+    height: 30px;
+    border-radius: 0 3px 3px 0;
+    padding: 0 9px 0 10px;
+    margin-right: 15px;
+    color: #ffffff;
+}
+.config_right table{
+    font-size: 14px;
+    font-weight: normal;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-left: 2%;
+    width: 96%;
+}
+
+.config_right table th {
+    text-align: center;
+}
+.config_right table tr{
+    background-color: #f3f3f3;
+}
+.select_edit {
+    margin-left: 2%;
+    margin-top: 9px;
+    font-weight: normal;
+}
+.select_edit div{
+    display: inline-block;
+}
+.selected_num{
+    color: #00A9E0;
+}
+.batch_edit{
+    background-color: #e0a700;
+    padding: 0 10px 0 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+/*页数切换*/
+.am-fr {
+    float: right;
+    font-size: 12px;
+    margin-right: 2%;
+}
+.am-fr select{
+    font-size: 12px;
+}
+.am-pagination {
+    padding-left: 0;
+    margin: 1.5rem 0;
+    list-style: none;
+    color: #999999;
+    text-align: left;
+
+}
+.am-pagination > li {
+    display: inline-block;
+}
+.am-pagination > .am-active > a {
+    background-color: #00a9e0;
+    border-color: #00a9e0;
+    color: #f9f9f9;
+    padding: 4px 4px 4px 5px;
+
+}
+.am-pagination > .am-active > a:hover{
+    z-index: 2;
+    color: #fff;
+    background-color: #0e90d2;
+    border-color: #0e90d2;
+    cursor: default;
+}
+
+/*页数切换*/
+
+.blue_input{
+    background: url("../img/unchecked.png") no-repeat;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.blue_input_checked{
+    background-image: url("../img/checked.png");
+    height: 18px;
+}
+
+
+
+#config_1 .config_left .depart>div>div {
+    float: right;
+    width: 34%;
+    margin: 0;
+    padding: 0;
+    color: #777;
+}
+
+#config_1 .config_right .config_title .add_user{
+    margin-left: 15px;
+}
+
+#config_1 .tab-content{
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+#config_1 .config_tab{
+    min-width: 100%;
+}
+
+#config_1 .nav-tabs>li{
+    width: inherit;
+}
+#config_1 .config_right .config_right_main{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.nav-tabs>li{
+    margin-bottom:0;
+}
+
+#config_1 .config_tab{
+    background-color: #f3f3f3;
+}
+
+#config_1  .config_tab a{
+    color: inherit;
+}
+
+#config_1 .config_tab>.active a {
+    color: #ffffff;
+}

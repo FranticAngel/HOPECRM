@@ -437,7 +437,6 @@ ul,ol{
     margin: 12px 21px 1px 0;
     float: left;
     background-color: #ffffff;
-    color: #f9f9f9;
     padding-left:10px;
     font-weight: normal;
     letter-spacing: 1px;
@@ -610,6 +609,7 @@ body {
     padding: 10px 20px 10px 20px;
     font-family: serif;
     font-weight: bolder;
+    margin: 0;
 }
 #client_container_div .client_tab a:hover{
     background-color: #ffffff;
