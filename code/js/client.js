@@ -307,9 +307,14 @@ $(function(){
 
         }
     });
+    client_info.find(".return").click(function () {
+        client_table.show();
+        client_table.siblings(".client_container").hide();
+    });
+
 
     /*客户记录点击切换到详细客户信息页面*/
-    client_table.on('click','tr',function () {
+    client_table.on('click','td',function () {
         client_info.show();
         client_info.siblings(".client_container").hide();
     });

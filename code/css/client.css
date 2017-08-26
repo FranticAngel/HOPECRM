@@ -610,7 +610,6 @@ body {
     padding: 10px 20px 10px 20px;
     font-family: serif;
     font-weight: bolder;
-    margin-left: -2px;
 }
 #client_container_div .client_tab a:hover{
     background-color: #ffffff;
@@ -636,7 +635,21 @@ body {
 
 
 /*              客户信息                    */
-
+#client_info .return{
+    background-color: #ffd200;
+    float: right;
+    border-radius: 3px 1px 1px 3px;
+}
+#client_info .return a{
+    font-size: 14px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: #050505;
+}
+#client_info .return a:hover{
+    border-radius: 3px 1px 1px 3px;
+    background-color: inherit;
+}
 #client_info .tab-content{
     padding: 0;
 }
