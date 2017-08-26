@@ -34,23 +34,27 @@ function gotoMemberLifeChart(){
 	$("#main").html("");
 }
 function gotoWorkPage(){
-    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/management.html");
 }
 
 function gotoContact(){
-    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/contact.html");
 }
 
 function gotoEmp(){
-    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/employee.html");
 }
 
 function gotoTrends(){
-    $("#azen-header").load("criclework/biaotou.html");
 	$("#main").load("criclework/trends.html");
+}
+
+function gotoGuhai(){
+	$("#main").load("criclework/conguhai.html");
+}
+
+function gotoGhxq(){
+    $("#main").load("criclework/ghxq.html");
 }
 
 function gotoGeren(){

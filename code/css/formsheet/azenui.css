@@ -80,12 +80,12 @@ table {
 
 .bordered th {
     background-color: #ccc;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
-    background-image: -webkit-linear-gradient(top, #fff, #ccc);
-    background-image:    -moz-linear-gradient(top, #fff, #ccc);
-    background-image:     -ms-linear-gradient(top, #fff, #ccc);
-    background-image:      -o-linear-gradient(top, #fff, #ccc);
-    background-image:         linear-gradient(top, #fff, #ccc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEFFFE), to(#ECEBEC));
+    background-image: -webkit-linear-gradient(top, #FEFFFE,#ECEBEC);
+    background-image:    -moz-linear-gradient(top, #FEFFFE,#ECEBEC);
+    background-image:     -ms-linear-gradient(top, #FEFFFE,#ECEBEC);
+    background-image:      -o-linear-gradient(top, #FEFFFE,#ECEBEC);
+    background-image:         linear-gradient(top, #FEFFFE,#ECEBEC);
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
     -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
     box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        

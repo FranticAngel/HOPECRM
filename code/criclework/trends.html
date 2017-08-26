@@ -1,49 +1,205 @@
 <html> <head>
     <meta charset="utf-8">
     <title></title>
-
-    <!--<script src="js/jquery.min.js"></script>-->
-    <!--通用css-->
-    <!--<script src="js/bootstrap.min.js"></script>-->
-    <!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
-    <link href="../css/formsheet/amazeui.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/formsheet/azenui.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<style>
+ .geren {
+        background-color: #0D5293;
+        height: 236px;
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+        border:0;
+        margin-top:0px;
+        padding-top:0;
+    }
+.gerenjieshao {
+        display:inline-block;
+        background-color: #fff;
+        height: 236px;
+        width:100%;
+        border:0;
+        font-size: 12px;
+}
+    
+.grad {  
+    background: -webkit-linear-gradient(#FEFFFE,#ECEBEC); /* Safari 5.1 - 6.0 */      
+    background: -o-linear-gradient(#FEFFFE,#ECEBEC); /* Opera 11.1 - 12.0 */    
+    background: -moz-linear-gradient(#FEFFFE,#ECEBEC); /* Firefox 3.6 - 15 */      
+    background: linear-gradient(#FEFFFE,#ECEBEC); /* 标准的语法 */ 
+    height: 50px;
+    width:100%;
+}
+    
+#formgere h1 {
+	font-weight: bold;
+    font-size: 18px;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height:50px;
+    margin-left: 30px;
+}
+a:hover {color: #00A9E0 !important} 
+a:link {color: #cccccc !important}
+</style>
 </head>
 <body>
-<div class="containers">
- <div class="container-flu">
-<table>
-<thead>
-    <tr>
-        <th align="left" width="40%">今天</th>   
-        <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
-    </tr>
-</thead>
-</table>
-    <div style="border-top:none; 
-    border-left: 0px solid #ccc;
-    border-top: 0px solid #ccc;
-    padding: 10px;
-    background:#fff;
-    list-style:none;
-    float:left;
-    line-height:30px;">
-    <ul>
-      <li float:left><a href="#" title="目前行业已经进入了中微量元素肥料技术创新的时代" target="_blank">·目前行业已经进入了中微量元素肥料技术创新的时代&nbsp&nbsp&nbsp</a><span class="am-icon-pencil-square-o"></span></li>
-        <li float:left><a href="#" title="5项农资新规定将正式开始执行" target="_blank">·5项农资新规定将正式开始执行</a><span class="am-icon-pencil-square-o"></span></li>
-        <li><a href="#" title="短期内尿素市场或仍以稳中震荡为主?" target="_blank">·短期内尿素市场或仍以稳中震荡为主?</a><span>[01-02]</span></li>
-        <li><a href="/gxxx/nzxx/588096.shtml" title="首期中国复合肥零售价格指数?" target="_blank">·首期中国复合肥零售价格指数?</a><span>[01-02]</span></li>
-        <li><a href="/gxxx/nzxx/512351.shtml" title="2014年4月底5月初农资价格信息" target="_blank">·2014年4月底5月初农资价格信息</a><span>[05-08]</span></li>
-        <li><a href="/gxxx/nzxx/509163.shtml" title="农业部种植业司拜访总社农资局 商谈测土配方施肥工作" target="_blank">·农业部种植业司拜访总社农资局 商谈测土配方施肥工作</a><span>[04-04]</span></li>
-        <li><a href="/gxxx/nzxx/500059.shtml" title="2014年元月份市供销社系统主要化肥价格情况" target="_blank">·2014年元月份市供销社系统主要化肥价格情况</a><span>[01-20]</span></li>
-        <li><a href="/gxxx/nzxx/497193.shtml" title="关于当前化肥市场行情分析" target="_blank">·关于当前化肥市场行情分析</a><span>[12-18]</span></li>
-        <li><a href="/gxxx/nzxx/497138.shtml" title="农资经营及农化服务的市场前景分析" target="_blank">·农资经营及农化服务的市场前景分析</a><span>[12-18]</span></li>
-        <li><a href="/gxxx/nzxx/485318.shtml" title="8月份我市农资价格情况" target="_blank">·8月份我市农资价格情况</a><span>[08-19]</span></li>
-        <li><a href="/gxxx/nzxx/482302.shtml" title="四川建立农药监管联动系统 全力强化农药质量监管" target="_blank">·四川建立农药监管联动系统 全力强化农药质量监管</a><span>[07-17]</span></li>
- 
-    </ul>
-    </div> 
+<div class="grad">
+    <form id="formgere" name="formgere" method="post" action="">
+    <h1>今&nbsp;天</h1>
+    </form>
 </div>
+<div class="gerenjieshao">
+    <div style="float:left; margin-left:5%;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" ></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>  
+    <div style="float:left;margin-left:40px;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>
+</div> 
+<div style="height:10px"></div>
+<div class="grad">
+    <form id="formgere" name="formgere" method="post" action="">
+    <h1>昨&nbsp;天</h1>
+    </form>
 </div>
+<div class="gerenjieshao">
+    <div style="float:left; margin-left:5%;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" ></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>  
+    <div style="float:left;margin-left:40px;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>
+</div>  
+<div style="height:10px"></div>
+<div class="grad">
+    <form id="formgere" name="formgere" method="post" action="">
+    <h1>星期三</h1>
+    </form>
+</div>
+<div class="gerenjieshao">
+    <div style="float:left; margin-left:5%;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" ></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>  
+    <div style="float:left;margin-left:40px;margin-top:35px">
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    <div>
+      <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+        <div>
+        <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>   
+    <div>
+    <a href="#" style="text-decoration: none;color: #ccc"><span class="fa fa-circle" style="margin-top:14px"></span>&nbsp;&nbsp;&nbsp;&nbsp;店面全面回馈新老顾客，情人节买一送一，好礼等你来年，送给你爱的那个她！</a>
+    </div>
+    </div>
+</div>
+<div style="height:20px"></div>
+<script type="text/javascript">
+ var today = new Date(); //新建一个Date对象
+  var day = today.getDay();//查询当前星期几                            
+  if (day==0) week='星期日';
+  if (day==1) week='星期一';
+  if (day==2) week='星期二';
+  if (day==3) week='星期三';
+  if (day==4) week='星期四';
+  if (day==5) week='星期五';
+  if (day==6) week='星期六';
+  document.write(year+"年"+month+"月"+date+"日 "+week+" "+morning);
+</script>
 </body>
 </html>
