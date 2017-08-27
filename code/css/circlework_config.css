@@ -8,7 +8,7 @@
 
 .config_tab{
     background-color: #00a9e0;
-    min-width: 855px;
+    /*min-width: 855px;*/
     font-weight: lighter;
     margin-bottom: 0;
 }
@@ -18,7 +18,7 @@
 .config_container_div .tab-content{
     display: block;
     min-height: 638px;
-    min-width:1070px;
+    /*min-width:1070px;*/
     background-color: #f5f5f5;
     padding: 0;
     letter-spacing: 3px;
@@ -372,7 +372,7 @@
     padding-top: 22px;
     margin-left: 2%;
     min-height: 638px;
-    min-width:1070px;
+    /*min-width:1070px;*/
     background-color: #ffffff;
 }
 .config_mid_main .config_title{
@@ -471,6 +471,7 @@
 }
 #login_log .log_operation,#sys_log .log_operation{
     float: right;
+    width: 50%;
 }
 #login_log .log_operation .blue_btn,#op_log .log_operation .blue_btn,#sys_log .log_operation .blue_btn{
     width: 65px;
@@ -479,4 +480,23 @@
 #login_log,#sys_log{
     background-color: #FFFFFF;
 }
+#config_6 .log_operation label{
+    width: 65%;
+}
+#config_6 .log_operation label select{
+    width: 100%;
+}
 
+#config_6 .log_operation>div>div{
+    display: inline-block;
+}
+#login_log .log_operation>div:first-child ,#sys_log .log_operation>div:first-child {
+    margin-left: 0;
+}
+
+
+
+
+body {
+    font-size: 12px;
+}
