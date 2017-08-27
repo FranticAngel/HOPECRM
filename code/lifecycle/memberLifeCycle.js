@@ -196,6 +196,9 @@ var myChart3 = echarts.init(document.getElementById('line3'));
 })(jQuery);
 
 function changeDate(type){
+	$("#startDate").hide()
+	$("#endDate").hide()
+	$("#query").hide()
 	var dateArray = []; 
 	var dataArray = []; 
 	var dataArray2 = []; 
@@ -290,7 +293,15 @@ function changeDate(type){
 		option1.title[0].text =  "最近一年新增用户走势图";
 		option2.title[0].text =  "最近一年客户流量走势图";
 		option3.title[0].text =  "最近一年成交量走势图";
+	}else if(type==5){
+		$("#startDate").show()
+		$("#endDate").show()
+		$("#query").show()
+		return;
 	}else if(type==100){
+		$("#startDate").show()
+		$("#endDate").show()
+		$("#query").show()
 		var startDate = formateDate($("#startDate").val());
 		var endDate = formateDate($("#endDate").val());
 		myDate = startDate;	
