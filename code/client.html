@@ -29,10 +29,10 @@
         </div>
         <ul class="nav nav-tabs client_tab">
             <li class="active">
-                <a  data-toggle="tab" >人口特征</a>
+                <a  data-toggle="tab" onclick="showPie('population')" >人口特征</a>
             </li>
-            <li><a  data-toggle="tab" >消费特征</a></li>
-            <li><a  data-toggle="tab" >消费关联系数</a></li>
+            <li><a  data-toggle="tab"  onclick="showPie('consumption')"  >消费特征</a></li>
+            <li><a  data-toggle="tab"  onclick="showPie('consumptionCoefficient')" >消费关联系数</a></li>
         </ul>
         <div class="tab-content client_tabContent"  >
             <div class="tab-pane fade in active" id="population" >
