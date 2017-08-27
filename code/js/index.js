@@ -31,7 +31,7 @@ function gotoMemberAgeChart(){
 function gotoMemberLifeChart(){
 	$("#sliders").load("lifeValue/memberLifeChart.html?"+new Date().getTime());
     $("#course").html("");
-	$("#main").html("");
+	$("#main").load("lifeValue/lifeChart.html");
 }
 function gotoWorkPage(){
 	$("#main").load("criclework/management.html");
@@ -62,8 +62,8 @@ function gotoConfig(){
 }
 
 function gotoGeren(){
-    // $("#sliders").load("common/commonEchart.html");
-    $("#sliders").html("");
+    $("#sliders").load("common/commonEchart.html");
+    //$("#sliders").html("");
     $("#course").load("criclework/biaotou.html");
 	$("#main").load("criclework/huiyuan.html");
 }
