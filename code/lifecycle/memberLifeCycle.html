@@ -19,21 +19,27 @@
         </main>
 		<br>
         <main id="line" class="main" style="min-height:400px;">
-			<button type="button" class="btn btn-default" onclick="changeDate(0)">近七天</button>
-			<button type="button" class="btn btn-default" onclick="changeDate(1)">近一个月</button>
-			<button type="button" class="btn btn-default" onclick="changeDate(2)">近一个季度</button>
-			<button type="button" class="btn btn-default" onclick="changeDate(3)">近半年</button>
-			<button type="button" class="btn btn-default" onclick="changeDate(4)">近一年</button>
-			<input id="startDate" class="laydate-icon" onclick="laydate()">
-			<input id="endDate" class="laydate-icon" onclick="laydate()">
-			<button type="button" class="btn btn-default" onclick="changeDate(100)">查询</button>
-			<main  style="min-height:400px;width:50%;float: left;background-color: white;">
+			<div width="100%">
+				<select onchange="changeDate(this.options[this.options.selectedIndex].value)">
+				<option value="0">近七天</option>
+				<option value="1">近一个月</option>
+				<option value="2">近一个季度</option>
+				<option value="3">近半年</option>
+				<option value="4">近一年</option>
+				<option value="5">自定义时间</option>
+			</select>
+			<input id="startDate" class="laydate-icon" onclick="laydate()" style="display:none">
+			<input id="endDate" class="laydate-icon" onclick="laydate()" style="display:none">
+			<button id="query" type="button" class="btn btn-default" onclick="changeDate(100)" style="display:none">查询</button>
+			</div>
+			<main  style="min-height:400px;width:100%;float: left;background-color: white;">
 				<main id="line1" class="main" style="min-height:400px;width:100%;">
 				</main>
 			</main>
-			<main  style="min-height:400px;width:50%;float: right;padding-left: 20px;background-color: white;">
-				<main id="line2" class="main"  style="min-height:400px;width:100%;">
-				</main>
+        </main>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+        <main style="background-color: white;padding-top: 20px;">
+			<main id="line2" class="main" style="min-height:400px;;background-color: white;">
 			</main>
         </main>
 		&nbsp;&nbsp;&nbsp;&nbsp;
