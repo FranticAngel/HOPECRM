@@ -3,7 +3,7 @@
 
 option = {
     title : {
-        text: '会员生命周期走势图'
+        text: '高忠诚客户终生价值'
     },
     tooltip : {
         trigger: 'axis'
