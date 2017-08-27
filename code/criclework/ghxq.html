@@ -16,17 +16,14 @@
 .gerenjieshao {
         display:inline-block;
         background-color: #fff;
-        height: 256px;
+        height: 276px;
         width:100%;
         border:0;
         font-size: 12px;
 }
     
 .grad {  
-    background: -webkit-linear-gradient(#FEFFFE,#ECEBEC); /* Safari 5.1 - 6.0 */      
-    background: -o-linear-gradient(#FEFFFE,#ECEBEC); /* Opera 11.1 - 12.0 */    
-    background: -moz-linear-gradient(#FEFFFE,#ECEBEC); /* Firefox 3.6 - 15 */      
-    background: linear-gradient(#FEFFFE,#ECEBEC); /* 标准的语法 */ 
+    background-color: #00A9E0;
     height: 50px;
     width:100%;
 }
@@ -36,7 +33,7 @@
     font-size: 14px;
     font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
     font-weight: normal;
-    color: #000000;
+    color: #fff;
     line-height:50px;
     margin-left: 30px;
 }
@@ -70,9 +67,13 @@ a:link {color: #cccccc !important}
     <div style="margin-top:14px;">
         <a href="#" style="text-decoration: none;">修改时间&nbsp;：&nbsp;&nbsp;2017/05/27</a>
     </div>
-    <div style="margin-left:100%;width:40px;">
-        <button type="button" onclick="gotoGuhai()">返&nbsp;&nbsp;回</button>
+<div class="am-cf" style="margin-left:100%;">
+    <div class="am-fr">
+        <ul class="am-pagination" >
+            <a href="#" style="color:#fff" onclick="gotoGuhai()"><li class="am-active" style="background-color:#00A9E0;height:40px;width:120px;margin:0 auto;text-align:center;line-height:40px">返回</li></a>
+        </ul>
     </div>
+</div>
 </div> 
 </div> 
 </body>
