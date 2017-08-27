@@ -11,11 +11,11 @@
         <ul class="nav nav-tabs config_tab">
             <li class="active"><a  href="#config_0" data-toggle="tab" >部门和用户设置</a></li>
             <li><a href="#config_1" data-toggle="tab" >角色和权限设置</a></li>
-            <li><a href="#" data-toggle="tab" >自定义产品字段</a></li>
-            <li><a href="#" data-toggle="tab" >公司信息</a></li>
-            <li><a href="#" data-toggle="tab" >门店信息</a></li>
-            <li><a href="#" data-toggle="tab" >密码规则设置</a></li>
-            <li><a href="#" data-toggle="tab" >日志查询</a></li>
+            <li><a href="#config_2" data-toggle="tab" >自定义产品字段</a></li>
+            <li><a href="#config_3" data-toggle="tab" >公司信息</a></li>
+            <li><a href="#config_4" data-toggle="tab" >门店信息</a></li>
+            <li><a href="#config_5" data-toggle="tab" >密码规则设置</a></li>
+            <li><a href="#config_6" data-toggle="tab" >日志查询</a></li>
         </ul>
         <div class="tab-content"  >
             <!--部门和用户设置-->
@@ -245,16 +245,736 @@
                         </ul>
                         <div class="tab-content"  >
                             <div class="tab-pane fade in active" id="op_role" >
-                                <div>部门和用户设置 - 权限</div>
+                                <div class="role_config_title">部门和用户设置 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>查看部门和用户</div>
+                                    <div><div class="blue_input"></div>添加用户</div>
+                                    <div><div class="blue_input"></div>删除用户</div>
+                                </div>
+                                <div class="role_config_title">角色和权限设置 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>查看角色和设置</div>
+                                    <div><div class="blue_input"></div>添加角色</div>
+                                    <div><div class="blue_input"></div>删除角色</div>
+                                </div>
+                                <div class="role_config_title">公司信息 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>查看公司信息</div>
+                                    <div><div class="blue_input"></div>修改公司信息</div>
+                                </div>
+                                <div class="role_config_title">门店信息 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>查看门店信息</div>
+                                    <div><div class="blue_input"></div>修改门店信息</div>
+                                </div>
+                                <div class="role_config_title">密码规则设置 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>修改密码规则</div>
+                                </div>
+                                <div class="role_config_title">日志权限 - 权限</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>查看日志</div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="data_role" >
-                                <div>数据权限</div>
+                                <div class="role_config_title">数据权限 (设置该角色的用户可以操作的数据范围)</div>
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>个人&nbsp&nbsp&nbsp只能操作自己和下属数据)</div>
+                                    <div><div class="blue_input"></div>所属部门&nbsp&nbsp&nbsp(只能操作自己,下属和所在部门的数据)</div>
+                                    <div><div class="blue_input"></div>查看角色和设置&nbsp&nbsp&nbsp(只能操作自己,下属,所在部门的数据和其他部门的数据)</div>
+                                    <div><div class="blue_input"></div>添加角色&nbsp&nbsp&nbsp(能操作全公司的数据)</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+
+            <!--自定义产品字段-->
+            <div class="tab-pane fade" id="config_2" >
+                <div class="config_left">
+                    <div class="config_title">自定义产品字段</div>
+                    <div class="company_name">品类</div>
+                    <div class="depart active"><div>彩宝</div></div>
+                    <div class="depart"><div>翡翠&玉</div></div>
+                    <div class="depart"><div>钻石镶嵌</div></div>
+                    <div class="depart"><div>黄金</div></div>
+                    <div class="depart"><div>珍珠</div></div>
+                    <div class="depart"><div>饰品</div></div>
+                </div>
+                <div class="config_mid_stripe"></div>
+                <div class="config_right">
+                    <div class="config_title">
+                    </div>
+                    <div class="config_right_main">
+                        <div class="product_tile">彩宝</div>
+                        <ul class="nav nav-tabs config_tab">
+                            <li class="active"><a href="#" data-toggle="tab" >红蓝宝</a></li>
+                            <li><a href="#" data-toggle="tab" >碧玺</a></li>
+                            <li><a href="#" data-toggle="tab" >坦桑石</a></li>
+                            <li><a href="#" data-toggle="tab" >芙蓉石</a></li>
+                            <li><a href="#" data-toggle="tab" >葡萄石</a></li>
+                            <li><a href="#" data-toggle="tab" >有机宝石</a></li>
+                            <li><a href="#" data-toggle="tab" >其他宝石</a></li>
+                        </ul>
+                        <div class="tab-content"  >
+                            <div class="tab-pane fade in active" id="">
+                                <div class="role_config_div">
+                                    <div><div class="blue_input"></div>戒指</div>
+                                    <div><div class="blue_input"></div>吊坠</div>
+                                    <div><div class="blue_input"></div>链牌</div>
+                                    <div><div class="blue_input"></div>耳钉</div>
+                                    <div><div class="blue_input"></div>手链</div>
+                                    <div><div class="blue_input"></div>套装</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--公司信息-->
+            <div class="tab-pane fade" id="config_3" >
+                <div class="config_mid_main">
+                    <div class="config_title">公司组织架构 <div class="yellow_btn">编辑</div></div>
+                    <div class="hint edit_hide">提示: 完善公司信息,帮助我们更好的了解您的需求,更好的为您服务!</div>
+                    <div class="config_option_tile">公司logo:<img src="img/config/add_pic.png" style="height: 200px;margin-left: 77px;"></div>
+                    <div class="config_option_tile">公司名称:<div>深圳好多银科技有限公司</div></div>
+                    <div class="config_option_tile">公司简称:<div>黑璞智能</div></div>
+                    <div class="config_option_tile">所属行业:<div>数据服务</div></div>
+                    <div class="config_option_tile">所在地区:<div>深圳</div></div>
+                    <div class="config_option_tile">所在地址:<div>深圳罗湖</div></div>
+                    <div class="config_option_tile">公司规模:<div>中小规模</div></div>
+                    <div class="config_option_tile edit_hide">公司名称:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">公司简称:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">所属行业:<div><label>
+                        <select>
+                            <option value="数据服务">数据服务</option>
+                            <option value="金融">金融</option>
+                            <option value="珠宝">珠宝</option>
+                        </select>
+                    </label></div></div>
+                    <div class="config_option_tile edit_hide">所在地区:<div><label>
+                        <select>
+                            <option value="广东">广东</option>
+                        </select>
+                        <select>
+                            <option value="深圳">深圳</option>
+                        </select>
+                        <select>
+                            <option value="罗湖">罗湖</option>
+                        </select>
+                    </label></div></div>
+                    <div class="config_option_tile edit_hide">所在地址:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">公司规模:<div><label>
+                        <select>
+                            <option value="小规模">小规模</option>
+                            <option value="中小规模">中小规模</option>
+                            <option value="大规模">大规模</option>
+                        </select>
+                    </label></div></div>
+                </div>
+
+            </div>
+
+            <!--门店信息-->
+            <div class="tab-pane fade" id="config_4" >
+                <div class="config_mid_main">
+
+                    <div class="config_title" >门店信息 <div class="yellow_btn">编辑</div></div>
+                    <div class="hint edit_hide">提示: 完善门店信息,帮助我们更好的了解您的需求,更好的为您服务!</div>
+                    <div class="config_option_tile" style=" margin-top: 20px;">门店名称:<div>老庙黄金罗湖湖贝2号店</div></div>
+                    <div class="config_option_tile">门店编号:<div>02158</div></div>
+                    <div class="config_option_tile">店长姓名:<div>刘晓清</div></div>
+                    <div class="config_option_tile">开业时间:<div>2016/06/14</div></div>
+                    <div class="config_option_tile">门店规模:<div>独立门店</div></div>
+                    <div class="config_option_tile">所在地区:<div>深圳市罗湖区湖贝</div></div>
+                    <div class="config_option_tile">门店地址:<div>深圳市罗湖区湖贝</div></div>
+                    <div class="config_option_tile">门店电话:<div>1385454788</div></div>
+                    <div class="config_option_tile edit_hide">门店名称:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">门店编号:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">店长姓名:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">开业时间:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">门店规模:<div><label>
+                        <select>
+                            <option value="独立门店">独立门店</option>
+                            <option value="连锁门店">连锁门店</option>
+                        </select>
+                    </label></div></div>
+                    <div class="config_option_tile edit_hide">所在地区:<div><label>
+                        <select>
+                            <option value="广东">广东</option>
+                        </select>
+                        <select>
+                            <option value="深圳">深圳</option>
+                        </select>
+                        <select>
+                            <option value="罗湖">罗湖</option>
+                        </select>
+                    </label></div></div>
+                    <div class="config_option_tile edit_hide">门店地址:<div><label><input></label></div></div>
+                    <div class="config_option_tile edit_hide">门店电话:<div><label><input></label></div></div>
+                </div>
+
+            </div>
+
+            <!--密码规则设置-->
+            <div class="tab-pane fade" id="config_5" >
+                <div class="config_mid_main">
+                    <div class="config_title">密码规则设置 <div class="yellow_btn">保存</div></div>
+                    <div class="hint">提示: 企业更改密码后,所有员工将遵循以下规则!</div>
+                    <div class="config_option_tile">密码组成:
+                        <div>密码必须包含以下字符</div><br>
+                        <div style="margin-left: 106px;">
+                            <div class="blue_input"></div>数字
+                            <div class="blue_input"></div>大写字母
+                            <div class="blue_input"></div>小写字母
+                            <div class="blue_input"></div>特殊符号 (如",""@"等)
+                        </div>
+                    </div>
+                    <div class="config_option_tile">密码长度:<div>密码最短长度为<label>
+                        <select>
+                            <option value="15">15</option>
+                            <option value="10">10</option>
+                            <option value="6">6</option>
+                        </select>
+                    </label></div></div>
+                    <div class="config_option_tile">登陆失效时间:<div>PC端,<label>
+                        <select>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="60">60</option>
+                        </select>
+                    </label>分钟内无操作,退出到登陆界面</div></div>
+                    <div class="config_option_tile">短信验证:
+                        <div>
+                            <label><input><div class="blue_btn" style="margin: 0 0 0 -8px;/* height: 29px; */padding: 3px 9px 5px 10px;border-radius: 0 2px 2px 0;">关闭</div></label>
+                        </div>
+                    </div>
+                    <div class="config_option_tile">
+                        <div style=" margin-left: 80px;">
+                            <div style="color: #00e0a7;display: inline-block;">*</div>开启短信验证后,帐号将在新设备登陆时,输入密码后,需通过短信验证,方可登陆<br>
+                            <div  class="green_btn">确定</div><div class="blue_btn">取消</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!--日志查询-->
+            <div class="tab-pane fade" id="config_6" >
+                <div class="config_mid_main">
+                    <ul class="nav nav-tabs config_tab">
+                        <li class="active"><a href="#op_log" data-toggle="tab" >操作日志</a></li>
+                        <li><a href="#login_log" data-toggle="tab" >登陆日志</a></li>
+                        <li><a href="#sys_log" data-toggle="tab" >系统日志</a></li>
+                    </ul>
+                    <div class="tab-content"  >
+                        <div class="tab-pane fade in active" id="op_log">
+                            <div class="log_operation">
+                                <div>系统模块<label><select><option value="短信签名">短信签名</option></select></label></div>
+                                <div>操作类别<label><select><option value="编辑">编辑</option><option value="新增">新增</option><option value="删除">删除</option></select></label></div>
+                                <div>操作人员<label><select><option value="系统管理员">系统管理员</option><option value="普通用户">普通用户</option></select></label></div>
+                                <div>操作时间<label><select><option value=""></option></select></label></div>
+                                <div class="blue_btn">查询</div>
+                            </div>
+                            <table class="bordered">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>ID</th>
+                                    <th>操作编号</th>
+                                    <th>流水编号</th>
+                                    <th>操作时间</th>
+                                    <th>操作人员</th>
+                                    <th>所属板块</th>
+                                    <th>操作对象</th>
+                                    <th>操作类型</th>
+                                    <th>字段名</th>
+                                    <th>旧字段值</th>
+                                    <th>新字段值</th>
+                                    <th>备注</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>456889</td>
+                                    <td>10</td>
+                                    <td>3</td>
+                                    <td>2017/08/27 15:21</td>
+                                    <td>刘欢欢</td>
+                                    <td>短信签名</td>
+                                    <td>邓晓福</td>
+                                    <td>编辑</td>
+                                    <td>HOPE</td>
+                                    <td>微马CRM</td>
+                                    <td>好多银科技</td>
+                                    <td></td>
+                                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+                                </tbody></table>
+                            <div class="am-cf">
+                                <div class="am-fr">
+                                    <ul class="am-pagination">
+                                        <li class="am-active"><a href="#">上一页</a></li>
+                                        <li><a href="">1</a></li>
+                                        <li class="am-active"><a href="#">下一页</a></li>
+                                        <lable >共 1 页&nbsp&nbsp&nbsp&nbsp&nbsp到第&nbsp</lable>
+                                        <label>
+                                            <select name="" style="width:50px;">
+                                                <option value="1">1</option>
+                                            </select>
+                                        </label>
+                                        <lable >&nbsp页&nbsp</lable>
+                                        <li class="am-active"><a href="#">确定</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="login_log">
+                            <div class="log_operation">
+                                <div>登陆人员<label><select><option value="系统管理员">系统管理员</option><option value="普通用户">普通用户</option></select></label></div>
+                                <div>登陆时间<label><select><option value=""></option></select></label></div>
+                                <div class="blue_btn">查询</div>
+                            </div>
+
+                            <table class="bordered">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>流水编号</th>
+                                    <th>登陆人员</th>
+                                    <th>登陆地点</th>
+                                    <th>IP</th>
+                                    <th>登陆时间</th>
+                                    <th>登陆设备</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>456889</td>
+                                    <td>刘欢欢</td>
+                                    <td> - </td>
+                                    <td>113.118.42.24</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td> - </td>
+                                </tr>
+
+                                </tbody></table>
+                            <div class="am-cf">
+                                <div class="am-fr">
+                                    <ul class="am-pagination">
+                                        <li class="am-active"><a href="#">上一页</a></li>
+                                        <li><a href="">1</a></li>
+                                        <li class="am-active"><a href="#">下一页</a></li>
+                                        <lable >共 1 页&nbsp&nbsp&nbsp&nbsp&nbsp到第&nbsp</lable>
+                                        <label>
+                                            <select name="" style="width:50px;">
+                                                <option value="1">1</option>
+                                            </select>
+                                        </label>
+                                        <lable >&nbsp页&nbsp</lable>
+                                        <li class="am-active"><a href="#">确定</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="sys_log">
+                            <div class="log_operation">
+                                <div>操作人员<label><select><option value="系统管理员">系统管理员</option><option value="普通用户">普通用户</option></select></label></div>
+                                <div>操作时间<label><select><option value=""></option></select></label></div>
+                                <div class="blue_btn">查询</div>
+                            </div>
+
+                            <table class="bordered">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>流水编号</th>
+                                    <th>操作时间</th>
+                                    <th>操作人员</th>
+                                    <th>板块</th>
+                                    <th>操作内容</th>
+                                    <th>操作设备</th>
+                                    <th>操作设备IP</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>456889</td>
+                                    <td>2017/08/27 15:12</td>
+                                    <td>刘欢欢</td>
+                                    <td>公司信息</td>
+                                    <td>更新公司信息</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+                                </tbody></table>
+                            <div class="am-cf">
+                                <div class="am-fr">
+                                    <ul class="am-pagination">
+                                        <li class="am-active"><a href="#">上一页</a></li>
+                                        <li><a href="">1</a></li>
+                                        <li class="am-active"><a href="#">下一页</a></li>
+                                        <lable >共 1 页&nbsp&nbsp&nbsp&nbsp&nbsp到第&nbsp</lable>
+                                        <label>
+                                            <select name="" style="width:50px;">
+                                                <option value="1">1</option>
+                                            </select>
+                                        </label>
+                                        <lable >&nbsp页&nbsp</lable>
+                                        <li class="am-active"><a href="#">确定</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
 
         </div>
     </div>
