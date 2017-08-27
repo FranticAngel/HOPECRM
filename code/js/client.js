@@ -383,25 +383,23 @@ $(function(){
 
 function showPie(div_){
 	if(div_=="population"){
-		$("#consumption").html("");
-		$("#consumptionCoefficient").html("");
+		$("#population").html("");
 		$("#population").css("width","100%")
 		$("#population").css("height","100%")
 		$("#population").css("min-height","800px")
 		$("#population").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
 	}else if(div_=="consumption"){
 		$("#population").html("");
-		$("#consumptionCoefficient").html("");
-		$("#consumption").css("width","100%")
-		$("#consumption").css("height","100%")
-		$("#consumption").css("min-height","800px")
-		$("#consumption").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
-	}else if(div_=="consumptionCoefficient"){
-		$("#consumption").html("");
 		$("#population").html("");
-		$("#consumptionCoefficient").css("width","100%")
-		$("#consumptionCoefficient").css("height","100%")
-		$("#consumptionCoefficient").css("min-height","800px")
-		$("#consumptionCoefficient").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
+		$("#population").css("width","100%")
+		$("#population").css("height","100%")
+		$("#population").css("min-height","800px")
+		$("#population").load("lifecycle/consumptionChart.html?"+new Date().getTime());
+	}else if(div_=="consumptionCoefficient"){
+		$("#population").html("");
+		$("#population").css("width","100%")
+		$("#population").css("height","100%")
+		$("#population").css("min-height","800px")
+		$("#population").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
 	}
 }
