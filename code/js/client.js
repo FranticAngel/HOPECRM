@@ -34,8 +34,62 @@ Array.prototype.remove = function(val) {
         this.splice(index, 1);
     }
 };
-
+var myDate = new Date(); //获取今天日期
+myDate.setDate(myDate.getDate() - 7);
+var dateArray = []; 
+var dateTemp; 
+var flag = 1; 
+for (var i = 0; i < 7; i++) {
+    dateTemp = (myDate.getMonth()+1)+"-"+myDate.getDate();
+    dateArray.push(dateTemp);
+    myDate.setDate(myDate.getDate() + flag);
+}
+optionLine = {
+    color: ['#3398DB'],
+	 title: {
+        text: '消费记录'
+    },
+    legend: {
+        data:['客户流量人数']
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : dateArray,
+            axisTick: {
+                alignWithLabel: true
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'消费记录',
+            type:'line',
+            barWidth: '60%',
+            data:[432, 489, 330, 490, 478, 475,432]
+        }
+    ]
+};
+var myChart = echarts.init(document.getElementById('line'));
 $(function(){
+	myChart.setOption(optionLine);
     /*商品信息筛选条件*/
     var select_data=["黄金","钻石","K金","铂金","珍珠","银饰","宝石","时期","价格"];
     var select_options=[
