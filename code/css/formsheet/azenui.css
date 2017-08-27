@@ -79,18 +79,13 @@ table {
 }
 
 .bordered th {
-    background-color: #ccc;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEFFFE), to(#ECEBEC));
-    background-image: -webkit-linear-gradient(top, #FEFFFE,#ECEBEC);
-    background-image:    -moz-linear-gradient(top, #FEFFFE,#ECEBEC);
-    background-image:     -ms-linear-gradient(top, #FEFFFE,#ECEBEC);
-    background-image:      -o-linear-gradient(top, #FEFFFE,#ECEBEC);
-    background-image:         linear-gradient(top, #FEFFFE,#ECEBEC);
+    background-color: #00A9E0;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
     -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
     box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
     border-top: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    color: #fff;
 }
 
 .bordered td:first-child, .bordered th:first-child {
@@ -126,3 +121,23 @@ table {
     -webkit-border-radius: 0 0 6px 0;
     border-radius: 0 0 10px 0;
 }
+.grad {  
+    background-color:#00A9E0; 
+    height: 50px;
+    width:100%;
+}
+.top-icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    transform: scale(0.9);
+    cursor: pointer;
+    text-align:center;
+    float:right;
+}
+.top-icon:hover{
+    transform: scale(1);
+} 
+
+a:hover {color: #00A9E0 !important} 
+a:link {color: #cccccc !important}
