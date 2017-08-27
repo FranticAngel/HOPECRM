@@ -18,6 +18,7 @@
 .config_container_div .tab-content{
     display: block;
     min-height: 638px;
+    min-width:1070px;
     background-color: #f5f5f5;
     padding: 0;
     letter-spacing: 3px;
@@ -84,7 +85,8 @@
     position: relative;
     background-color: #ffffff;
     margin-left: -2%;
-    margin-bottom: 11px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 .config_left .depart:hover{
     color: #00a9e0;
@@ -201,9 +203,27 @@
     width: 96%;
 }
 
-.config_right table th {
+.config_right table th ,#config_6 table th{
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #050505;
+    padding: 5px 10px 5px 0;
+}
+#config_6 table {
     text-align: center;
 }
+#config_6 table tr td:first-child {
+    padding-left: 8px;
+}
+#config_6 table{
+    background-color: #fff;
+    width: 100%;
+    min-height: 500px;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
 .config_right table tr{
     background-color: #f3f3f3;
 }
@@ -291,20 +311,20 @@
     margin-left: 15px;
 }
 
-#config_1 .tab-content{
+#config_1 .tab-content,#config_2 .tab-content,#config_6 .tab-content{
     padding: 0;
     margin: 0;
     min-height: 100%;
     width: 100%;
 }
-#config_1 .config_tab{
+#config_1 .config_tab, #config_2 .config_tab, #config_6 .config_tab{
     min-width: 100%;
 }
 
-#config_1 .nav-tabs>li{
+#config_1 .nav-tabs>,#config_3 .nav-tabs>li{
     width: inherit;
 }
-#config_1 .config_right .config_right_main{
+#config_1 .config_right .config_right_main,#config_2 .config_right .config_right_main{
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -312,14 +332,151 @@
     margin-bottom:0;
 }
 
-#config_1 .config_tab{
+#config_1 .config_tab,#config_2 .config_tab,#config_6 .config_tab{
     background-color: #f3f3f3;
+    margin-bottom: 10px;
+    border-bottom: none;
 }
 
-#config_1  .config_tab a{
+#config_1  .config_tab a,#config_2  .config_tab a,#config_6  .config_tab a{
     color: inherit;
 }
 
-#config_1 .config_tab>.active a {
+#config_1 .config_tab>.active a,#config_2 .config_tab>.active a,#config_6 .config_tab>.active a{
     color: #ffffff;
 }
+
+.role_config_div{
+    background-color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+}
+.role_config_title{
+    padding-left: 10px;
+}
+#data_role .role_config_title{
+
+}
+.role_config_div div {
+    display: inline-block;
+}
+
+.role_config_div .blue_input {
+    margin-bottom: -3px;
+}
+
+#config_2 .tab-content{
+    background-color: #FFFFFF;
+}
+.config_mid_main{
+    padding-top: 22px;
+    margin-left: 2%;
+    min-height: 638px;
+    min-width:1070px;
+    background-color: #ffffff;
+}
+.config_mid_main .config_title{
+    padding-top: 7px;
+    padding-left: 21px;
+    padding-bottom: 7px;
+}
+.yellow_btn{
+    float: right;
+    background-color: #e0a700;
+    padding: 7px 15px 7px 16px;
+    margin-top: -6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+
+}
+.config_option_tile{
+    color: #050505;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.config_option_tile div{
+    display: inline-block;
+    margin-left: 45px;
+    color: #cacaca;
+    font-weight: normal;
+}
+.config_option_tile select{
+    font-weight: normal;
+    border: none;
+    background-color: #f5f5f5;
+}
+.config_option_tile input{
+    border: none;
+    background-color: #f5f5f5;
+    padding: 4px 6px;
+}
+
+
+.edit_hide{
+    display: none;
+}
+
+@-webkit-keyframes slide-down{
+    0%{transform: scale(1,0);}
+    25%{transform: scale(1,1.2);}
+    50%{transform: scale(1,0.85);}
+    75%{transform: scale(1,1.05);}
+    100%{transform: scale(1,1);}
+}
+.config_container_div .hint{
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-top: 7px;
+    font-size: 14px;
+    font-weight: normal;
+    box-shadow: 1px 9px 22px -12px rgba(0, 0, 0, 0.18);
+    -webkit-animation: slide-down .35s ease-in;
+}
+.blue_btn{
+    background-color: #00A9E0;
+    padding: 0 15px;
+    color: #FFFFFF !important;
+    display: inline-block;
+    cursor: pointer;
+}
+.green_btn{
+    background-color: #00e0a7;
+    padding: 0 15px;
+    color: #FFFFFF !important;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#config_5 .blue_input{
+    margin-bottom: -3px;
+    margin-left: 20px;
+}
+.log_operation>div {
+    display: inline-block;
+    width: 21%;
+    font-size: 13px;
+}
+.log_operation{
+    background-color: #ffffff;
+}
+.log_operation>div:first-child {
+    margin-left: 20px;
+}
+
+#login_log .log_operation>div,#sys_log .log_operation>div{
+    width: 40%;
+}
+#login_log .log_operation,#sys_log .log_operation{
+    float: right;
+}
+#login_log .log_operation .blue_btn,#op_log .log_operation .blue_btn,#sys_log .log_operation .blue_btn{
+    width: 65px;
+    padding-left: 18px;
+}
+#login_log,#sys_log{
+    background-color: #FFFFFF;
+}
+
