@@ -1,10 +1,4 @@
-/*苹方字体*/
-@font-face
-{
-    font-family: PF;
-    src: url('PF.ttf')
-}
-
+body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑"; }
 
 .config_tab{
     background-color: #00a9e0;
