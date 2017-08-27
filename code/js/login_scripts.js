@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
         var password2 = $(this).find('.password2').val();
         if(username == '') {
             $(this).find('.error').fadeOut('fast', function(){
-                $(this).css('top', '27px');
+                $(this).css('top', '17px');
             });
             $(this).find('.error').fadeIn('fast', function(){
                 $(this).parent().find('.username').focus();
@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
         }
         if(password == '') {
             $(this).find('.error').fadeOut('fast', function(){
-                $(this).css('top', '96px');
+                $(this).css('top', '80px');
             });
             $(this).find('.error').fadeIn('fast', function(){
                 $(this).parent().find('.password').focus();
@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
         }
         if(password2 == '') {
             $(this).find('.error').fadeOut('fast', function(){
-                $(this).css('top', '165px');
+                $(this).css('top', '145px');
             });
             $(this).find('.error').fadeIn('fast', function(){
                 $(this).parent().find('.password2').focus();
