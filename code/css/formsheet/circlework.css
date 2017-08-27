@@ -1,0 +1,92 @@
+
+@font-face
+{
+    font-family: PF;
+    src: url('PF.ttf')
+}
+
+
+.circlework_tab{
+    background-color: #fff;
+    min-width: 855px;
+    font-weight: lighter;
+    margin-bottom: 0;
+    color: #000;
+}
+.nav-tabs>li {
+    width: 14.285%;
+}
+.circlework_div .tab-circlework{
+    display: block;
+    background-color: #f5f5f5;
+    padding: 0;
+    letter-spacing: 3px;
+    font-family: PF, serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    color: #000;
+
+}
+
+.circlework_div .circlework_tab a{
+    color: #000;
+    font-weight: bolder;
+    margin: 0;
+    height: 40px;
+    text-align: center;
+    text-decoration:none; 
+}
+.circlework_div .circlework_tab a:hover{
+    background-color: #00A9E0;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.circlework_div .circlework_tab .active a{
+    border: none;
+    background-color: #00A9E0;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+
+
+#formgere h1 {
+	font-weight: bold;
+    font-size: 24px;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    font-weight: normal;
+    color: #D0D0D0;
+}
+#formgere h2 {
+	font-weight: bold;
+    font-size: 14px;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    font-weight: normal;
+    color: #D0D0D0;
+}
+.geren {
+        background-color: #0D5293;
+        height: 376px;
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+        border:0;
+        margin-top:0px;
+        padding-top:0;
+    }
+.imggeren{
+    margin-top:70px;
+    border:none;
+    width:152;
+    height:152;
+    padding: 0;
+    vertical-align:bottom;
+    }
+.gerenjieshao {
+        display:inline-block;
+        background-color: #fff;
+        height: 328px;
+        width:100%;
+        border:0;
+    }
+

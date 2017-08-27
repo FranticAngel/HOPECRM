@@ -1,14 +1,17 @@
+#footer{
+  padding-top: 20px;
+}
 body,div,ul,li{margin:0;padding:0}
 ol,ul{list-style:none}
 ins,a{text-decoration:none}
 textarea {resize: none;}
 ul,ol {list-style:none;}
-.wrapper02 {position:relative;height: 70px;width: 100%;overflow: hidden;margin:0 auto;background:#0D5293}
+.wrapper02 {position:relative;height: 40px;width: 100%;overflow: hidden;margin:0 auto;}
 .wrapper02 .scrollers {position:absolute;margin-left:11%;width=1000px}
-.wrapper02 .scrollers li {height: 70px;color:#fff;float: left;line-height:70px;font-size: 14px;text-align: center}
-.wrapper02 .scrollers li a{color:#fff;display:block;padding:0 16px;}
+.wrapper02 .scrollers li {height: 40px;color:#fff;float: left;line-height:40px;font-size: 14px;text-align: center}
+.wrapper02 .scrollers li a{color:#000;display:block;padding:0 16px;}
 .wrapper02 .scrollers li.cur{background:#00A9E0}
-.wrapper02 .scrollers li.cur a{color:#000;}
+.wrapper02 .scrollers li.cur a{color:#fff;}
 
 .top-icon {
     display: inline-block;
