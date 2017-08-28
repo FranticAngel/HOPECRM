@@ -908,7 +908,7 @@ myChart21.setOption(optionbar21);
 var myChart22 = echarts.init(document.getElementById('bar22'));
 myChart22.setOption(optionbar22);
 var myChart31 = echarts.init(document.getElementById('bar31'));
-//myChart31.setOption(optionbar31);
+myChart31.setOption(optionbar31);
 var myChart32 = echarts.init(document.getElementById('bar32'));
 myChart32.setOption(optionbar32);
 var myChart41 = echarts.init(document.getElementById('bar41'));
