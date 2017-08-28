@@ -453,6 +453,271 @@ optionbar32 = {
         }
     ]
 };
+
+optionbar41 = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['不同消费总额消费占比']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            splitLine : {show : false},
+            data : ['1000元以下','1001-5000元','5001-10000元','10001-20000元','20001-50001元','50001-10万元','10万以上']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'不同消费总额消费占比',
+            type:'bar',
+            data:[320, 332, 301, 120, 90, 30, 70]
+        },
+
+        {
+            center: [400,120],
+            radius : [0, 50],
+            itemStyle :　{
+                normal : {
+                    labelLine : {
+                        length : 20
+                    }
+                }
+            },
+            name:'不同消费总额消费占比',
+            type:'pie',
+            tooltip : {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            data:[
+                {value:1048, name:'1000元以下'},
+                {value:251, name:'1001-5000元'},
+                {value:147, name:'5001-10000元'},
+                {value:102, name:'10001-20000元'},
+                {value:102, name:'20001-50001元'},
+                {value:102, name:'50001-10万元'},
+                {value:102, name:'10万以上'}
+            ]
+        }
+    ]
+};
+optionbar42 = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['不同消费频次消费占比']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            splitLine : {show : false},
+            data : ['一年3次以上','一年2次','一年一次','两年一次','三年以上一次']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'不同消费频次消费占比',
+            type:'bar',
+            data:[320, 332, 301, 120, 90, 30]
+        },
+
+        {
+            center: [400,120],
+            radius : [0, 50],
+            itemStyle :　{
+                normal : {
+                    labelLine : {
+                        length : 20
+                    }
+                }
+            },
+            name:'不同消费频次消费占比',
+            type:'pie',
+            tooltip : {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            data:[
+                {value:1048, name:'一年3次以上'},
+                {value:251, name:'一年2次'},
+                {value:147, name:'一年一次'},
+                {value:102, name:'两年一次'},
+                {value:102, name:'三年以上一次'}
+            ]
+        }
+    ]
+};
+
+optionbar51 = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['不同客单价消费占比']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            splitLine : {show : false},
+            data : ['1k以下','1k-3k','3k-5k','10k以上']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'不同客单价消费占比',
+            type:'bar',
+            data:[320, 332, 301, 120, 90, 30, 70]
+        },
+
+        {
+            center: [400,120],
+            radius : [0, 50],
+            itemStyle :　{
+                normal : {
+                    labelLine : {
+                        length : 20
+                    }
+                }
+            },
+            name:'不同客单价消费占比',
+            type:'pie',
+            tooltip : {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            data:[
+                {value:1048, name:'1k以下'},
+                {value:251, name:'1k-3k'},
+                {value:147, name:'3k-5k'},
+                {value:102, name:'5k-10k'},
+                {value:102, name:'10k以上'}
+            ]
+        }
+    ]
+};
+optionbar52 = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['不同提篮数消费占比']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            splitLine : {show : false},
+            data : ['1件','2件','3件','4件','5件','6件以上']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'不同提篮数消费占比',
+            type:'bar',
+            data:[320, 332, 301, 120, 90, 30]
+        },
+
+        {
+            center: [400,120],
+            radius : [0, 50],
+            itemStyle :　{
+                normal : {
+                    labelLine : {
+                        length : 20
+                    }
+                }
+            },
+            name:'不同提篮数消费占比',
+            type:'pie',
+            tooltip : {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            data:[
+                {value:1048, name:'1件'},
+                {value:251, name:'2件'},
+                {value:147, name:'3件'},
+                {value:102, name:'4件'},
+                {value:102, name:'5件'},
+                {value:102, name:'6件以上'}
+            ]
+        }
+    ]
+};
 var myChart11 = echarts.init(document.getElementById('bar11'));
 myChart11.setOption(optionbar11);
 var myChart12 = echarts.init(document.getElementById('bar12'));
@@ -465,6 +730,14 @@ var myChart31 = echarts.init(document.getElementById('bar31'));
 //myChart31.setOption(optionbar31);
 var myChart32 = echarts.init(document.getElementById('bar32'));
 myChart32.setOption(optionbar32);
+var myChart41 = echarts.init(document.getElementById('bar41'));
+myChart41.setOption(optionbar41);
+var myChart42 = echarts.init(document.getElementById('bar42'));
+myChart42.setOption(optionbar42);
+var myChart51 = echarts.init(document.getElementById('bar51'));
+myChart51.setOption(optionbar51);
+var myChart52 = echarts.init(document.getElementById('bar52'));
+myChart52.setOption(optionbar52);
 
 })(jQuery);
 
