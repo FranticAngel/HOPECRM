@@ -398,6 +398,6 @@ function showPie(div_){
 		$("#population").css("width","100%")
 		$("#population").css("height","100%")
 		$("#population").css("min-height","800px")
-		$("#population").load("lifecycle/memberAgeChart.html?"+new Date().getTime());
+		$("#population").load("lifecycle/consumptionCoefficientChart.html?"+new Date().getTime());
 	}
 }
