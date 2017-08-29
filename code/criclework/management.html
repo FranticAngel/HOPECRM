@@ -22,7 +22,7 @@
                 <th>有效范围</th>
                 <th><div class="iconas" >
                     <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;" onclick="addRow()"></a>
-                    <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;"></a>
+                    <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;" data-toggle="modal" data-target="#downUpload_modal"></a>
                     </div>
                 </th>
             </tr>
@@ -178,7 +178,7 @@
       <div class="am-fr">
         <ul class="am-pagination">
           <li class="am-active"><a href="#">上一页</a></li>
-          <li><a href="">1</a></li>
+            <li><a href="#">1</a></li>
           <li class="am-active"><a href="#">下一页</a></li>
                 <a style="Microsoft Yahei,微软雅黑, Helvetica Neue,adobe雅黑;size=6px">共 1 页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到第&nbsp;</a>
             <select name="" style="width:50px;"> 
@@ -199,7 +199,7 @@
         var ID,color;  
         window.onload = function(){  
             var myTab = $q("#tab");  
-            ID = myTab.rows.length-1;  
+            ID = myTab.rows.length-1;
         }  
         //鼠标悬浮在某元素时  
         function over(node){  
@@ -209,59 +209,15 @@
         //鼠标离开某元素时  
         function out(node){  
             node.style.backgroundColor = color;  
-        }  
-        //全选  
-        function quan(){  
-            var checkArr = $q("$checkbox"); //得到tbody行的集合  
-            var qArr = $q("$quan");   
-            if(qArr[0].checked){ //如果是全选,设置全部选中  
-                for(var i=0;i<checkArr.length;i++){     
-                    checkArr[i].checked = true;  
-                }  
-            }else{  //如果没有全选,设置全部没选中  
-                for(var i=0;i<checkArr.length;i++){    
-                    checkArr[i].checked = false;  
-                }  
-            }  
-        }  
-  
-        //反选  
-        function fan(){  
-            var checkArr = $q("$checkbox"); //得到tbody行的集合  
-            for(var i=0;i<checkArr.length;i++){  //循环将所有行反选  
-                checkArr[i].checked = checkArr[i].checked ? false : true;  
-            }  
-        }  
+        }    
   
         //添加一行数据  
         function addRow(){  
             var myTab = $q("#tab");  
             var rowLength = myTab.rows.length;  
-            var newRow = document.createElement("tr"); //创建一行  
-            //设置隔行变色  
-            if(rowLength%2 == 1){  
-                newRow.style.background = "#fff";  
-            }else{  
-                newRow.style.background = "#fff";  
-            }  
-            if(newRow.addEventListener){  
-                //给创建的行添加鼠标悬浮的事件  
-                newRow.addEventListener("mouseover",function(){over(newRow);},false);  
-                //给创建的行添加鼠标离开的事件  
-                newRow.addEventListener("mouseout",function(){out(newRow);},false);  
-            }else if(newRow.attachEvent){  
-                //给创建的行添加鼠标悬浮的事件  
-                newRow.attachEvent("onmouseover",function(){over(newRow);});  
-                //给创建的行添加鼠标离开的事件  
-                newRow.attachEvent("onmouseout",function(){out(newRow);});  
-            }else{  
-                //给创建的行添加鼠标悬浮的事件  
-                newRow.onmouseover = function(){over(newRow);};  
-                //给创建的行添加鼠标离开的事件  
-                newRow.onmouseout = function(){out(newRow);};  
-            }    
+            var newRow = document.createElement("tr"); //创建一行    
             //创建多列 
-            ID = 12; 
+            ID = 12;
             ID += 1;
             var newCell1 = document.createElement("td");  
             newCell1.innerHTML = ID;  
@@ -298,67 +254,8 @@
         function deleteRow(currentRow){  
             var tab = $q("#tab"); //获得表格节点  
             tab.deleteRow(currentRow.rowIndex); //删除选中的行  
-        }  
-        //删除多行数据  
-        function deleteChecked(){  
-            var tab = $q("#tab"); //获得表格节点  
-            var checkArr = $q("$checkbox");  //得到tbody行的集合  
-            for(var i=0;i<checkArr.length;i++){  
-                if(checkArr[i].checked){  //用循环删除选中的行  
-                    var index = checkArr[i].parentNode.parentNode.rowIndex;  
-                    tab.deleteRow(index);  
-                }  
-            }  
-        }    
-var CustomFunctions = {  
-    //获取子节点的集合（ie，ff通用）  
-    getChildNodes:function(node){  
-        var arr = [];  
-        var nodes = node.childNodes;  
-        for(var i in nodes){  
-            if(nodes[i].nodeType == 1){ //查找元素节点  
-                arr.push(nodes[i]);  
-            }  
-        }  
-        return arr;  
-    },  
-    //获取第一个元素子节点（ie，ff通用）  
-    getFirstElementChild : function(node){  
-        return node.firstElementChild ? node.firstElementChild : node.firstChild ;  
-    },  
-    //获取最后一个元素子节点（ie，ff通用）  
-    getLastElementChild : function(node){  
-        return node.lastElementChild ? node.lastElementChild : node.lastChild ;  
-    },  
-    //获取上一个相邻节点（ie，ff通用）  
-    getPreviousSibling : function(node){  
-        //找到上一个节点就返回节点，没找到就返回null  
-        do{  
-            node = node.previousSibling;  
-        }while(node && node.nodeType!=1)  
-        return node;  
-    },  
-    //获取下一个相邻节点 （ie，ff通用）  
-    getNextSibling : function(node){  
-        //找到下一个节点就返回节点，没找到就返回null  
-        do{  
-            node = node.nextSibling;  
-        }while(node && node.nodeType!=1)  
-        return node;  
-    },  
-    //将元素插入到指定的node节点后面  
-    insertAfter : function(newNode,targetNode){  
-        if(newNode && targetNode){  
-            var parent = targetNode.parentNode;  
-            var nextNode = this.getNextSibling(targetNode);  
-            if(nextNode && parent){  
-                parent.insertBefore(newNode,nextNode);  
-            }else{  
-                parent.appendChild(newNode);  
-            }  
-        }  
-    }  
-};  
+        }     
+
   
 /*清除字符串前后的空格*/  
 String.prototype.trim=function(){  
