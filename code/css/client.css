@@ -406,9 +406,40 @@ ul,ol{
 #client_table .containers{
     font-size: 12px;
 }
-#client_table tr{
+#client_table table{
+
+}
+#client_table tr>td:nth-child(2){
     cursor: pointer;
 }
+#client_table .dropdown .btn{
+    padding: 0;
+}
+#client_table .dropdown ul{
+    min-width:100%;
+    border-radius: 0;
+    padding: 0;
+ }
+#client_table .dropdown ul>li>a:hover{
+    color: #FFFFFF !important;
+    background: #00A9E0 none;
+}
+
+#client_table .dropdown{
+   background-color: #00A9E0;
+}
+#client_table .caret {
+    border-top-color: #FFFFFF;
+}
+.no_result{
+    padding: 50px;
+    font-size: 15px;
+    min-height: 480px;
+    border: solid #fff 0;
+    box-shadow: 0 4px 7px #BFBFBF;
+}
+
+
 .operate{
     width: 41px;
     height: 40px;
@@ -592,6 +623,12 @@ body {
     background-color: #00a9e0;
     border-color:#00a9e0;
 }
+.am-pagination > li> .active_page{
+    background-color: #00a9e0;
+    border-color:#00a9e0;
+    color: #FFFFFF;
+}
+
 
 .client_tab{
     font-size: 15px;

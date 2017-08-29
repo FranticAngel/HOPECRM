@@ -98,7 +98,7 @@
            </div>
            <div class="pull-right">
                <div class="change_sheet">
-                   显示表格
+                   显示图表
                </div>
            </div>
            <div class="operation pull-right">
@@ -109,7 +109,7 @@
 
                <div class="operate" style="background-image: url(img/1.png)"></div>
                <div class="operate" style="background-image: url(img/4.png)"></div>
-               <div class="operate" style="background-image: url(img/6.png)"></div>
+               <div class="operate" style="background-image: url(img/6.png)" data-toggle="modal" data-target="#downUpload_modal"></div>
                <div class="operate" style="background-image: url(img/9.png)"></div>
            </div>
        </div>
@@ -184,6 +184,46 @@
     </footer>
 </div>
 
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="downUpload_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div style="height: 42px;background-color: #00a9e0; border-radius: 4px 4px 0 0; ">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <div  style="font-size: 18px;padding: 6px 19px;color: #ffffff">
+                    上传/下载
+                </div>
+            </div>
+            <div class="modal-body">
+                <input type="file" style="display: inline-block;"/>
+                <button type="button" style="width: 64px;">
+                    <a onclick="clickDownload(this)" download="downlaod.csv" href="#">下载数据</a>
+                </button>
+            </div>
+            <div class="modal-footer" style="padding: 7px 16px 9px;">
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 2px 18px;">关闭
+                </button>
+                <!--<button type="button" class="btn btn-primary">-->
+                    <!--提交更改-->
+                <!--</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    function clickDownload(aLink)
+    {
+        var str = "栏位1,栏位2,栏位3\n值1,值2,值3";
+        str =  encodeURIComponent(str);
+        aLink.href = "data:text/csv;charset=utf-8,\ufeff"+str;
+        aLink.click();
+    }
+</script>
+
+
 <!-- Required Plugins and Scripts -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate.min.js"></script>
@@ -196,7 +236,7 @@
 <!--<script src="js/slicknav/jquery.slicknav.min.js"></script>-->
 <!--<script src="js/lightcase/vendor/jQuery/jquery.events.touch.js"></script>-->
 <script src="js/lightcase/js/lightcase.js"></script>
-<script src="js/fakeLoader/fakeLoader.min.js"></script>
+<!--<script src="js/fakeLoader/fakeLoader.min.js"></script>-->
 <script src="js/scripts.js"></script>
 <script src="js/index.js"></script>
 <script src="js/echarts/echarts.min.js"></script>

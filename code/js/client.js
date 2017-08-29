@@ -342,8 +342,8 @@ $(function(){
     var client_table=$("#client_table");
     var client_info=$("#client_info");
     var operation=$(".operation ");
-    change_sheet.text("显示表格");
-    operation.hide();
+    change_sheet.text("显示图表");
+    operation.show();
     change_sheet.unbind("click");
     change_sheet.click(function(){
         if(change_sheet.text().trim()==="显示表格"){
@@ -352,6 +352,7 @@ $(function(){
             client_table.show();
             client_table.siblings(".client_container").hide();
         }else{
+            showPie('population');
             change_sheet.text("显示表格");
             operation.hide();
             client_chart.show();
@@ -364,19 +365,142 @@ $(function(){
         client_table.siblings(".client_container").hide();
     });
 
+    /*生成表格*/
+    function showTable() {
+        $(".am-fr").css('opacity',1);
+        $(".no_result").remove();
+        var client_tbody=$("#client_tbody");
+        client_tbody.html("");
+        var client_info_html="";
+        for (i=0;i<10;i++){
+            client_info_html+='<tr>\
+                <td>{0}</td>\
+                <td>{1}</td>\
+                <td class="member">00{2}</td>\
+                <td>{3}</td>\
+                <td>{4}</td>\
+                <td>{5}</td>\
+                <td>{6}</td>\
+                <td>{7}</td>\
+                <td>深圳{8}门店</td>\
+                <td>{9}黄金</td>\
+                <td>深圳</td>\
+                <td>广东</td>\
+                <td>深圳</td>\
+                <td>\
+                <div class="am-btn-toolbar">\
+                <div class="am-btn-group am-btn-group-xs">\
+                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>\
+                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>\
+                </div>\
+                </div>\
+                </td>\
+                </tr>'.format(i+1,getName(),getMobile().slice(7),getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName())
+        }
+        client_tbody.append(client_info_html);
+        if( $(".search_input").attr('placeholder')==="请输入姓名、会员编码、电话"){
+            $(".member").show();
+        }else {
+            $(".member").hide();
+        }
+    }
+
+
+
+    function generateRow(input_text) {
+        var html= '<tr>\
+                <td>{0}</td>\
+                <td>{1}</td>\
+                <td class="member">{2}</td>\
+                <td>{3}</td>\
+                <td>{4}</td>\
+                <td>{5}</td>\
+                <td>{6}</td>\
+                <td>{7}</td>\
+                <td>深圳{8}门店</td>\
+                <td>{9}黄金</td>\
+                <td>深圳</td>\
+                <td>广东</td>\
+                <td>深圳</td>\
+                <td>\
+                <div class="am-btn-toolbar">\
+                <div class="am-btn-group am-btn-group-xs">\
+                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>\
+                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>\
+                </div>\
+                </div>\
+                </td>\
+                </tr>';
+        $(".am-fr").css('opacity',0);
+        var client_tbody = $("#client_tbody");
+        client_tbody.html('');
+        $(".no_result").remove();
+        switch(input_text.length)
+        {
+            case 3://人名
+                client_tbody.append(html.format(1,input_text,"00"+getMobile().slice(7),getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName()));
+                break;
+            case 6://会员编码
+                client_tbody.append(html.format(1,getName(),input_text,getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName()));
+                break;
+            case 11://电话
+                client_tbody.append(html.format(1,getName(),"00"+getMobile().slice(7),getGender(),getAge(),input_text,getEducation(),getCareer(),getArea(),getShopName()));
+                break;
+            default:
+                $("table.bordered").after('<div class="no_result">没有找到匹配结果</div>');
+
+        }
+    }
+
+
+    var page_div = $(".am-pagination");
+    page_div.on('click','a',function () {
+        if($(this).parent().hasClass("am-active")){
+            var cur_active_page = $(".active_page");//当前页码
+            cur_active_page.removeClass("active_page");
+            if($(this).parent().hasClass("up")){
+                cur_active_page.parent().prev().children('a').addClass("active_page");//当前页码移到上一页
+            }else {
+                cur_active_page.parent().next().children('a').addClass("active_page");//当前页码移到下一页
+            }
+            showTable();
+        }else if(!$(this).hasClass("active_page")){
+            page_div.find('.active_page').removeClass("active_page");
+            $(this).addClass("active_page");
+            showTable();
+        }
+
+    });
+    page_div.find('option').on('click',function () {
+        showTable();
+    });
+
+
+
+
+    showTable();
+
+    /*按钮*/
+    //刷新按钮
+    $(".operate").eq(0).on('click',function () {
+        showTable();
+    });
+    //搜索按钮
+    $(".search").find(".input_search").on('click',function () {
+       var input_text = $(this).prev().val();
+       generateRow(input_text);//根据输入内容生成记录
+    });
+
+
 
     /*客户记录点击切换到详细客户信息页面*/
-    client_table.on('click','td',function () {
+    client_table.on('click','td:nth-child(2)',function () {
         client_info.show();
         client_info.siblings(".client_container").hide();
     });
 
 
 
-
-
-
-	showPie('population');
 });
 
 function showPie(div_){
