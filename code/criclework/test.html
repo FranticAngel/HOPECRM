@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+<title>表格操作</title>  
+    <script type= "text/javascript" src="domutil.js" ></script>  
+</head>  
+  
+<body>    
+      
+                <!--以下数据纯属虚构-->  
+  
+    <table id="tab" border="1" style =" align:center;text-align:center ">  
+        <thead style="background:#0000FF" onmouseover="over(this)" onmouseout="out(this)">  
+            <tr>  
+                <th><input type="checkbox" name="quan" onclick="quan()" style="cursor:pointer"/>全选</th>  
+                <th onclick="sortTable('tab',1,'int')" style="cursor:pointer">编号</th>  
+                <th onclick="sortTable('tab',2,'汉字')" style="cursor:pointer">编程语言</th>  
+                <th onclick="sortTable('tab',3,'汉字')" style="cursor:pointer">所属公司</th>  
+                <th onclick="sortTable('tab',4,'float')" style="cursor:pointer">市场份额</th>  
+                <th onclick="sortTable('tab',5,'date')" style="cursor:pointer">诞生日期</th>  
+                <th style="cursor:pointer">操作</th>  
+            </tr>  
+        </thead>  
+        <tbody id="tbody">  
+            <tr style="background:#00FF00" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">4</td>  
+                <td id="name" width="100">Java</td>  
+                <td id="company" width="100" >甲骨文公司</td>  
+                <td id="age" width="100">47.6</td>  
+                <td id="date" width="100">1970/09/09</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+            <tr style="background:#00FFFF" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">6</td>  
+                <td id="name" width="100">ASP</td>  
+                <td id="company" width="100">微软公司</td>  
+                <td id="age" width="100">30.3</td>  
+                <td id="date" width="100">1980/09/09</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+            <tr style="background:#00FF00" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">3</td>  
+                <td id="name" width="100">PHP</td>  
+                <td id="company" width="100">公司Zend</td>  
+                <td id="age" width="100">22.1</td>  
+                <td id="date" width="100">1994/07/09</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+            <tr style="background:#00FFFF" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">1</td>  
+                <td id="name" width="100">Objective-C</td>  
+                <td id="company" width="100" >Stepstone公司</td>  
+                <td id="age" width="100">35.9</td>  
+                <td id="date" width="100">1980/01/01</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+            <tr style="background:#00FF00" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">5</td>  
+                <td id="name" width="100">VB</td>  
+                <td id="company" width="100">美国微软</td>  
+                <td id="age" width="100">32.7</td>  
+                <td id="date" width="100">1991/09/09</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+            <tr style="background:#00FFFF" onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="checkbox" /></td>  
+                <td width=100 id="ID">2</td>  
+                <td id="name" width="100">javascript</td>  
+                <td id="company" width="100">Netscape</td>  
+                <td id="age" width="100">33.8</td>  
+                <td id="date" width="100">1992/06/09</td>  
+                <td ><input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)"/></td>  
+            </tr>  
+        </tbody>  
+        <tfoot style="background:#C0C0C0">  
+            <tr onmouseover="over(this)" onmouseout="out(this)">  
+                <td><input type="checkbox" name="fan" onclick="fan()"/>反选</td>  
+                <td colspan="6">  
+                <input type="button" value="添加数据" onclick="addRow()" />       
+                <input type="button" value="删除选中行" onclick="deleteChecked()"/>  
+                </td>  
+            </tr>  
+        </tfoot>  
+    </table>  
+      
+</body>   
+<script type="text/javascript">   
+        /* 
+        全局变量 
+        ID:    保存插入数据的编号 
+        color：保存原来的背景色 
+        */  
+        var ID,color;  
+        window.onload = function(){  
+            var myTab = $q("#tab");  
+            ID = myTab.rows.length-1;  
+        }  
+        //鼠标悬浮在某元素时  
+        function over(node){  
+            color = node.style.backgroundColor;  
+            node.style.backgroundColor = '#FF00FF';  
+        }  
+        //鼠标离开某元素时  
+        function out(node){  
+            node.style.backgroundColor = color;  
+        }  
+        //全选  
+        function quan(){  
+            var checkArr = $q("$checkbox"); //得到tbody行的集合  
+            var qArr = $q("$quan");   
+            if(qArr[0].checked){ //如果是全选,设置全部选中  
+                for(var i=0;i<checkArr.length;i++){     
+                    checkArr[i].checked = true;  
+                }  
+            }else{  //如果没有全选,设置全部没选中  
+                for(var i=0;i<checkArr.length;i++){    
+                    checkArr[i].checked = false;  
+                }  
+            }  
+        }  
+  
+        //反选  
+        function fan(){  
+            var checkArr = $q("$checkbox"); //得到tbody行的集合  
+            for(var i=0;i<checkArr.length;i++){  //循环将所有行反选  
+                checkArr[i].checked = checkArr[i].checked ? false : true;  
+            }  
+        }  
+  
+        //添加一行数据  
+        function addRow(){  
+            var myTab = $q("#tab");  
+            var rowLength = myTab.rows.length;  
+            var newRow = document.createElement("tr"); //创建一行  
+            //设置隔行变色  
+            if(rowLength%2 == 1){  
+                newRow.style.background = "#00FFFF";  
+            }else{  
+                newRow.style.background = "#00FF00";  
+            }  
+            if(newRow.addEventListener){  
+                //给创建的行添加鼠标悬浮的事件  
+                newRow.addEventListener("mouseover",function(){over(newRow);},false);  
+                //给创建的行添加鼠标离开的事件  
+                newRow.addEventListener("mouseout",function(){out(newRow);},false);  
+            }else if(newRow.attachEvent){  
+                //给创建的行添加鼠标悬浮的事件  
+                newRow.attachEvent("onmouseover",function(){over(newRow);});  
+                //给创建的行添加鼠标离开的事件  
+                newRow.attachEvent("onmouseout",function(){out(newRow);});  
+            }else{  
+                //给创建的行添加鼠标悬浮的事件  
+                newRow.onmouseover = function(){over(newRow);};  
+                //给创建的行添加鼠标离开的事件  
+                newRow.onmouseout = function(){out(newRow);};  
+            }    
+            //创建多列  
+            var newCell1 = document.createElement("td");  
+            newCell1.innerHTML = '<input type="checkbox" name="checkbox" />';  
+            var newCell2 = document.createElement("td");  
+            newCell2.innerHTML = ID;  
+            ID += 1;  
+            var newCell3 = document.createElement("td");  
+            newCell3.innerHTML = prompt("请输入编程语言：","");  
+            var newCell4 = document.createElement("td");  
+            newCell4.innerHTML = prompt("请输入所属公司：","");  
+            var newCell5 = document.createElement("td");  
+            newCell5.innerHTML = prompt("请输入市场份额：","");  
+            var newCell6 = document.createElement("td");  
+            newCell6.innerHTML = prompt("请输入诞生日期：","");  
+            var newCell7 = document.createElement("td");  
+            newCell7.innerHTML = '<input type="button" value="删除" onclick="deleteRow(this.parentNode.parentNode)" />' ;  
+            //将创建的多列添加到行  
+            newRow.appendChild(newCell1);  
+            newRow.appendChild(newCell2);  
+            newRow.appendChild(newCell3);  
+            newRow.appendChild(newCell4);  
+            newRow.appendChild(newCell5);  
+            newRow.appendChild(newCell6);  
+            newRow.appendChild(newCell7);  
+            var tbody = myTab.tBodies[0]; //获取表格的tbody  
+            tbody.appendChild(newRow);  //将创建的行添加到表格body里  
+        }   
+        //删除一行数据  
+        function deleteRow(currentRow){  
+            var tab = $q("#tab"); //获得表格节点  
+            tab.deleteRow(currentRow.rowIndex); //删除选中的行  
+        }  
+        //删除多行数据  
+        function deleteChecked(){  
+            var tab = $q("#tab"); //获得表格节点  
+            var checkArr = $q("$checkbox");  //得到tbody行的集合  
+            for(var i=0;i<checkArr.length;i++){  
+                if(checkArr[i].checked){  //用循环删除选中的行  
+                    var index = checkArr[i].parentNode.parentNode.rowIndex;  
+                    tab.deleteRow(index);  
+                }  
+            }  
+        }  
+        //转换数据类型,v为值，dataType为数据类型  
+        function convert(v,dataType){  
+            switch(dataType){  
+                case "int":  
+                    return parseInt(v);  
+                case "float":  
+                    return parseFloat(v);  
+                case "date":  
+                    return (new Date(Date.parse(v)));  
+                default:  
+                    return v.toString();  
+            }  
+        }  
+        //排序函数,index为索引，type为数据类型  
+        function pai(index,dataType){  
+            if(dataType === "汉字"){  
+                return function compare(a,b){  
+                            var str1 = convert(a.cells[index].innerHTML,dataType);   
+                            var str2 = convert(b.cells[index].innerHTML,dataType);  
+                            return str1.localeCompare(str2);  
+                        };  
+            }else{  
+                return function compare(a,b){  
+                            //var str1 = convert(a.cells[index].firstChild.nodeValue,dataType);  
+                            //var str2 = convert(b.cells[index].firstChild.nodeValue,dataType);  
+                            var str1 = convert(a.cells[index].innerHTML,dataType); //两种方法效果一样  
+                            var str2 = convert(b.cells[index].innerHTML,dataType);  
+                            if(str1 < str2){  
+                                return -1;  
+                            }else if(str1 > str2){  
+                                return 1;  
+                            }else{   
+                                return 0;  
+                            }  
+                        };  
+            }  
+        }  
+        //排序的过程  
+        function sortTable(tableID,index,dataType){  
+            var tab = $q("#"+tableID); //获取表格的ID  
+            var td = tab.tBodies[0]; //获取表格的tbody  
+            var newRows = td.rows;   //获取tbody里的所有行  
+            var arr = new Array();   //定义arr数组用于存放tbody里的行  
+            //用循环将所有行放入数组  
+            for(var i=0;i<newRows.length;i++){  
+                arr.push(newRows[i]);  
+            }  
+            //判断最后一次排序的列是否与现在要进行排序的列相同，如果是就反序排列  
+            if(tab.sortCol == index){  
+                arr.reverse();  
+            }else{   
+                //使用数组的sort方法，传进排序函数  
+                arr.sort(pai(index,dataType));  
+            }  
+            var oFragment = document.createDocumentFragment(); //创建文档碎片  
+            for (var i=0; i < arr.length; i++) {  //把排序过的aTRs数组成员依次添加到文档碎片  
+                if(i%2 == 1){  
+                    arr[i].style.background = "#00FFFF";  
+                    oFragment.appendChild(arr[i]);  
+                }else{  
+                    arr[i].style.background = "#00FF00";  
+                    oFragment.appendChild(arr[i]);  
+                }  
+            }  
+            td.appendChild(oFragment); //把文档碎片添加到tbody,完成排序后的显示更新  
+            tab.sortCol = index;  //记录最后一次排序的列索引  
+        }  
+var CustomFunctions = {  
+    //获取子节点的集合（ie，ff通用）  
+    getChildNodes:function(node){  
+        var arr = [];  
+        var nodes = node.childNodes;  
+        for(var i in nodes){  
+            if(nodes[i].nodeType == 1){ //查找元素节点  
+                arr.push(nodes[i]);  
+            }  
+        }  
+        return arr;  
+    },  
+    //获取第一个元素子节点（ie，ff通用）  
+    getFirstElementChild : function(node){  
+        return node.firstElementChild ? node.firstElementChild : node.firstChild ;  
+    },  
+    //获取最后一个元素子节点（ie，ff通用）  
+    getLastElementChild : function(node){  
+        return node.lastElementChild ? node.lastElementChild : node.lastChild ;  
+    },  
+    //获取上一个相邻节点（ie，ff通用）  
+    getPreviousSibling : function(node){  
+        //找到上一个节点就返回节点，没找到就返回null  
+        do{  
+            node = node.previousSibling;  
+        }while(node && node.nodeType!=1)  
+        return node;  
+    },  
+    //获取下一个相邻节点 （ie，ff通用）  
+    getNextSibling : function(node){  
+        //找到下一个节点就返回节点，没找到就返回null  
+        do{  
+            node = node.nextSibling;  
+        }while(node && node.nodeType!=1)  
+        return node;  
+    },  
+    //将元素插入到指定的node节点后面  
+    insertAfter : function(newNode,targetNode){  
+        if(newNode && targetNode){  
+            var parent = targetNode.parentNode;  
+            var nextNode = this.getNextSibling(targetNode);  
+            if(nextNode && parent){  
+                parent.insertBefore(newNode,nextNode);  
+            }else{  
+                parent.appendChild(newNode);  
+            }  
+        }  
+    }  
+};  
+  
+/*清除字符串前后的空格*/  
+String.prototype.trim=function(){  
+    return this.replace(/^\s*|\s*$/,"");  
+};  
+  
+/* 
+查找元素： 
+$q("div"):bytagname 
+$q(".l"):byclassname 
+$q("#l"):byid 
+$q("$name"):byname 
+selector:选择符 
+parentElement:父元素 
+*/  
+window.$q = function(selector,parentElement){  
+    if(selector && (typeof selector) === 'string'){  
+        selector = selector.trim();//去掉前后空格  
+        var parentEl = parentElement || document;  
+        var nodeArr = new Array();    
+        var firstChar = selector.substr(0,1);   //取得第一个字符  
+        //以#开头，表示根据ID查找  
+        if(firstChar === '#'){  
+            return parentEl.getElementById(selector.substr(1));  
+        }  
+        //以$开头，根据name查找  
+        else if(firstChar === '$'){  
+            var all = parentEl.getElementsByTagName("*");  
+            for(var i=0;i<all.length;i++){  
+                var name = all[i].getAttribute("name");  
+                if(name === selector.substr(1)){  
+                    nodeArr.push(all[i]);  
+                }  
+            }  
+            delete i;  
+            return nodeArr;  
+        }  
+        //以.开头，根据class名查找  
+        else if(firstChar === '.'){  
+            var className = selector.substr(1);  
+            if(parentEl.getElementsByClassName){  
+                return parentEl.getElementsByClassName(className);  
+            }  
+            else{  
+                var childList = parentEl.getElementsByTagName("*");  
+                for(var i=0;i<childList.length;i++){  
+                    var nodeClassName = childList[i].className;  
+                    var classNameArr = nodeClassName.split(' ');  
+                    for(var j=0;j<classNameArr.length;j++){  
+                        if(classNameArr[j]===className){  
+                            nodeArr.push(childList[i]);  
+                        }  
+                    }  
+                    delete j;  
+                }  
+                delete i;  
+                return nodeArr;  
+            }  
+        }  
+        //否则，根据标签名查找  
+        else{  
+            return parentEl.getElementsByTagName(selector);  
+        }  
+          
+    }  
+    else{  
+        return document.all || document.getElementsByTagName("*");  
+    }  
+  
+};  
+    </script>  
+</html>  
