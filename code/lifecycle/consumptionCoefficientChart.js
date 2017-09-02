@@ -146,6 +146,10 @@ optionbar12 = {
     ]
 };		
 optionbar21 = {
+	 title: {
+        x: 'center',
+        text: '推荐值'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -168,50 +172,40 @@ optionbar21 = {
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1分','2分','3分','4分','5分','6分','7分','8分','9分','10分']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'推荐值',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'推荐值',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1分'},
-                {value:251, name:'2分'},
-                {value:147, name:'3分'},
-                {value:102, name:'4分'},
-                {value:102, name:'5分'},
-                {value:102, name:'6分'},
-                {value:102, name:'7分'},
-                {value:102, name:'8分'},
-                {value:102, name:'9分'},
-                {value:102, name:'10分'}
-            ]
+            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
         }
     ]
 };
@@ -366,6 +360,10 @@ optionbar31 = {
 
 
 optionbar41 = {
+	 title: {
+        x: 'center',
+        text: '信息渠道'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -387,6 +385,7 @@ optionbar41 = {
     xAxis : [
         {
             type : 'category',
+			show: false,
             splitLine : {show : false},
             data : ['朋友介绍','自主逛街','电视广告','社交平台','品牌忠诚者']
         }
@@ -394,39 +393,33 @@ optionbar41 = {
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'信息渠道',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'信息渠道',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'朋友介绍'},
-                {value:251, name:'自主逛街'},
-                {value:147, name:'电视广告'},
-                {value:102, name:'社交平台'},
-                {value:102, name:'品牌忠诚者'}
-            ]
+            data:[320, 332, 301, 120, 90]
         }
     ]
 };
