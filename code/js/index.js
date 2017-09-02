@@ -60,9 +60,53 @@ function gotoGuhai(){
 	$("#main").load("criclework/conguhai.html");
 }
 
-function gotoGhxq(){
+function gotoGhxq1(){
     $("#course").load("criclework/top/ghxq_top.html");
-    $("#main").load("criclework/ghxq.html");
+    $("#main").load("criclework/ghxq1.html");
+}
+function gotoGhxq2(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq2.html");
+}
+function gotoGhxq3(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq3.html");
+}
+function gotoGhxq4(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq4.html");
+}
+function gotoGhxq5(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq5.html");
+}
+function gotoGhxq6(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq6.html");
+}
+function gotoGhxq7(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq7.html");
+}
+function gotoGhxq8(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq8.html");
+}
+function gotoGhxq9(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq9.html");
+}
+function gotoGhxq10(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq10.html");
+}
+function gotoGhxq11(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq11.html");
+}
+function gotoGhxq12(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq12.html");
 }
 
 function gotoConfig(){
@@ -174,4 +218,22 @@ function getShopName() {
     var name = ["宝盈","玉阁","金玉","良缘","翠缘","金乐","万福"];
     var i = parseInt(10 * Math.random())%7;
     return name[i]
+}
+
+
+var TODAY = new Date();
+function getTime(type) {
+    if (type==="month"){
+        return TODAY.getMonth()+1;
+    }else if (type==="year"){
+        return TODAY.getFullYear();
+    }else if (type==="day"){
+        return TODAY.getDate();
+    }else if (type==="all"){
+        return getTime("year")+"/"+getTime("month")+"/"+getTime("day")
+    }else if (type==="random"){
+        var rand_day = parseInt(getTime("day")*(Math.random()+0.5));
+        var day = rand_day===0?1:rand_day;
+        return getTime("year")+"/"+getTime("month")+"/"+day
+    }
 }

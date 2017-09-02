@@ -275,48 +275,6 @@ ul,ol{
     width: 128px;
     margin-top: 14px;
 }
-/*.band ul{*/
-    /*float:left;*/
-/*}*/
-/*.band .band_nav a{*/
-    /*display: block;*/
-    /*color: #fff;*/
-    /*font-size: 14px;*/
-    /*padding: 0 24px;*/
-    /*line-height: 60px;*/
-    /*height: 60px;*/
-    /*margin-right: 5px;*/
-    /*transition: all 0.3s ease 0s;*/
-/*}*/
-/*.band .band_nav a:hover{*/
-    /*background-color: #0e90d2;*/
-/*}*/
-/*.band .band_nav .current{*/
-    /*background-color: #0e90d2;*/
-/*}*/
-
-/*.band li{*/
-    /*list-style:none;*/
-    /*float: right;*/
-/*}*/
-
-/*.top-icon {*/
-    /*background-color: #ffffff;*/
-    /*border-radius: 50%;*/
-    /*color: #3498db;*/
-    /*display: inline-block;*/
-    /*width: 30px;*/
-    /*height: 30px;*/
-    /*line-height: 30px;*/
-    /*margin-right: 10px;*/
-    /*text-align: center;*/
-/*}*/
-/*.fa-facebook-f:before, .fa-facebook:before {*/
-    /*content: "\f09a";*/
-/*}*/
-/*.band .pull-right ul{*/
-    /*margin-top: 15px;*/
-/*}*/
 
 
 .change_sheet{
@@ -409,7 +367,7 @@ ul,ol{
 #client_table table{
 
 }
-#client_table tr>td:nth-child(2){
+#client_table tr:not(.new_row)>td:nth-child(2){
     cursor: pointer;
 }
 #client_table .dropdown .btn{
@@ -969,19 +927,28 @@ body {
     font-family: "微软雅黑", serif;
 }
 .game-record-tab td{
+	width:60%;
     color: rgb(204, 204, 204);
 }
 
 .game-info-name{
     color:#00a9e0;
+	cursor:pointer;
 
 }
 
 .game-info-date{
     color:#000;
     width:100px;
+	cursor:pointer;
+}
+.width-88{
+	width:88px;
 }
 
+.width-112{
+	width:112px;
+}
 
 .add_info_tab{
     width:66%;
@@ -1027,7 +994,7 @@ body {
 .single-baseinfo-record-sort div{
     float:left;
     padding: 7px 20px 0 20px;
-    height:40px;
+    height:38px;
     cursor:pointer;
 }
 
@@ -1036,7 +1003,13 @@ body {
     color:#fff;
 
 }
+.width-88{
+	width:88px;
+}
 
+.width-112{
+	width:112px;
+}
 
 .this-quater{
     font-weight:bold;
@@ -1099,3 +1072,14 @@ body {
     background-color:#f98f11;
     border-radius:3px;
 }
+.bordered th .dropdown{
+    cursor: pointer;
+}
+
+#client_tbody .td_edit{
+    width: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+
