@@ -467,8 +467,8 @@ optionbar52 =  {
         trigger: 'axis',
         formatter: function(params) {
             return params[0].name + '<br/>'
-                   + params[0].seriesName + ' : ' + params[0].value + ' (m^3/s)<br/>'
-                   + params[1].seriesName + ' : ' + -params[1].value + ' (mm)';
+                   + params[0].seriesName + ' : ' + params[0].value + ' (RMB)<br/>'
+                   + params[1].seriesName + ' : ' + -params[1].value + ' (个)';
         }
     },
     legend: {
