@@ -219,3 +219,21 @@ function getShopName() {
     var i = parseInt(10 * Math.random())%7;
     return name[i]
 }
+
+
+var TODAY = new Date();
+function getTime(type) {
+    if (type==="month"){
+        return TODAY.getMonth()+1;
+    }else if (type==="year"){
+        return TODAY.getFullYear();
+    }else if (type==="day"){
+        return TODAY.getDate();
+    }else if (type==="all"){
+        return getTime("year")+"/"+getTime("month")+"/"+getTime("day")
+    }else if (type==="random"){
+        var rand_day = parseInt(getTime("day")*(Math.random()+0.5));
+        var day = rand_day===0?1:rand_day;
+        return getTime("year")+"/"+getTime("month")+"/"+day
+    }
+}

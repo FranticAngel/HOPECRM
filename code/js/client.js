@@ -369,7 +369,7 @@ $(function(){
         var client_tbody=$("#client_tbody");
         client_tbody.html("");
         var client_info_html="";
-        for (i=0;i<10;i++){
+        for (i=0;i<12;i++){
             client_info_html+='<tr>\
                 <td>{0}</td>\
                 <td >{1}</td>\
