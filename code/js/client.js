@@ -525,3 +525,28 @@ function showPie(div_){
 		$("#population").load("lifecycle/consumptionCoefficientChart.html?"+new Date().getTime());
 	}
 }
+
+function gameRocordEx(msg){
+	if(msg=="info"){
+		$("#game-record-info").css("display","block");
+		$(".game-info-name").css("color","#00a9e0");
+		$("#game-record-ex").css("display","none");
+		$(".game-info-date").css("color","#000");
+	}else{
+		$("#game-record-info").css("display","none");
+		$(".game-info-name").css("color","#000");
+		$("#game-record-ex").css("display","block");
+		$(".game-info-date").css("color","#00a9e0");
+	}
+}
+
+$(function(){
+	$(".single-baseinfo-record-sort").children('div').on("click",function(){
+		$(this).parent().children("div").removeClass();
+		$(this).attr("class","single-baseinfo-record-sort-selected");
+	})
+})
+
+
+
+

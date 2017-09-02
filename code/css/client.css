@@ -1027,7 +1027,7 @@ body {
 .single-baseinfo-record-sort div{
     float:left;
     padding: 7px 20px 0 20px;
-    height:40px;
+    height:38px;
     cursor:pointer;
 }
 
@@ -1036,7 +1036,13 @@ body {
     color:#fff;
 
 }
+.width-88{
+	width:88px;
+}
 
+.width-112{
+	width:112px;
+}
 
 .this-quater{
     font-weight:bold;
