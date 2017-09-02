@@ -5,6 +5,7 @@
 </head>
 <body>
 <style type="text/css">
+body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑"; }
 #formgere h1 {
 	font-weight: bold;
     font-size: 24px;
@@ -34,66 +35,187 @@
 .gerenjieshao {
         display:inline-block;
         background-color: #fff;
-        height: 304px;
+        height: 324px;
         width:100%;
         border:0;
     }
 
+.bordereds {
+    border: solid #fff 0px;
+    background-color: #fff;
+}
+    
+.bordereds td {
+    background-color: #fff;
+    text-align: center;
+}
+
+.bordereds th {
+    height: 50px;
+}
+
+.bordereds th {
+    background-color: #fff;
+    color: #fff;
+}
+
+.bordereds td:first-child, .bordered th:first-child {
+    display:inline-block;
+}
+
+       .kuang{
+           display: inline-block;
+           vertical-align: middle;
+           text-align: left;
+           margin-right: 20px;
+           margin-bottom: 20px;
+           width: 165px;
+           height: 165px;
+           margin-top: 50px;
+       }
+       .addhao{
+           width: 165px;
+           height: 165px;
+           background: url(img/circlework/1/头像.png);
+       }
+       .on img{
+           width: 100%;
+           height: auto;
+           position: absolute;
+           left: 0;
+           right: 0;
+           top: 0;
+           bottom: 0;
+           margin:auto;
+       }
+       .kuang input{
+           width: 164px;
+           height: 164px;
+           opacity: 0;
+       }
+
+       .set input{
+           width: 216px;
+           height: 36px;
+           opacity: 0;
+           position: absolute;
+           top: 0;
+           left: 0;
+       }
 </style>
 <div class="geren">
-  <a href="#"><img class="imggeren" src="img/circlework/1/头像.png"/></a>
+<div class="kuang">
+  <div class="addhao">
+      <input type="file" name="" class="fileinput">
+  </div>
+</div>
   <p>&nbsp;</p>
   <form id="formgere" name="formgere" method="post" action="">
-    <h1>刘&nbsp;静&nbsp;&nbsp;<a href="#"><img src="img/circlework/1/编辑图标默认状态.png"/></a></h1>  
+    <h1 contenteditable="true">刘 静</h1>  
   </form>
 </div>
 <div class="gerenjieshao">
-    <div>
-    <div style="float:left; margin-left:5%;margin-top:4%;">
-            <img src="img/circlework/1/2.png">&nbsp;&nbsp;姓&nbsp;名&nbsp;:&nbsp;刘&nbsp;静
-    </div>
-    <div style="float:left; margin-left:10%;margin-top:4%;">
-            <img src="img/circlework/1/1.png">&nbsp;&nbsp;年&nbsp;龄&nbsp;:&nbsp;23&nbsp;岁
-    </div>
-    <div style="float:left; margin-left:10%;margin-top:4%;">
-            <img src="img/circlework/1/3.png">&nbsp;&nbsp;性&nbsp;别&nbsp;:&nbsp;女&nbsp;
-    </div>
-    <div style="float:left; margin-left:10%;margin-top:4%;">
-            <img src="img/circlework/1/4.png">&nbsp;&nbsp;工&nbsp;号&nbsp;:&nbsp;L015&nbsp;
-    </div>
-    <div style="float:left; margin-left:10%;margin-top:4%;">
-            <img src="img/circlework/1/5.png">&nbsp;&nbsp;职&nbsp;位&nbsp;:&nbsp;店&nbsp;长
-    </div>
-    </div>
-    <div>
-        <div style="margin-left:5%;margin-top:160px;">
-            <img src="img/circlework/1/6.png">&nbsp;&nbsp;入&nbsp;职&nbsp;日&nbsp;期&nbsp;:&nbsp;2016/04/21&nbsp;
-        </div>
-    </div>
-    <div style="margin-left:5%;margin-top:30px;">
-        <div style="float:left;">
-            <img src="img/circlework/1/7.png">&nbsp;&nbsp;手&nbsp;机&nbsp;:&nbsp;<font contentEditable="true">13335287779</font>
-        </div>    
-        <div style="float:left;margin-left:16%;">
-            <img src="img/circlework/1/8.png">&nbsp;&nbsp;主&nbsp;营&nbsp;品&nbsp;牌&nbsp;:&nbsp;老&nbsp;庙&nbsp;黄&nbsp;金
-        </div>
-        <div style="float:left;margin-left:18%;">
-            <img src="img/circlework/1/12.png">&nbsp;&nbsp;负&nbsp;责&nbsp;范&nbsp;围&nbsp;:&nbsp;负责所在店面整体运营
-        </div>
-    </div>
-    <div style="margin-left:5%;margin-top:70px;">
-        <div style="float:left;">
-            <img src="img/circlework/1/9.png">&nbsp;&nbsp;微&nbsp;信&nbsp;号&nbsp;:&nbsp;13335287779
-        </div>    
-        <div style="float:left;margin-left:15%;">
-            <img src="img/circlework/1/10.png">&nbsp;&nbsp;开&nbsp;业&nbsp;日&nbsp;期&nbsp;:&nbsp;2015/08/08
-        </div>
-        <div style="float:left;margin-left:17%;">
-            <img src="img/circlework/1/11.png">&nbsp;&nbsp;门&nbsp;面&nbsp;地&nbsp;址&nbsp;:&nbsp;深圳市罗湖商务中心2028号
-        </div>
-    </div>
+<table class="bordereds" id="tabProduct" style="table-layout:fixed;" >
+    <tr>
+        <th></th>        
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="font-weight:bold;"><img src="img/circlework/1/2.png">&nbsp;&nbsp;姓&nbsp;名&nbsp;:</td>
+        <td>刘 静</td>
+        <td></td>
+        <td style="font-weight:bold;"><img src="img/circlework/1/1.png">&nbsp;&nbsp;年&nbsp;龄&nbsp;:</td>
+        <td>23 岁</td>
+        <td></td>
+        <td style="font-weight:bold;"><img src="img/circlework/1/3.png">&nbsp;&nbsp;性&nbsp;别&nbsp;:</td>
+        <td>女</td>
+        <td></td>
+        <td style="font-weight:bold;"><img src="img/circlework/1/4.png">&nbsp;&nbsp;工&nbsp;号&nbsp;:</td>
+        <td>L015</td>
+        <td></td>
+        <td style="font-weight:bold;"><img src="img/circlework/1/5.png">&nbsp;&nbsp;职&nbsp;位&nbsp;:</td>
+        <td>店长</td>
+        <td></td>
+    </tr> 
+</table>
+    
+<table id="tabProduct1" style="background-color:#fff;">
+    <tr style="height:76px;">
+        <th></th>        
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td style="width:6.25%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/6.png">&nbsp;&nbsp;入&nbsp;职&nbsp;日&nbsp;期&nbsp;:</td>
+        <td style="width:10%; text-align: center;">2016/04/21</td>
+        <td></td>
+    </tr>
+</table>
+    
+<table id="tabProduct2" style="background-color:#fff;">
+    <tr style="height:36px;">
+        <th></th>        
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+        <th></th>
+        <th></th>
+        <th EditType="TextBox"></th>
+    </tr>
+    <tr>
+        <td style="width:6.25%;"></td>
+        <td style="width:6.25%;font-weight:bold;"><img src="img/circlework/1/7.png">&nbsp;&nbsp;手&nbsp;机&nbsp;:</td>
+        <td style="width:10%; text-align: center;">13335287779</td>
+        <td style="width:10%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/8.png">&nbsp;&nbsp;主&nbsp;营&nbsp;品&nbsp;牌&nbsp;:</td>
+        <td style="width:10%; text-align: center;">老庙黄金</td>
+        <td style="width:10%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/12.png">&nbsp;&nbsp;负&nbsp;责&nbsp;范&nbsp;围&nbsp;:</td>
+        <td style="text-align: center;">负责所在店面整体运营</td>
+    </tr>
+    <tr style="height:36px;">
+    </tr>
+    <tr>
+        <td style="width:6.25%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/9.png">&nbsp;&nbsp;微&nbsp;信&nbsp;号&nbsp;:</td>
+        <td style="width:10%; text-align: center;">13335287779</td>
+        <td style="width:10%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/10.png">&nbsp;&nbsp;开&nbsp;业&nbsp;日&nbsp;期&nbsp;:</td>
+        <td style="width:10%; text-align: center;">2015/08/08</td>
+        <td style="width:10%;"></td>
+        <td style="width:10%;font-weight:bold;"><img src="img/circlework/1/11.png">&nbsp;&nbsp;门&nbsp;面&nbsp;地&nbsp;址&nbsp;:</td>
+        <td style="text-align: center;">深圳市罗湖商务中心2028号</td>
+    </tr>
+</table>
 </div>
-<br style="height:50px"/><br/>
+<br style="height:80px"/><br/>
 </body>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/client.js"></script>
+<script src="js/formsheet/formsheet.js"></script>
+<script>
+ $(" .fileinput").change(function () {
+      var file = this.files[0];
+      readFile(file,$(this).parent().siblings(".on"));
+ });
+</script>
 </html>

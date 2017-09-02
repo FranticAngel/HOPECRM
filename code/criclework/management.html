@@ -5,174 +5,166 @@
     <link rel="stylesheet" type="text/css" href="css/formsheet/azenui.css">
 </head>
 <body>
-<style>
- 
-</style>
-
-    <table id="tab" class="bordered">  
-        <thead onmouseover="over(this)" onmouseout="out(this)"> 
+    <table id="tabProduct" class="bordered">  
             <tr>
-                <th></th>        
-                <th>活动名称</th>
-                <th>活动内容</th>
-                <th>活动开始时间</th>
-                <th>活动有效时间</th>
-                <th>举办人</th>
-                <th>策划人</th>
-                <th>有效范围</th>
+                <th EditType="TextBox"></th>        
+                <th EditType="TextBox">活动名称</th>
+                <th EditType="TextBox">活动内容</th>
+                <th EditType="TextBox">活动开始时间</th>
+                <th EditType="TextBox">活动有效时间</th>
+                <th EditType="TextBox">举办人</th>
+                <th EditType="TextBox">策划人</th>
+                <th EditType="TextBox">有效范围</th>
                 <th><div class="iconas" >
-                    <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;" onclick="addRow()"></a>
+                    <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;" onclick="AddRow(document.getElementById('tabProduct'),1)"></a>
                     <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;" data-toggle="modal" data-target="#downUpload_modal"></a>
                     </div>
                 </th>
             </tr>
-        </thead> 
-       <tbody id="tbody">  
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">1</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>1</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
             </tr>        
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">2</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>2</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
             </tr>       
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">3</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>3</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">4</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            </tr>     
+             <tr>  
+                <td>4</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">5</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            </tr>     
+            <tr>  
+                <td>5</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">6</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            </tr>     
+            <tr>  
+                <td>6</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">7</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            </tr>     
+            <tr>  
+                <td>7</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
             </tr>        
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">8</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>8</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
             </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">9</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
-                <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
-                </td>
-            </tr>       
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">10</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>9</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
             </tr>      
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">11</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            <tr>  
+                <td>10</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>       
-            <tr onmouseover="over(this)" onmouseout="out(this)">  
-                <td id="ID">12</td>  
-                <td id="name" contentEditable="true">品牌50周年庆</td>  
-                <td id="company" contentEditable="true">活动期间到点消费均有礼品赠送</td>  
-                <td id="date" contentEditable="true">2017/05/20</td>  
-                <td id="date" contentEditable="true">2017/06/20</td>
-                <td id="name" contentEditable="true">周大福品牌</td>
-                <td id="name" contentEditable="true">李磊</td>
-                <td id="name" contentEditable="true">全国周大福所有门店</td>
+            </tr>      
+            <tr>  
+                <td>11</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
                 <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
                 </td>
-            </tr>    
-         </tbody>  
+            </tr>      
+            <tr>  
+                <td>12</td>  
+                <td>品牌50周年庆</td>  
+                <td>活动期间到点消费均有礼品赠送</td>  
+                <td>2017/05/20</td>  
+                <td>2017/06/20</td>
+                <td>周大福品牌</td>
+                <td>李磊</td>
+                <td>全国周大福所有门店</td>
+                <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+                </td>
+            </tr>   
 </table>
     <div class="am-cf">
       <div class="am-fr">
@@ -190,142 +182,6 @@
       </div>
     </div>
 <div style="height:20px"></div>
-<script type="text/javascript">   
-        /* 
-        全局变量 
-        ID:    保存插入数据的编号 
-        color：保存原来的背景色 
-        */  
-        var ID,color;  
-        window.onload = function(){  
-            var myTab = $q("#tab");  
-            ID = myTab.rows.length-1;
-        }  
-        //鼠标悬浮在某元素时  
-        function over(node){  
-            color = node.style.backgroundColor;  
-            node.style.backgroundColor = '#ccc';  
-        }  
-        //鼠标离开某元素时  
-        function out(node){  
-            node.style.backgroundColor = color;  
-        }    
-  
-        //添加一行数据  
-        function addRow(){  
-            var myTab = $q("#tab");  
-            var rowLength = myTab.rows.length;  
-            var newRow = document.createElement("tr"); //创建一行    
-            //创建多列 
-            ID = 12;
-            ID += 1;
-            var newCell1 = document.createElement("td");  
-            newCell1.innerHTML = ID;  
-            var newCell2 = document.createElement("td");  
-            newCell2.innerHTML = '';   
-            var newCell3 = document.createElement("td");  
-            newCell3.innerHTML = '';  
-            var newCell4 = document.createElement("td");  
-            newCell4.innerHTML = '';  
-            var newCell5 = document.createElement("td");  
-            newCell5.innerHTML = ''; 
-            var newCell6 = document.createElement("td");  
-            newCell6.innerHTML = '';
-            var newCell7 = document.createElement("td");  
-            newCell7.innerHTML = ''; 
-            var newCell8 = document.createElement("td");  
-            newCell8.innerHTML = ''; 
-            var newCell9 = document.createElement("td");  
-            newCell9.innerHTML = '<button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>' ;  
-            //将创建的多列添加到行  
-            newRow.appendChild(newCell1);  
-            newRow.appendChild(newCell2);  
-            newRow.appendChild(newCell3);  
-            newRow.appendChild(newCell4);  
-            newRow.appendChild(newCell5);  
-            newRow.appendChild(newCell6);
-            newRow.appendChild(newCell7); 
-            newRow.appendChild(newCell8); 
-            newRow.appendChild(newCell9); 
-            var tbody = myTab.tBodies[0]; //获取表格的tbody  
-            tbody.appendChild(newRow);  //将创建的行添加到表格body里  
-        }   
-        //删除一行数据  
-        function deleteRow(currentRow){  
-            var tab = $q("#tab"); //获得表格节点  
-            tab.deleteRow(currentRow.rowIndex); //删除选中的行  
-        }     
-
-  
-/*清除字符串前后的空格*/  
-String.prototype.trim=function(){  
-    return this.replace(/^\s*|\s*$/,"");  
-};  
-  
-/* 
-查找元素： 
-$q("div"):bytagname 
-$q(".l"):byclassname 
-$q("#l"):byid 
-$q("$name"):byname 
-selector:选择符 
-parentElement:父元素 
-*/  
-window.$q = function(selector,parentElement){  
-    if(selector && (typeof selector) === 'string'){  
-        selector = selector.trim();//去掉前后空格  
-        var parentEl = parentElement || document;  
-        var nodeArr = new Array();    
-        var firstChar = selector.substr(0,1);   //取得第一个字符  
-        //以#开头，表示根据ID查找  
-        if(firstChar === '#'){  
-            return parentEl.getElementById(selector.substr(1));  
-        }  
-        //以$开头，根据name查找  
-        else if(firstChar === '$'){  
-            var all = parentEl.getElementsByTagName("*");  
-            for(var i=0;i<all.length;i++){  
-                var name = all[i].getAttribute("name");  
-                if(name === selector.substr(1)){  
-                    nodeArr.push(all[i]);  
-                }  
-            }  
-            delete i;  
-            return nodeArr;  
-        }  
-        //以.开头，根据class名查找  
-        else if(firstChar === '.'){  
-            var className = selector.substr(1);  
-            if(parentEl.getElementsByClassName){  
-                return parentEl.getElementsByClassName(className);  
-            }  
-            else{  
-                var childList = parentEl.getElementsByTagName("*");  
-                for(var i=0;i<childList.length;i++){  
-                    var nodeClassName = childList[i].className;  
-                    var classNameArr = nodeClassName.split(' ');  
-                    for(var j=0;j<classNameArr.length;j++){  
-                        if(classNameArr[j]===className){  
-                            nodeArr.push(childList[i]);  
-                        }  
-                    }  
-                    delete j;  
-                }  
-                delete i;  
-                return nodeArr;  
-            }  
-        }  
-        //否则，根据标签名查找  
-        else{  
-            return parentEl.getElementsByTagName(selector);  
-        }  
-          
-    }  
-    else{  
-        return document.all || document.getElementsByTagName("*");  
-    }  
-  
-};  
-</script>  
+<script src="js/formsheet/formsheet.js"></script> 
 </body>
 </html>

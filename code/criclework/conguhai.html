@@ -5,27 +5,23 @@
     <link rel="stylesheet" type="text/css" href="css/formsheet/azenui.css">
 </head>
 <body>
-<div class="containers">
- <div class="container-flu">
-<table class="bordered">
-<thead>
+<table class="bordered" id="tabProduct">
     <tr>
-        <th></th>        
-        <th>关怀主题</th>
-        <th>客户</th>
-        <th>关怀日期</th>
-        <th>关怀方式</th>
-        <th>执行人</th>
-        <th>创建人</th>
-        <th>备注</th>
+        <th EditType="TextBox"></th>        
+        <th EditType="TextBox">关怀主题</th>
+        <th EditType="TextBox">客户</th>
+        <th EditType="TextBox">关怀日期</th>
+        <th EditType="TextBox">关怀方式</th>
+        <th EditType="TextBox">执行人</th>
+        <th EditType="TextBox">创建人</th>
+        <th EditType="TextBox">备注</th>
         <th><div class="iconas" >
-            <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;"></a>
-            <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:10px;"></a>
+            <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;" onclick="AddRow(document.getElementById('tabProduct'),1)"></a>
+            <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;" data-toggle="modal" data-target="#downUpload_modal"></a>
             <a class="top-icon" style="background-image: url(img/circlework/1.png);margin-right:10px;"></a>
             </div>
         </th>
     </tr>
-</thead>
    <tr>
         <td>1</td>       
         <td>生日关怀</td>
@@ -35,18 +31,11 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>       
-    <tr>
-        <td>2</td>        
+   <tr>
+        <td>2</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -54,18 +43,23 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>   
+   <tr>
+        <td>3</td>       
+        <td>生日关怀</td>
+        <td>张晓</td>
+        <td>2017年5月20日</td>
+        <td>祝福短信</td>
+        <td>刘潇潇</td>
+        <td>李磊</td>
+        <td>客户很满意，并回短信表示感谢</td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>  
-    <tr>
-        <td>3</td>        
+   <tr>
+        <td>4</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -73,18 +67,47 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>  
+   <tr>
+        <td>5</td>       
+        <td>生日关怀</td>
+        <td>张晓</td>
+        <td>2017年5月20日</td>
+        <td>祝福短信</td>
+        <td>刘潇潇</td>
+        <td>李磊</td>
+        <td>客户很满意，并回短信表示感谢</td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>    
+   <tr>
+        <td>6</td>       
+        <td>生日关怀</td>
+        <td>张晓</td>
+        <td>2017年5月20日</td>
+        <td>祝福短信</td>
+        <td>刘潇潇</td>
+        <td>李磊</td>
+        <td>客户很满意，并回短信表示感谢</td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>   
+   <tr>
+        <td>7</td>       
+        <td>生日关怀</td>
+        <td>张晓</td>
+        <td>2017年5月20日</td>
+        <td>祝福短信</td>
+        <td>刘潇潇</td>
+        <td>李磊</td>
+        <td>客户很满意，并回短信表示感谢</td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>     
-    <tr>
-        <td>4</td>        
+   <tr>
+        <td>8</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -92,18 +115,11 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-    <tr>
-        <td>5</td>        
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>
+   <tr>
+        <td>9</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -111,18 +127,11 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-    <tr>
-        <td>6</td>        
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
+    </tr>   
+   <tr>
+        <td>10</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -130,37 +139,11 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-    <tr>
-        <td>7</td>        
-        <td>生日关怀</td>
-        <td>张晓</td>
-        <td>2017年5月20日</td>
-        <td>祝福短信</td>
-        <td>刘潇潇</td>
-        <td>李磊</td>
-        <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>    
     <tr>
-        <td>8</td>        
+        <td>11</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -168,18 +151,11 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>  
-    <tr>
-        <td>9</td>        
+   <tr>
+        <td>12</td>       
         <td>生日关怀</td>
         <td>张晓</td>
         <td>2017年5月20日</td>
@@ -187,91 +163,26 @@
         <td>刘潇潇</td>
         <td>李磊</td>
         <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-    <tr>
-        <td>10</td>        
-        <td>生日关怀</td>
-        <td>张晓</td>
-        <td>2017年5月20日</td>
-        <td>祝福短信</td>
-        <td>刘潇潇</td>
-        <td>李磊</td>
-        <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-        <tr>
-        <td>11</td>        
-        <td>生日关怀</td>
-        <td>张晓</td>
-        <td>2017年5月20日</td>
-        <td>祝福短信</td>
-        <td>刘潇潇</td>
-        <td>李磊</td>
-        <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
-    </tr>  
-        <tr>
-        <td>12</td>        
-        <td>生日关怀</td>
-        <td>张晓</td>
-        <td>2017年5月20日</td>
-        <td>祝福短信</td>
-        <td>刘潇潇</td>
-        <td>李磊</td>
-        <td>客户很满意，并回短信表示感谢</td>
-        <td>     
-            <div class="am-btn-toolbar">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                   <button class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="float:left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
+        <button style="float: left;text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-secondary" onclick="gotoGhxq()"><span class="social fa fa-file-text"></span> 关怀详情</button></td>
     </tr>  
 </table>
     <div class="am-cf">
       <div class="am-fr">
         <ul class="am-pagination">
           <li class="am-active"><a href="#">上一页</a></li>
-          <li><a href="">1</a></li>
+            <li><a href="#">1</a></li>
           <li class="am-active"><a href="#">下一页</a></li>
-          <a "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑"; size=6px>共 1 页&nbsp&nbsp&nbsp&nbsp&nbsp到第&nbsp</a>
+                <a style="Microsoft Yahei,微软雅黑, Helvetica Neue,adobe雅黑;size=6px">共 1 页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到第&nbsp;</a>
             <select name="" style="width:50px;"> 
                 <option value="1">1</option> 
             </select> 
-           <a "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑";size=6px>&nbsp页&nbsp</a>
+                <a style="Microsoft Yahei, 微软雅黑, Helvetica Neue, adobe雅黑;size=6px">&nbsp;页&nbsp;</a>
         <li class="am-active"><a href="#">确定</a></li>
         </ul>
       </div>
     </div>
 
-</div>
-</div>
+<script src="js/formsheet/formsheet.js"></script>
 </body>
 </html>

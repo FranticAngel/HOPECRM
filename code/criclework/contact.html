@@ -11,26 +11,21 @@
     <link rel="stylesheet" type="text/css" href="css/formsheet/azenui.css">
 </head>     
 <body>
-<div class="containers">
- <div class="container-flu">
-    <table class="bordered">
-    <thead>
-
+<table class="bordered" id="tabProduct">
     <tr>
-        <th></th>        
-        <th>姓名</th>
-        <th>性别</th>
-        <th>年龄</th>
-        <th>工号</th>
-        <th>手机号</th>
-        <th>职位</th>
+        <th EditType="TextBox"></th>        
+        <th EditType="TextBox">姓名</th>
+        <th EditType="TextBox">性别</th>
+        <th EditType="TextBox">年龄</th>
+        <th EditType="TextBox">工号</th>
+        <th EditType="TextBox">手机号</th>
+        <th EditType="TextBox">职位</th>
         <th><div class="iconas" >
-            <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;"></a>
-            <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;"></a>
+            <a class="top-icon" style="background-image: url(img/circlework/4.png);margin-right:30px;" onclick="AddRow(document.getElementById('tabProduct'),1)"></a>
+            <a class="top-icon" style="background-image: url(img/circlework/2.png);margin-right:8px;" data-toggle="modal" data-target="#downUpload_modal"></a>
             </div>
         </th>
     </tr>
-    </thead>
     <tr>
         <td>1</td>        
         <td>张丽</td>
@@ -39,14 +34,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>        
     <tr>
         <td>2</td>        
@@ -56,14 +44,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>3</td>        
@@ -73,14 +54,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>     
     <tr>
         <td>4</td>        
@@ -90,14 +64,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>5</td>        
@@ -107,14 +74,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>6</td>        
@@ -124,14 +84,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>7</td>        
@@ -141,14 +94,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>    
     <tr>
         <td>8</td>        
@@ -158,14 +104,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>9</td>        
@@ -175,14 +114,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>  
     <tr>
         <td>10</td>        
@@ -192,14 +124,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr>
         <tr>
         <td>11</td>        
@@ -209,14 +134,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
-        </td>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
     </tr> 
         <tr>
         <td>12</td>        
@@ -226,13 +144,7 @@
         <td>L12125403</td>
         <td>13545383572</td>
         <td>店长</td>
-        <td>     
-            <div class="am-btn-toolbar" style="margin-left:25%;">
-                <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                </div>
-            </div>
+        <td><button style="text-align:center;margin:0 auto;" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>
         </td>
     </tr> 
 </table>
@@ -240,20 +152,18 @@
       <div class="am-fr">
         <ul class="am-pagination">
           <li class="am-active"><a href="#">上一页</a></li>
-          <li><a href="">1</a></li>
+            <li><a href="#">1</a></li>
           <li class="am-active"><a href="#">下一页</a></li>
-          <a "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑" size=6px>共 1 页&nbsp&nbsp&nbsp&nbsp&nbsp到第&nbsp</a>
+                <a style="Microsoft Yahei,微软雅黑, Helvetica Neue,adobe雅黑;size=6px">共 1 页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到第&nbsp;</a>
             <select name="" style="width:50px;"> 
                 <option value="1">1</option> 
             </select> 
-           <a "Microsoft Yahei", "微软雅黑", "Helvetica Neue", "adobe雅黑" size=6px>&nbsp页&nbsp</a>
+                <a style="Microsoft Yahei, 微软雅黑, Helvetica Neue, adobe雅黑;size=6px">&nbsp;页&nbsp;</a>
         <li class="am-active"><a href="#">确定</a></li>
         </ul>
       </div>
     </div>
-
-</div>
-</div>
 </body>
 <script src="js/client.js"></script>
+<script src="js/formsheet/formsheet.js"></script>
 </html>
