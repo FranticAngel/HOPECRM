@@ -1,3 +1,70 @@
+
+/*
+ 查找元素：
+ $q("div"):bytagname
+ $q(".l"):byclassname
+ $q("#l"):byid
+ $q("$name"):byname
+ selector:选择符
+ parentElement:父元素
+ */
+window.$q = function(selector,parentElement){
+    if(selector && (typeof selector) === 'string'){
+        selector = selector.trim();//去掉前后空格
+        var parentEl = parentElement || document;
+        var nodeArr = new Array();
+        var firstChar = selector.substr(0,1);   //取得第一个字符
+        //以#开头，表示根据ID查找
+        if(firstChar === '#'){
+            return parentEl.getElementById(selector.substr(1));
+        }
+        //以$开头，根据name查找
+        else if(firstChar === '$'){
+            var all = parentEl.getElementsByTagName("*");
+            for(var i=0;i<all.length;i++){
+                var name = all[i].getAttribute("name");
+                if(name === selector.substr(1)){
+                    nodeArr.push(all[i]);
+                }
+            }
+            delete i;
+            return nodeArr;
+        }
+        //以.开头，根据class名查找
+        else if(firstChar === '.'){
+            var className = selector.substr(1);
+            if(parentEl.getElementsByClassName){
+                return parentEl.getElementsByClassName(className);
+            }
+            else{
+                var childList = parentEl.getElementsByTagName("*");
+                for(var i=0;i<childList.length;i++){
+                    var nodeClassName = childList[i].className;
+                    var classNameArr = nodeClassName.split(' ');
+                    for(var j=0;j<classNameArr.length;j++){
+                        if(classNameArr[j]===className){
+                            nodeArr.push(childList[i]);
+                        }
+                    }
+                    delete j;
+                }
+                delete i;
+                return nodeArr;
+            }
+        }
+        //否则，根据标签名查找
+        else{
+            return parentEl.getElementsByTagName(selector);
+        }
+
+    }
+    else{
+        return document.all || document.getElementsByTagName("*");
+    }
+
+};
+
+
 function EditTables(){
 	for(var i=0;i<arguments.length;i++){
 	   SetTableCanEdit(arguments[i]);
@@ -70,7 +137,7 @@ function CreateTextBox(element, value){
 		//设置文本框的失去焦点事件
 		textBox.onblur = function (){
 			CancelEditCell(this.parentNode, this.value);
-		}
+		};
 		//向当前单元格添加文本框
 		ClearChild(element);
 		element.appendChild(textBox);
@@ -208,69 +275,4 @@ function deleteRow(currentRow){
 /*清除字符串前后的空格*/  
 String.prototype.trim=function(){  
     return this.replace(/^\s*|\s*$/,"");  
-}
-  
-/* 
-查找元素： 
-$q("div"):bytagname 
-$q(".l"):byclassname 
-$q("#l"):byid 
-$q("$name"):byname 
-selector:选择符 
-parentElement:父元素 
-*/  
-window.$q = function(selector,parentElement){  
-    if(selector && (typeof selector) === 'string'){  
-        selector = selector.trim();//去掉前后空格  
-        var parentEl = parentElement || document;  
-        var nodeArr = new Array();    
-        var firstChar = selector.substr(0,1);   //取得第一个字符  
-        //以#开头，表示根据ID查找  
-        if(firstChar === '#'){  
-            return parentEl.getElementById(selector.substr(1));  
-        }  
-        //以$开头，根据name查找  
-        else if(firstChar === '$'){  
-            var all = parentEl.getElementsByTagName("*");  
-            for(var i=0;i<all.length;i++){  
-                var name = all[i].getAttribute("name");  
-                if(name === selector.substr(1)){  
-                    nodeArr.push(all[i]);  
-                }  
-            }  
-            delete i;  
-            return nodeArr;  
-        }  
-        //以.开头，根据class名查找  
-        else if(firstChar === '.'){  
-            var className = selector.substr(1);  
-            if(parentEl.getElementsByClassName){  
-                return parentEl.getElementsByClassName(className);  
-            }  
-            else{  
-                var childList = parentEl.getElementsByTagName("*");  
-                for(var i=0;i<childList.length;i++){  
-                    var nodeClassName = childList[i].className;  
-                    var classNameArr = nodeClassName.split(' ');  
-                    for(var j=0;j<classNameArr.length;j++){  
-                        if(classNameArr[j]===className){  
-                            nodeArr.push(childList[i]);  
-                        }  
-                    }  
-                    delete j;  
-                }  
-                delete i;  
-                return nodeArr;  
-            }  
-        }  
-        //否则，根据标签名查找  
-        else{  
-            return parentEl.getElementsByTagName(selector);  
-        }  
-          
-    }  
-    else{  
-        return document.all || document.getElementsByTagName("*");  
-    }  
-  
 }

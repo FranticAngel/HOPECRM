@@ -27,7 +27,7 @@ optionbar11 = {
     },
     calculable : true,
     legend: {
-        data:['各信用度消费占比']
+        data:['信用度','忠诚度']
     },
     xAxis : [
         {
@@ -44,9 +44,14 @@ optionbar11 = {
     ],
     series : [
         {
-            name:'各信用度消费占比',
+            name:'信用度',
             type:'bar',
             data:[320, 80, 30]
+        },
+        {
+            name:'忠诚度',
+            type:'bar',
+            data:[489, 149, 50]
         },
 
         {
@@ -59,7 +64,7 @@ optionbar11 = {
                     }
                 }
             },
-            name:'各信用度消费占比',
+            name:'信用度',
             type:'pie',
             tooltip : {
                 trigger: 'item',
@@ -73,7 +78,8 @@ optionbar11 = {
         }
     ]
 };
-
+      
+		
 optionbar12 = {
     tooltip : {
         trigger: 'axis'
@@ -91,71 +97,7 @@ optionbar12 = {
     },
     calculable : true,
     legend: {
-        data:['各忠诚度消费占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['高','中','低']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'各忠诚度消费占比',
-            type:'bar',
-            data:[320, 80, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'各忠诚度消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'高'},
-                {value:251, name:'中'},
-                {value:147, name:'低'}
-            ]
-        }
-    ]
-};            
-		
-optionbar21 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['不同满意度占比']
+        data:['满意度']
     },
     xAxis : [
         {
@@ -172,7 +114,7 @@ optionbar21 = {
     ],
     series : [
         {
-            name:'不同满意度占比',
+            name:'满意度',
             type:'bar',
             data:[320, 332, 301, 120, 90]
         },
@@ -187,7 +129,7 @@ optionbar21 = {
                     }
                 }
             },
-            name:'不同满意度占比',
+            name:'满意度',
             type:'pie',
             tooltip : {
                 trigger: 'item',
@@ -203,7 +145,11 @@ optionbar21 = {
         }
     ]
 };		
-optionbar22 = {
+optionbar21 = {
+	 title: {
+        x: 'center',
+        text: '推荐值'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -220,69 +166,272 @@ optionbar22 = {
     },
     calculable : true,
     legend: {
-        data:['不同推荐值占比']
+        data:['推荐值']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1分','2分','3分','4分','5分','6分','7分','8分','9分','10分']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同推荐值占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同推荐值占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1分'},
-                {value:251, name:'2分'},
-                {value:147, name:'3分'},
-                {value:102, name:'4分'},
-                {value:102, name:'5分'},
-                {value:102, name:'6分'},
-                {value:102, name:'7分'},
-                {value:102, name:'8分'},
-                {value:102, name:'9分'},
-                {value:102, name:'10分'}
+            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
+        }
+    ]
+};
+
+optionbar22 =  {
+    title: {
+        text: '购物偏好'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        x: 'center',
+        data:['购物偏好','高关注度商品']
+    },
+    radar: [
+       
+        {
+            indicator: [
+                {text: '项链', max: 100},
+                {text: '戒指', max: 100},
+                {text: '手镯', max: 100},
+                {text: '脚链', max: 100},
+                {text: '彩宝', max: 100},
+                {text: '钻石', max: 100}
+            ],
+            center: ['50%','50%'],
+            radius: 100
+        }
+    ],
+    series: [
+        {
+            type: 'radar',
+            radarIndex: 0,
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data: [
+                {
+                    name: '购物偏好',
+                    value: [82.6, 75.9, 69.0, 56.4, 48.7, 30.7],
+                },
+                {
+                    name:'高关注度商品',
+                    value:[72.0, 67.9, 67.0, 53.2, 45.6, 16.7]
+                }
             ]
         }
     ]
 };
 
-optionbar31 =  {
+optionbar32 = {
+    title : {
+        text: '品牌总提及',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        x : 'center',
+        y : 'bottom',
+        data:['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'品牌总提及',
+            type:'pie',
+            radius : [30, 110],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:50, name:'老凤祥'},
+                {value:5, name:'周大生'},
+                {value:15, name:'周生生'},
+                {value:25, name:'周大福'},
+                {value:20, name:'六福珠宝'},
+                {value:35, name:'卡地亚'},
+                {value:30, name:'潮宏基'},
+                {value:40, name:'钻石小鸟'},
+                {value:40, name:'戴梦得'},
+                {value:40, name:'谢瑞麟'},
+                {value:40, name:'金伯利钻石资'}
+            ]
+        }
+    ]
+};
+optionbar31 = {
+    title : {
+        text: '品牌第一提及',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        x : 'center',
+        y : 'bottom',
+        data:['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'品牌第一提及',
+            type:'pie',
+            radius : [30, 110],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:50, name:'老凤祥'},
+                {value:5, name:'周大生'},
+                {value:15, name:'周生生'},
+                {value:25, name:'周大福'},
+                {value:20, name:'六福珠宝'},
+                {value:35, name:'卡地亚'},
+                {value:30, name:'潮宏基'},
+                {value:40, name:'钻石小鸟'},
+                {value:40, name:'戴梦得'},
+                {value:40, name:'谢瑞麟'},
+                {value:40, name:'金伯利钻石资'}
+            ]
+        }
+    ]
+};
+
+
+optionbar41 = {
+	 title: {
+        x: 'center',
+        text: '信息渠道'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['信息渠道']
+    },
+    xAxis : [
+        {
+            type : 'category',
+			show: false,
+            splitLine : {show : false},
+            data : ['朋友介绍','自主逛街','电视广告','社交平台','品牌忠诚者']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+			show: false,
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'消费',
+            type:'bar',
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
+                    }
+                }
+            },
+            data:[320, 332, 301, 120, 90]
+        }
+    ]
+};
+optionbar51 = {
     title: {
-        text: '购物偏好'
+        text: '广告记忆'
     },
     tooltip: {
         show: true
     },
     series: [{
-        name: '购物偏好',
+        name: '广告记忆',
         type: 'wordCloud',
         size: ['80%', '80%'],
         textRotation : [0, 45, 90, -45],
@@ -293,7 +442,7 @@ optionbar31 =  {
         },
         data: [
             {
-                name: "项链",
+                name: "一生只送一人的钻戒",
                 value: 10000,
                 itemStyle: {
                     normal: {
@@ -302,376 +451,40 @@ optionbar31 =  {
                 }
             },
             {
-                name: "戒指",
-                value: 6181,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "手镯",
-                value: 4386,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "脚链",
-                value: 4055,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "彩宝",
+                name: "一枚婚戒，一个故事、一生一戒",
                 value: 2467,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "钻石",
-                value: 2244,
+                name: "每一颗珍珠里都筑着一个少女梦",
+                value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "And after all this time,you’re still one I love",
+                value: 6181,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "经过这么长时间，你仍是我的爱人",
+                value: 4386,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "爱 伴你一生，因为爱很美",
+                value: 4055,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "缔造一生的承诺，纵享恒久的情缘",
+                value: 2467,
                 itemStyle: createRandomItemStyle()
             }
         ]
     }]
 };
 
-optionbar32 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['品牌总提及占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'品牌总提及占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'品牌总提及占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'老凤祥'},
-                {value:251, name:'周大生'},
-                {value:147, name:'周生生'},
-                {value:102, name:'周大福'},
-                {value:102, name:'六福珠宝'},
-                {value:102, name:'卡地亚'},
-                {value:102, name:'潮宏基'},
-                {value:102, name:'钻石小鸟'},
-                {value:102, name:'戴梦得'},
-                {value:102, name:'谢瑞麟'},
-                {value:102, name:'金伯利钻石资'}
-            ]
-        }
-    ]
-};
-optionbar41 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['品牌第一提及占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'品牌第一提及占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'品牌第一提及占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'老凤祥'},
-                {value:251, name:'周大生'},
-                {value:147, name:'周生生'},
-                {value:102, name:'周大福'},
-                {value:102, name:'六福珠宝'},
-                {value:102, name:'卡地亚'},
-                {value:102, name:'潮宏基'},
-                {value:102, name:'钻石小鸟'},
-                {value:102, name:'戴梦得'},
-                {value:102, name:'谢瑞麟'},
-                {value:102, name:'金伯利钻石资'}
-            ]
-        }
-    ]
-};
-
-optionbar42 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['高关注商品占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['钻石戒指','钻石项链','黄金吊坠','彩宝','珍珠']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'高关注商品占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'高关注商品占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'钻石戒指'},
-                {value:251, name:'钻石项链'},
-                {value:147, name:'黄金吊坠'},
-                {value:102, name:'彩宝'},
-                {value:102, name:'珍珠'}
-            ]
-        }
-    ]
-};
-
-optionbar51 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['信息渠道占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['朋友介绍','自主逛街','电视广告','社交平台','品牌忠诚者']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'信息渠道占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'信息渠道占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'朋友介绍'},
-                {value:251, name:'自主逛街'},
-                {value:147, name:'电视广告'},
-                {value:102, name:'社交平台'},
-                {value:102, name:'品牌忠诚者'}
-            ]
-        }
-    ]
-};
-optionbar52 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['广告记忆占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['一生只送一人的钻戒','And after all this time,you’re still one I love','经过这么长时间，你仍是我的爱人','爱 伴你一生，因为爱很美','一枚婚戒，一个故事、一生一戒','每一颗珍珠里都筑着一个少女梦','缔造一生的承诺，纵享恒久的情缘']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'广告记忆占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'广告记忆占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'一生只送一人的钻戒'},
-                {value:251, name:'经过这么长时间，你仍是我的爱人'},
-                {value:147, name:'爱 伴你一生，因为爱很美'},
-                {value:102, name:'一枚婚戒，一个故事、一生一戒'},
-                {value:102, name:'每一颗珍珠里都筑着一个少女梦'},
-                {value:102, name:'缔造一生的承诺，纵享恒久的情缘'}
-            ]
-        }
-    ]
-};
-
-optionbar61 =  {
+optionbar42 =  {
     title: {
         text: '兴趣爱好'
     },
@@ -848,7 +661,7 @@ optionbar61 =  {
 };
 
 
-optionbar62 =  {
+optionbar52 =  {
     title: {
         text: '意见'
     },

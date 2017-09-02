@@ -11,6 +11,10 @@ function createRandomItemStyle() {
 }
 (function ($) {
 optionbar11 = {
+	 title: {
+        x: 'center',
+        text: '会员等级'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -27,57 +31,55 @@ optionbar11 = {
     },
     calculable : true,
     legend: {
-        data:['各会员等级消费占比']
+        data:['会员等级']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['铁牌会员','铜牌会员','银牌会员','金牌会员','钻石会员','皇冠会员']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'各会员等级消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'各会员等级消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'铁牌会员'},
-                {value:251, name:'铜牌会员'},
-                {value:147, name:'银牌会员'},
-                {value:102, name:'金牌会员'},
-                {value:102, name:'钻石会员'},
-                {value:102, name:'皇冠会员'}
-            ]
+            data:[320, 332, 301, 120, 90, 30]
         }
     ]
 };
 
 optionbar12 = {
+	 title: {
+        x: 'center',
+        text: '会龄'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -100,50 +102,49 @@ optionbar12 = {
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1年以内','1-2年','2-3年','3-5年','5年以上']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同会龄消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同会龄消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1年以内'},
-                {value:251, name:'1-2年'},
-                {value:147, name:'2-3年'},
-                {value:102, name:'3-5年'},
-                {value:102, name:'5年以上'}
-            ]
+            data:[320, 332, 301, 120, 90]
         }
     ]
 };            
 		
 optionbar21 = {
+	 title: {
+        x: 'center',
+        text: '积分值'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -160,55 +161,54 @@ optionbar21 = {
     },
     calculable : true,
     legend: {
-        data:['不同积分值消费占比']
+        data:['积分值']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['100分以内','101-500分','501-1000分','1001-2000分','2001分以上']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同积分值消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同积分值消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'100分以内'},
-                {value:251, name:'101-500分'},
-                {value:147, name:'501-1000分'},
-                {value:102, name:'1001-2000分'},
-                {value:102, name:'2001分以上'}
-            ]
+            data:[320, 332, 301, 120, 90]
         }
     ]
 };		
 optionbar22 = {
+	 title: {
+        x: 'center',
+        text: '首购金额'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -225,59 +225,53 @@ optionbar22 = {
     },
     calculable : true,
     legend: {
-        data:['不同首购金额消费占比']
+        data:['首购金额']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1000元以下','1001-5000元','5001-10000元','10001-20000元','20001-50001元','50001-10万元','10万以上']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同首购金额消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同首购金额消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1000元以下'},
-                {value:251, name:'1001-5000元'},
-                {value:147, name:'5001-10000元'},
-                {value:102, name:'10001-20000元'},
-                {value:102, name:'20001-50001元'},
-                {value:102, name:'50001-10万元'},
-                {value:102, name:'10万以上'}
-            ]
+            data:[320, 332, 301, 120, 90, 30, 70]
         }
     ]
 };
 
 optionbar31 =  {
     title: {
+        x: 'center',
         text: '首购商品'
     },
     tooltip: {
@@ -388,6 +382,10 @@ optionbar31 =  {
 };
 
 optionbar32 = {
+    title: {
+        x: 'center',
+        text: '购买动机'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -404,57 +402,55 @@ optionbar32 = {
     },
     calculable : true,
     legend: {
-        data:['不同购买动机额消费占比']
+        data:['购买动机']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['自我犒赏','节俗性需求','结婚','生日','社交赠礼','投资']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同购买动机额消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同购买动机额消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'自我犒赏'},
-                {value:251, name:'节俗性需求'},
-                {value:147, name:'结婚'},
-                {value:102, name:'生日'},
-                {value:102, name:'社交赠礼'},
-                {value:102, name:'投资'}
-            ]
+            data:[320, 332, 301, 120, 90, 30, 70]
         }
     ]
 };
 
 optionbar41 = {
+    title: {
+        x: 'center',
+        text: '消费总额'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -471,11 +467,12 @@ optionbar41 = {
     },
     calculable : true,
     legend: {
-        data:['不同消费总额消费占比']
+        data:['消费总额']
     },
     xAxis : [
         {
             type : 'category',
+			show: false,
             splitLine : {show : false},
             data : ['1000元以下','1001-5000元','5001-10000元','10001-20000元','20001-50001元','50001-10万元','10万以上']
         }
@@ -483,45 +480,41 @@ optionbar41 = {
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同消费总额消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同消费总额消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1000元以下'},
-                {value:251, name:'1001-5000元'},
-                {value:147, name:'5001-10000元'},
-                {value:102, name:'10001-20000元'},
-                {value:102, name:'20001-50001元'},
-                {value:102, name:'50001-10万元'},
-                {value:102, name:'10万以上'}
-            ]
+            data:[320, 332, 301, 120, 90, 30, 70]
         }
     ]
 };
 optionbar42 = {
+    title: {
+        x: 'center',
+        text: '消费频次'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -538,56 +531,55 @@ optionbar42 = {
     },
     calculable : true,
     legend: {
-        data:['不同消费频次消费占比']
+        data:['消费频次']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['一年3次以上','一年2次','一年一次','两年一次','三年以上一次']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同消费频次消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同消费频次消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'一年3次以上'},
-                {value:251, name:'一年2次'},
-                {value:147, name:'一年一次'},
-                {value:102, name:'两年一次'},
-                {value:102, name:'三年以上一次'}
-            ]
+            data:[320, 332, 301, 120, 90, 30]
         }
     ]
 };
 
 optionbar51 = {
+    title: {
+        x: 'center',
+        text: '客单价'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -604,55 +596,54 @@ optionbar51 = {
     },
     calculable : true,
     legend: {
-        data:['不同客单价消费占比']
+        data:['客单价']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1k以下','1k-3k','3k-5k','10k以上']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同客单价消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同客单价消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1k以下'},
-                {value:251, name:'1k-3k'},
-                {value:147, name:'3k-5k'},
-                {value:102, name:'5k-10k'},
-                {value:102, name:'10k以上'}
-            ]
+            data:[320, 332, 301, 120, 90, 30, 70]
         }
     ]
 };
 optionbar52 = {
+    title: {
+        x: 'center',
+        text: '提篮数'
+    },
     tooltip : {
         trigger: 'axis'
     },
@@ -669,52 +660,46 @@ optionbar52 = {
     },
     calculable : true,
     legend: {
-        data:['不同提篮数消费占比']
+        data:['提篮数']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
+			show: false,
             data : ['1件','2件','3件','4件','5件','6件以上']
         }
     ],
     yAxis : [
         {
             type : 'value',
+			show: false,
             position: 'left'
         }
     ],
     series : [
         {
-            name:'不同提篮数消费占比',
+            name:'消费',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
+			itemStyle: {
+                normal: {
+                    color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{b}\n{c}'
                     }
                 }
             },
-            name:'不同提篮数消费占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'1件'},
-                {value:251, name:'2件'},
-                {value:147, name:'3件'},
-                {value:102, name:'4件'},
-                {value:102, name:'5件'},
-                {value:102, name:'6件以上'}
-            ]
+            data:[320, 332, 301, 120, 90, 30]
         }
     ]
 };

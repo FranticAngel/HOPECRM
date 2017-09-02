@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+@linbomb
+Sign out
+Unwatch 1
+Star 0
+Fork 0 FranticAngel/HOPECRM
+Code  Issues 0  Pull requests 0  Projects 0  Wiki  Settings Insights
+Tree: 02082356a8 Find file Copy pathHOPECRM/code/client.html
+0208235  2 days ago
+@luoqiya luoqiya 13
+3 contributors @linbomb @465730396 @luoqiya
+RawBlameHistory
+542 lines (512 sloc)  34.1 KB
 <html><head>
     <meta charset="utf-8">
     <title></title>
@@ -62,25 +81,57 @@
                             <th>电话</th>
                             <th>学历</th>
                             <th>职业</th>
-                            <th>消费门店</th>
-                            <th>注册门店</th>
                             <th>
                                 <div class="dropdown">
-                                    <div  class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">地区
+                                    <div  class="dropdown-toggle" data-toggle="dropdown">消费门店
                                         <span class="caret"></span>
                                     </div>
                                     <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳罗湖门店</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳福田门店</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳南山门店</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳盐田门店</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳宝安门店</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">深圳龙岗门店</a></li>
+                                    </ul></div>
+                            </th>
+                            <th class="member">
+                                <div class="dropdown">
+                                    <div  class="dropdown-toggle"  data-toggle="dropdown">注册门店
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">宝盈黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">玉阁黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">金玉黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">良缘黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">翠缘黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">金乐黄金</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">万福黄金</a></li>
                                     </ul></div>
                             </th>
                             <th>
                                 <div class="dropdown">
-                                <div  class="dropdown-toggle"  data-toggle="dropdown">省份
-                                    <span class="caret"></span>
-                                </div>
-                                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1">广东</a></li>
-                                </ul></div>
+                                    <div  class="dropdown-toggle" data-toggle="dropdown">地区
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">华北地区</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">华东地区</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">华中地区</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">华南地区</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">西南地区</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">西北地区</a></li>
+                                    </ul></div>
+                            </th>
+                            <th>
+                                <div class="dropdown">
+                                    <div  class="dropdown-toggle"  data-toggle="dropdown">省份
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1">广东</a></li>
+                                    </ul></div>
                             </th>
                             <th>
                                 <div class="dropdown">
@@ -148,47 +199,47 @@
             <div class="tab-content"  >
                 <div class="tab-pane fade in active" id="client_baseinfo" >
                     <table class="info-tab single-info-bar">
-                            <tr>
-                                <td rowspan="7" class="cst-header-td"><img src="img/baseinfo/header.png" alt="IMG"/></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">姓名:&nbsp;</span><span class="cst-value">杨贵妃</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">年龄:&nbsp;</span><span class="cst-value">20岁</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">职业:&nbsp;</span><span class="cst-value">网红主播</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">性别:&nbsp;</span><span class="cst-value">女</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">学历:&nbsp;</span><span class="cst-value">本科</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">城市:&nbsp;</span><span class="cst-value">深圳</span></td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                        <tr>
+                            <td rowspan="7" class="cst-header-td"><img src="img/baseinfo/header.png" alt="IMG"/></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">姓名:&nbsp;</span><span class="cst-value">杨贵妃</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">年龄:&nbsp;</span><span class="cst-value">20岁</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">职业:&nbsp;</span><span class="cst-value">网红主播</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">性别:&nbsp;</span><span class="cst-value">女</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">学历:&nbsp;</span><span class="cst-value">本科</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">城市:&nbsp;</span><span class="cst-value">深圳</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
 
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
 
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
 
-                            </tr>
-                            <tr>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">会员编号:&nbsp;</span><span class="cst-value">008888</span></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">微信号:&nbsp;</span><span class="cst-value">13324565618</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">手机号码:&nbsp;</span><span class="cst-value">13324565618</span></td>
-                                <td><span class="item-flag">&nbsp;</span><span class="cst-key">QQ号:&nbsp;</span><span class="cst-value">14322565618</span></td>
-                            </tr>
+                        </tr>
+                        <tr>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">会员编号:&nbsp;</span><span class="cst-value">008888</span></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">微信号:&nbsp;</span><span class="cst-value">13324565618</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">手机号码:&nbsp;</span><span class="cst-value">13324565618</span></td>
+                            <td><span class="item-flag">&nbsp;</span><span class="cst-key">QQ号:&nbsp;</span><span class="cst-value">14322565618</span></td>
+                        </tr>
 
-                        </table>
+                    </table>
                 </div>
 
                 <div class="tab-pane fade" id="client_expense" >
@@ -254,8 +305,8 @@
                 <div class="com-way"> <img src="img/contact_1.png" /> <img src="img/contact_2.png"/> <img src="img/contact_3.png"/></div>
             </div>
             <div class="customer-record-chart">
-				<div id="line" width="100%" height="100%" style="width:1000px;height:400px">
-				</div>
+                <div id="line" width="100%" height="100%" style="width:1000px;height:400px">
+                </div>
             </div>
         </div>
 
@@ -538,5 +589,17 @@
 
 </body>
 <script src="js/client.js"></script>
-<script src="js/formsheet/formsheet.js"></script> 
+<script src="js/formsheet/formsheet.js"></script>
 </html>
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
