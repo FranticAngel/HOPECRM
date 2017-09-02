@@ -324,7 +324,7 @@ $(function(){
         $(".filter_type").toggleClass('filter_type_selected');
     });
     /*弹出框内按钮*/
-    var modal_body=$(".modal-body");
+    var modal_body=$("#client_filter_modal");
     modal_body.on("click","#filter_reset",function(){//取消清空
         $(".option").removeClass("option_selected")
     });
@@ -360,10 +360,7 @@ $(function(){
 
         }
     });
-    client_info.find(".return").click(function () {
-        client_table.show();
-        client_table.siblings(".client_container").hide();
-    });
+
 
     /*生成表格*/
     function showTable() {
@@ -375,22 +372,22 @@ $(function(){
         for (i=0;i<10;i++){
             client_info_html+='<tr>\
                 <td>{0}</td>\
-                <td contenteditable="true">{1}</td>\
-                <td class="member" contenteditable="true">00{2}</td>\
-                <td contenteditable="true">{3}</td>\
-                <td contenteditable="true">{4}</td>\
-                <td contenteditable="true">{5}</td>\
-                <td contenteditable="true">{6}</td>\
-                <td contenteditable="true">{7}</td>\
-                <td contenteditable="true">深圳{8}门店</td>\
-                <td contenteditable="true">{9}黄金</td>\
-                <td contenteditable="true">深圳</td>\
-                <td contenteditable="true">广东</td>\
-                <td contenteditable="true">深圳</td>\
+                <td >{1}</td>\
+                <td class="member" >00{2}</td>\
+                <td >{3}</td>\
+                <td >{4}</td>\
+                <td >{5}</td>\
+                <td >{6}</td>\
+                <td >{7}</td>\
+                <td class="member">深圳{8}门店</td>\
+                <td >{9}黄金</td>\
+                <td >华南地区</td>\
+                <td >广东</td>\
+                <td >深圳</td>\
                 <td>\
                 <div class="am-btn-toolbar">\
                 <div class="am-btn-group am-btn-group-xs">\
-                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>\
+                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>\
                 </div>\
                 </div>\
                 </td>\
@@ -406,7 +403,7 @@ $(function(){
 
 
 
-    function generateRow(input_text) {
+    function generateRow(input_text,type) {
         var html= '<tr>\
                 <td>{0}</td>\
                 <td>{1}</td>\
@@ -416,40 +413,48 @@ $(function(){
                 <td>{5}</td>\
                 <td>{6}</td>\
                 <td>{7}</td>\
-                <td>深圳{8}门店</td>\
+                <td class="member">深圳{8}门店</td>\
                 <td>{9}黄金</td>\
-                <td>深圳</td>\
+                <td>华南地区</td>\
                 <td>广东</td>\
                 <td>深圳</td>\
                 <td>\
                 <div class="am-btn-toolbar">\
                 <div class="am-btn-group am-btn-group-xs">\
-                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>\
                 <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>\
                 </div>\
                 </div>\
                 </td>\
                 </tr>';
-        $(".am-fr").css('opacity',0);
-        var client_tbody = $("#client_tbody");
-        client_tbody.html('');
-        $(".no_result").remove();
+        if(type==="new"){
+            return html.replace("<tr>","<tr class='new_row'>").format('').replace('<span class="am-icon-trash-o"></span> 删除</button>','<span class="am-icon-save"></span> 保存</button>').replace("am-text-danger","am-text-secondary");
+        }
         switch(input_text.length)
         {
             case 3://人名
-                client_tbody.append(html.format(1,input_text,"00"+getMobile().slice(7),getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName()));
+                return html.format(1,input_text,"00"+getMobile().slice(7),getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName());
                 break;
             case 6://会员编码
-                client_tbody.append(html.format(1,getName(),input_text,getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName()));
+                return html.format(1,getName(),input_text,getGender(),getAge(),getMobile(),getEducation(),getCareer(),getArea(),getShopName());
                 break;
             case 11://电话
-                client_tbody.append(html.format(1,getName(),"00"+getMobile().slice(7),getGender(),getAge(),input_text,getEducation(),getCareer(),getArea(),getShopName()));
+                return html.format(1,getName(),"00"+getMobile().slice(7),getGender(),getAge(),input_text,getEducation(),getCareer(),getArea(),getShopName());
                 break;
             default:
-                $("table.bordered").after('<div class="no_result">没有找到匹配结果</div>');
+                return ""
 
         }
     }
+    //表格删除按钮
+    client_table.on('click',"button.am-text-danger",function () {
+        if(window.confirm("确定删除?") ){
+            $(this).parent().parent().parent().parent().fadeOut(300);
+        }
+    });
+    //表格保存按钮
+    client_table.on('click',"button.am-text-secondary",function () {
+        $(this).parent().parent().parent().parent().fadeOut(300);
+    });
 
 
     var page_div = $(".am-pagination");
@@ -481,26 +486,61 @@ $(function(){
 
     /*按钮*/
     //刷新按钮
-    $(".operate").eq(0).on('click',function () {
+    var operate=$(".operate");
+    operate.unbind('click');
+    operate.eq(0).on('click',function () {
         showTable();
     });
+    //新增记录
+    operate.eq(2).on('click',function () {
+        $("#client_tbody").append(generateRow("","new"));
+        $(".new_row td:not(td:last-child):not(td:first-child)").addClass('input').html('<input class="td_edit" type="text" value="" />');
+        scrollToEnd()
+    });
+
     //搜索按钮
     $(".search").find(".input_search").on('click',function () {
        var input_text = $(this).prev().val();
-       generateRow(input_text);//根据输入内容生成记录
+        $(".am-fr").css('opacity',0);
+        var client_tbody = $("#client_tbody");
+        client_tbody.html('');
+        $(".no_result").remove();
+        var row_html = generateRow(input_text);
+        if(row_html.length===0){
+            $("table.bordered").after('<div class="no_result">没有找到匹配结果</div>');
+        }else {
+            client_tbody.append(row_html);//显示表格内容
+        }
     });
 
-
+    /*点击编辑记录*/
+    client_table.on('click','tr:not(.new_row)>td:not(td:last-child)',function () {
+        if(!$(this).is('.input')){
+            $(this).addClass('input').html('<input class="td_edit" type="text" value="'+ $(this).text() +'" />').find('input').focus().blur(function(){
+                $(this).parent().removeClass('input').html($(this).val() || 0);
+            });
+        }
+    });
 
     /*客户记录点击切换到详细客户信息页面*/
-    client_table.on('click','td:nth-child(2)',function () {
+    client_table.on('click','tr:not(.new_row)>td:nth-child(2)',function () {
         client_info.show();
         client_info.siblings(".client_container").hide();
+        $(".change_sheet").hide();
     });
-
+    //返回按钮
+    client_info.find(".return").click(function () {
+        $(".change_sheet").show();
+        client_table.show();
+        client_table.siblings(".client_container").hide();
+    });
 
 
 });
+function scrollToEnd(){//滚动到底部
+    var h = $(document).height()-$(window).height();
+    $(document).scrollTop(h);
+}
 
 function showPie(div_){
 	if(div_=="population"){
