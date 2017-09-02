@@ -27,7 +27,7 @@ optionbar11 = {
     },
     calculable : true,
     legend: {
-        data:['各信用度消费占比']
+        data:['信用度','忠诚度']
     },
     xAxis : [
         {
@@ -44,9 +44,14 @@ optionbar11 = {
     ],
     series : [
         {
-            name:'各信用度消费占比',
+            name:'信用度',
             type:'bar',
             data:[320, 80, 30]
+        },
+        {
+            name:'忠诚度',
+            type:'bar',
+            data:[489, 149, 50]
         },
 
         {
@@ -59,7 +64,7 @@ optionbar11 = {
                     }
                 }
             },
-            name:'各信用度消费占比',
+            name:'信用度',
             type:'pie',
             tooltip : {
                 trigger: 'item',
@@ -73,7 +78,8 @@ optionbar11 = {
         }
     ]
 };
-
+      
+		
 optionbar12 = {
     tooltip : {
         trigger: 'axis'
@@ -91,13 +97,13 @@ optionbar12 = {
     },
     calculable : true,
     legend: {
-        data:['各忠诚度消费占比']
+        data:['满意度']
     },
     xAxis : [
         {
             type : 'category',
             splitLine : {show : false},
-            data : ['高','中','低']
+            data : ['不满意','基本满意','满意','很满意','非常满意']
         }
     ],
     yAxis : [
@@ -108,9 +114,9 @@ optionbar12 = {
     ],
     series : [
         {
-            name:'各忠诚度消费占比',
+            name:'满意度',
             type:'bar',
-            data:[320, 80, 30]
+            data:[320, 332, 301, 120, 90]
         },
 
         {
@@ -123,21 +129,22 @@ optionbar12 = {
                     }
                 }
             },
-            name:'各忠诚度消费占比',
+            name:'满意度',
             type:'pie',
             tooltip : {
                 trigger: 'item',
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             data:[
-                {value:1048, name:'高'},
-                {value:251, name:'中'},
-                {value:147, name:'低'}
+                {value:1048, name:'不满意'},
+                {value:251, name:'基本满意'},
+                {value:147, name:'满意'},
+                {value:102, name:'很满意'},
+                {value:102, name:'非常满意'}
             ]
         }
     ]
-};            
-		
+};		
 optionbar21 = {
     tooltip : {
         trigger: 'axis'
@@ -155,72 +162,7 @@ optionbar21 = {
     },
     calculable : true,
     legend: {
-        data:['不同满意度占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['不满意','基本满意','满意','很满意','非常满意']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'不同满意度占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'不同满意度占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'不满意'},
-                {value:251, name:'基本满意'},
-                {value:147, name:'满意'},
-                {value:102, name:'很满意'},
-                {value:102, name:'非常满意'}
-            ]
-        }
-    ]
-};		
-optionbar22 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['不同推荐值占比']
+        data:['推荐值']
     },
     xAxis : [
         {
@@ -237,7 +179,7 @@ optionbar22 = {
     ],
     series : [
         {
-            name:'不同推荐值占比',
+            name:'推荐值',
             type:'bar',
             data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
         },
@@ -252,7 +194,7 @@ optionbar22 = {
                     }
                 }
             },
-            name:'不同推荐值占比',
+            name:'推荐值',
             type:'pie',
             tooltip : {
                 trigger: 'item',
@@ -274,9 +216,9 @@ optionbar22 = {
     ]
 };
 
-optionbar31 =  {
+optionbar22 =  {
     title: {
-        text: '多雷达图'
+        text: '购物偏好'
     },
     tooltip: {
         trigger: 'axis'
@@ -319,7 +261,7 @@ optionbar31 =  {
     ]
 };
 
-optionbar41 = {
+optionbar32 = {
     title : {
         text: '品牌总提及',
         x:'center'
@@ -370,7 +312,7 @@ optionbar41 = {
         }
     ]
 };
-optionbar32 = {
+optionbar31 = {
     title : {
         text: '品牌第一提及',
         x:'center'
@@ -423,7 +365,7 @@ optionbar32 = {
 };
 
 
-optionbar42 = {
+optionbar41 = {
     tooltip : {
         trigger: 'axis'
     },
@@ -440,73 +382,7 @@ optionbar42 = {
     },
     calculable : true,
     legend: {
-        data:['高关注商品占比']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['钻石戒指','钻石项链','黄金吊坠','彩宝','珍珠']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
-    series : [
-        {
-            name:'高关注商品占比',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'高关注商品占比',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'钻石戒指'},
-                {value:251, name:'钻石项链'},
-                {value:147, name:'黄金吊坠'},
-                {value:102, name:'彩宝'},
-                {value:102, name:'珍珠'}
-            ]
-        }
-    ]
-};
-
-optionbar51 = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    legend: {
-        data:['信息渠道占比']
+        data:['信息渠道']
     },
     xAxis : [
         {
@@ -523,7 +399,7 @@ optionbar51 = {
     ],
     series : [
         {
-            name:'信息渠道占比',
+            name:'信息渠道',
             type:'bar',
             data:[320, 332, 301, 120, 90]
         },
@@ -538,7 +414,7 @@ optionbar51 = {
                     }
                 }
             },
-            name:'信息渠道占比',
+            name:'信息渠道',
             type:'pie',
             tooltip : {
                 trigger: 'item',
@@ -554,7 +430,7 @@ optionbar51 = {
         }
     ]
 };
-optionbar61 = {
+optionbar51 = {
     title: {
         text: '广告记忆'
     },
@@ -615,7 +491,7 @@ optionbar61 = {
     }]
 };
 
-optionbar52 =  {
+optionbar42 =  {
     title: {
         text: '兴趣爱好'
     },
@@ -792,7 +668,7 @@ optionbar52 =  {
 };
 
 
-optionbar62 =  {
+optionbar52 =  {
     title: {
         text: '意见'
     },
