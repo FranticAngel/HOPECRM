@@ -264,11 +264,14 @@ function AddRow(table, index){
 	SetRowCanEdit(newRow);
 	return newRow;
 }
+  
 
 //删除一行数据  
 function deleteRow(currentRow){  
             var tab = $q("#tabProduct"); //获得表格节点  
+    if(window.confirm("确定删除?") ){
             tab.deleteRow(currentRow.rowIndex); //删除选中的行  
+    }
 }     
 
   
