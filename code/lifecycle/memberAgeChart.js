@@ -214,17 +214,6 @@ optionbar12 = {
     tooltip : {
         trigger: 'axis'
     },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
     calculable : true,
     legend: {
         data:['年龄']
@@ -279,17 +268,6 @@ optionbar21 = {
     },
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
@@ -613,17 +591,6 @@ optionbar22 = {
     tooltip : {
         trigger: 'axis'
     },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
     calculable : true,
     legend: {
         data:['职业']
@@ -678,17 +645,6 @@ optionbar11 = {
     tooltip : {
         trigger: 'axis'
     },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
     calculable : true,
     legend: {
         data:['性别']
@@ -725,17 +681,6 @@ optionbar32 = {
     },
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
@@ -791,17 +736,6 @@ optionbar41 = {
     tooltip : {
         trigger: 'axis'
     },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
     calculable : true,
     legend: {
         data:['个人月收入']
@@ -854,17 +788,6 @@ optionbar42 = {
     },
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
