@@ -28,13 +28,14 @@ String.prototype.format = function(args) {
 };
 
 $(function(){
-    $(".config_container_div").on('click','.blue_input',function () {
+    var config_container_div = $(".config_container_div");
+    config_container_div.on('click','.blue_input',function () {
         $(this).toggleClass("blue_input_checked");
     });
     var config_0=$("#config_0");
     config_0.find(".depart").on('click',function () {
         if ( !$(this).hasClass("active")){
-            $("#config_0").find(".operation").appendTo($(this).find("div"));
+            $(".depart").find(".operation").appendTo($(this).find("div"));
             $(this).addClass("active");
             $(this).siblings(".depart").removeClass("active");
         }
@@ -152,8 +153,29 @@ $(function(){
         }else {
             $(this).text("编辑");
         }
-    })
+    });
 
+
+    config_container_div.on('click',".del",function () {
+        if(window.confirm("确定删除?") ){
+            if ($(this).parent().parent().hasClass("company_name")){
+                $(this).parent().parent().parent().fadeOut(300);
+            }else {
+                $(this).parent().parent().siblings(".depart").fadeOut(300);
+                $(this).parent().parent().parent().fadeOut(300);
+            }
+        }
+    });
+    config_container_div.on('click',".download",function (e) {
+        var str = "栏位1,栏位2,栏位3\n值1,值2,值3";
+        str =  encodeURIComponent(str);
+        var link = document.getElementById("download");
+        link.className="download";
+        link.href = 'data:attachment/csv,' + str;
+        link.target = '_blank';
+        link.download =$(this).parent().parent().text().replace(/[\n]/g,"").replace(/[ ]/g,"")+".csv";
+        link.click();
+    });
 
 
 

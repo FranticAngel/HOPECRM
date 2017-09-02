@@ -23,7 +23,7 @@ body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helveti
     background-color: #f5f5f5;
     padding: 0;
     letter-spacing: 3px;
-    font-family: PF, serif !important;
+    /*font-family: PF, serif !important;*/
     font-size: 15px;
     font-weight: bold;
     width: 102%;
@@ -215,7 +215,12 @@ body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helveti
     letter-spacing: 0;
     text-align: center;
 }
-
+#config_0 .company_name .operation {
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 19px;
+}
 #config_6 table {
     text-align: center;
 }
@@ -481,7 +486,7 @@ body {line-height: 1; font: 12px/1.5 "Microsoft Yahei", "微软雅黑", "Helveti
     width: 50%;
 }
 #login_log .log_operation .blue_btn,#op_log .log_operation .blue_btn,#sys_log .log_operation .blue_btn{
-    width: 65px;
+    width: 7%;
     padding-left: 18px;
 }
 #login_log,#sys_log{

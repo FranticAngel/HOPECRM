@@ -409,7 +409,7 @@ ul,ol{
 #client_table table{
 
 }
-#client_table tr>td:nth-child(2){
+#client_table tr:not(.new_row)>td:nth-child(2){
     cursor: pointer;
 }
 #client_table .dropdown .btn{
@@ -1105,3 +1105,14 @@ body {
     background-color:#f98f11;
     border-radius:3px;
 }
+.bordered th .dropdown{
+    cursor: pointer;
+}
+
+#client_tbody .td_edit{
+    width: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+
