@@ -293,7 +293,10 @@ $(function(){
         });
 
         //快速取消x按钮
-        selected_commodity_div.on('click',".selected_data::after",function () {
+        selected_commodity_div.on('click',".selected_data",function () {
+            if($(this).find("input").length!==0){
+                return;
+            }
             var first_category=$(this).text().split(':')[0];
             var second_category=$(this).text().split(':')[1].slice(0,-1);
             sync_selected_commodity_data('remove',first_category,second_category);
@@ -537,6 +540,7 @@ $(function(){
 
     /*客户记录点击切换到详细客户信息页面*/
     client_table.on('click','tr:not(.new_row)>td:nth-child(2)',function () {
+        operation.hide();
         client_info.show();
         client_info.siblings(".client_container").hide();
         $(".change_sheet").hide();
@@ -578,6 +582,7 @@ $(function(){
     //返回按钮
     client_info.find(".return").click(function () {
         $(".change_sheet").show();
+        operation.show();
         client_table.show();
         client_table.siblings(".client_container").hide();
     });
