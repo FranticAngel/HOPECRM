@@ -57,29 +57,6 @@ optionbar11 = {
             name:'忠诚度',
             type:'bar',
             data:[489, 149, 50]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'信用度',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'高'},
-                {value:251, name:'中'},
-                {value:147, name:'低'}
-            ]
         }
     ]
 };
