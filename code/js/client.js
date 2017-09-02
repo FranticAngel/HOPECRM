@@ -375,22 +375,23 @@ $(function(){
         for (i=0;i<10;i++){
             client_info_html+='<tr>\
                 <td>{0}</td>\
-                <td contenteditable="true">{1}</td>\
-                <td class="member" contenteditable="true">00{2}</td>\
-                <td contenteditable="true">{3}</td>\
-                <td contenteditable="true">{4}</td>\
-                <td contenteditable="true">{5}</td>\
-                <td contenteditable="true">{6}</td>\
-                <td contenteditable="true">{7}</td>\
-                <td contenteditable="true">深圳{8}门店</td>\
-                <td contenteditable="true">{9}黄金</td>\
-                <td contenteditable="true">深圳</td>\
-                <td contenteditable="true">广东</td>\
-                <td contenteditable="true">深圳</td>\
+                <td>{1}</td>\
+                <td class="member">00{2}</td>\
+                <td>{3}</td>\
+                <td>{4}</td>\
+                <td>{5}</td>\
+                <td>{6}</td>\
+                <td>{7}</td>\
+                <td>深圳{8}门店</td>\
+                <td>{9}黄金</td>\
+                <td>深圳</td>\
+                <td>广东</td>\
+                <td>深圳</td>\
                 <td>\
                 <div class="am-btn-toolbar">\
                 <div class="am-btn-group am-btn-group-xs">\
-                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" onclick="deleteRow(this.parentNode.parentNode)"><span class="am-icon-trash-o"></span> 删除</button>\
+                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>\
+                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>\
                 </div>\
                 </div>\
                 </td>\
