@@ -60,9 +60,53 @@ function gotoGuhai(){
 	$("#main").load("criclework/conguhai.html");
 }
 
-function gotoGhxq(){
+function gotoGhxq1(){
     $("#course").load("criclework/top/ghxq_top.html");
-    $("#main").load("criclework/ghxq.html");
+    $("#main").load("criclework/ghxq1.html");
+}
+function gotoGhxq2(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq2.html");
+}
+function gotoGhxq3(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq3.html");
+}
+function gotoGhxq4(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq4.html");
+}
+function gotoGhxq5(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq5.html");
+}
+function gotoGhxq6(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq6.html");
+}
+function gotoGhxq7(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq7.html");
+}
+function gotoGhxq8(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq8.html");
+}
+function gotoGhxq9(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq9.html");
+}
+function gotoGhxq10(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq10.html");
+}
+function gotoGhxq11(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq11.html");
+}
+function gotoGhxq12(){
+    $("#course").load("criclework/top/ghxq_top.html");
+    $("#main").load("criclework/ghxq12.html");
 }
 
 function gotoConfig(){
