@@ -166,7 +166,7 @@ $(function(){
             }
         }
     });
-    config_container_div.on('click',".download",function (e) {
+    config_container_div.on('click',".download",function () {
         var str = "栏位1,栏位2,栏位3\n值1,值2,值3";
         str =  encodeURIComponent(str);
         var link = document.getElementById("download");
@@ -176,6 +176,12 @@ $(function(){
         link.download =$(this).parent().parent().text().replace(/[\n]/g,"").replace(/[ ]/g,"")+".csv";
         link.click();
     });
+    config_container_div.on('click',".edit",function () {
+
+         str.html('<input class="td_edit" type="text" value="" />');
+    });
+
+
 
 
 
