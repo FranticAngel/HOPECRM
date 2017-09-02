@@ -9,21 +9,26 @@ function createRandomItemStyle() {
         }
     };
 }
+var dataStyle = {
+    normal: {
+        label: {show:false},
+        labelLine: {show:false}
+    }
+};
+var placeHolderStyle = {
+    normal : {
+        color: 'rgba(0,0,0,0)',
+        label: {show:false},
+        labelLine: {show:false}
+    },
+    emphasis : {
+        color: 'rgba(0,0,0,0)'
+    }
+};
 (function ($) {
 optionbar11 = {
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
@@ -81,70 +86,122 @@ optionbar11 = {
       
 		
 optionbar12 = {
+    title: {
+        text: '你满意吗？',
+        x: 'center',
+        y: 'center',
+        itemGap: 20,
+        textStyle : {
+            color : 'rgba(30,144,255,0.8)',
+            fontFamily : '微软雅黑',
+            fontSize : 35,
+            fontWeight : 'bolder'
+        }
+    },
     tooltip : {
-        trigger: 'axis'
+        show: true,
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
     legend: {
-        data:['满意度']
+        orient : 'vertical',
+        x : document.getElementById('bar12').offsetWidth / 2,
+        y : 45,
+        itemGap:12,
+        data:['50%的人表示十分满意','29%的人表示满意','9%的人表示基本满意','6%的人表示不满意','6%的人表示很不满意']
     },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-            data : ['不满意','基本满意','满意','很满意','非常满意']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-            position: 'left'
-        }
-    ],
     series : [
         {
-            name:'满意度',
-            type:'bar',
-            data:[320, 332, 301, 120, 90]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'满意度',
+            name:'1',
             type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
+            clockWise:false,
+            radius : [125, 150],
+            itemStyle : dataStyle,
             data:[
-                {value:1048, name:'不满意'},
-                {value:251, name:'基本满意'},
-                {value:147, name:'满意'},
-                {value:102, name:'很满意'},
-                {value:102, name:'非常满意'}
+                {
+                    value:50,
+                    name:'50%的人表示十分满意'
+                },
+                {
+                    value:32,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'2',
+            type:'pie',
+            clockWise:false,
+            radius : [100, 125],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:29, 
+                    name:'29%的人表示满意'
+                },
+                {
+                    value:71,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'3',
+            type:'pie',
+            clockWise:false,
+            radius : [75, 100],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:9, 
+                    name:'9%的人表示基本满意'
+                },
+                {
+                    value:97,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'4',
+            type:'pie',
+            clockWise:false,
+            radius : [75, 100],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:6, 
+                    name:'6%的人表示不满意'
+                },
+                {
+                    value:98,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'5',
+            type:'pie',
+            clockWise:false,
+            radius : [75, 100],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:6, 
+                    name:'6%的人表示很不满意'
+                },
+                {
+                    value:98,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
             ]
         }
     ]
-};		
+};
 optionbar21 = {
 	 title: {
         x: 'center',
@@ -152,17 +209,6 @@ optionbar21 = {
     },
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
@@ -212,13 +258,14 @@ optionbar21 = {
 
 optionbar22 =  {
     title: {
-        text: '购物偏好'
+        text: '购物偏好',
+        x: 'center',
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        x: 'center',
+        x: 'bottom',
         data:['购物偏好','高关注度商品']
     },
     radar: [
@@ -264,24 +311,6 @@ optionbar32 = {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
-    legend: {
-        x : 'center',
-        y : 'bottom',
-        data:['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
-    },
-    toolbox: {
-        show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {
-                show: true,
-                type: ['pie', 'funnel']
-            },
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
     calculable : true,
     series : [
         {
@@ -314,24 +343,6 @@ optionbar31 = {
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        x : 'center',
-        y : 'bottom',
-        data:['老凤祥','周大生','周生生','周大福','六福珠宝','卡地亚','潮宏基','钻石小鸟','戴梦得','谢瑞麟','金伯利钻石资']
-    },
-    toolbox: {
-        show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {
-                show: true,
-                type: ['pie', 'funnel']
-            },
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     series : [
@@ -366,17 +377,6 @@ optionbar41 = {
     },
     tooltip : {
         trigger: 'axis'
-    },
-    toolbox: {
-        show : true,
-        y: 'bottom',
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
     },
     calculable : true,
     legend: {
@@ -425,7 +425,8 @@ optionbar41 = {
 };
 optionbar51 = {
     title: {
-        text: '广告记忆'
+        text: '广告记忆',
+        x: 'center',
     },
     tooltip: {
         show: true
@@ -486,7 +487,8 @@ optionbar51 = {
 
 optionbar42 =  {
     title: {
-        text: '兴趣爱好'
+        text: '兴趣爱好',
+        x: 'center',
     },
     tooltip: {
         show: true
@@ -663,7 +665,8 @@ optionbar42 =  {
 
 optionbar52 =  {
     title: {
-        text: '意见'
+        text: '意见',
+        x: 'center',
     },
     tooltip: {
         show: true

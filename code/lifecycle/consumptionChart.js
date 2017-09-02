@@ -143,7 +143,7 @@ optionbar12 = {
 optionbar21 = {
 	 title: {
         x: 'center',
-        text: '积分值'
+        text: '会员积分'
     },
     tooltip : {
         trigger: 'axis'
@@ -161,7 +161,7 @@ optionbar21 = {
     },
     calculable : true,
     legend: {
-        data:['积分值']
+        data:['会员积分']
     },
     xAxis : [
         {
@@ -270,115 +270,58 @@ optionbar22 = {
 };
 
 optionbar31 =  {
-    title: {
-        x: 'center',
-        text: '首购商品'
+    title : {
+        text: '首购商品',
+        x:'center'
     },
-    tooltip: {
-        show: true
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
-    series: [{
-        name: '首购商品',
-        type: 'wordCloud',
-        size: ['80%', '80%'],
-        textRotation : [0, 45, 90, -45],
-        textPadding: 0,
-        autoSize: {
-            enable: true,
-            minSize: 14
-        },
-        data: [
-            {
-                name: "钻石戒指女戒",
-                value: 10000,
-                itemStyle: {
-                    normal: {
-                        color: 'black'
-                    }
-                }
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
             },
-            {
-                name: "钻石对戒",
-                value: 6181,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "钻石项链",
-                value: 4386,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "黄金吊坠",
-                value: 4055,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "黄金婚嫁套装",
-                value: 2467,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "碧玺吊坠",
-                value: 2244,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "金镶玉吊坠",
-                value: 1898,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "和田玉手镯",
-                value: 1484,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "碎钻耳钉",
-                value: 1112,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "金条",
-                value: 965,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "金币",
-                value: 847,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "元宝",
-                value: 582,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "珍珠项链",
-                value: 555,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "珍珠吊坠",
-                value: 550,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "珍珠耳饰",
-                value: 462,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "黄金生肖",
-                value: 366,
-                itemStyle: createRandomItemStyle()
-            },
-            {
-                name: "黄金财神",
-                value: 360,
-                itemStyle: createRandomItemStyle()
-            }
-        ]
-    }]
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'品牌总提及',
+            type:'pie',
+            radius : [30, 110],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:100, name:'钻石戒指'},
+                {value:90, name:'女戒'},
+                {value:80, name:'钻石对戒'},
+                {value:85, name:'钻石项链'},
+                {value:70, name:'黄金吊坠'},
+                {value:75, name:'黄金婚嫁套装'},
+                {value:60, name:'碧玺吊坠'},
+                {value:64, name:'金镶玉吊坠'},
+                {value:62, name:'和田玉手镯'},
+                {value:61, name:'碎钻耳钉'},
+                {value:54, name:'金条'},
+                {value:50, name:'金币'},
+                {value:42, name:'元宝'},
+                {value:43, name:'珍珠项链'},
+                {value:46, name:'珍珠吊坠'},
+                {value:40, name:'珍珠耳饰'},
+                {value:30, name:'黄金生肖'},
+                {value:20, name:'黄金财神'},
+                {value:10, name:'转运珠'}
+            ]
+        }
+    ]
 };
 
 optionbar32 = {
@@ -576,66 +519,45 @@ optionbar42 = {
 };
 
 optionbar51 = {
-    title: {
-        x: 'center',
-        text: '客单价'
+    title : {
+        text: '消费态度',
+        x:'center'
     },
     tooltip : {
-        trigger: 'axis'
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
     toolbox: {
         show : true,
-        y: 'bottom',
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            magicType : {
+                show: true,
+                type: ['pie', 'funnel']
+            },
             restore : {show: true},
             saveAsImage : {show: true}
         }
     },
     calculable : true,
-    legend: {
-        data:['客单价']
-    },
-    xAxis : [
-        {
-            type : 'category',
-            splitLine : {show : false},
-			show: false,
-            data : ['1k以下','1k-3k','3k-5k','10k以上']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value',
-			show: false,
-            position: 'left'
-        }
-    ],
     series : [
         {
-            name:'消费',
-            type:'bar',
-			itemStyle: {
-                normal: {
-                    color: function(params) {
-                        // build a color map as your need.
-                        var colorList = [
-                          '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
-                           '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
-                           '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
-                        ];
-                        return colorList[params.dataIndex]
-                    },
-                    label: {
-                        show: true,
-                        position: 'top',
-                        formatter: '{b}\n{c}'
-                    }
-                }
-            },
-            data:[320, 332, 301, 120, 90, 30, 70]
+            name:'品牌总提及',
+            type:'pie',
+            radius : [30, 110],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:100, name:'完美型'},
+                {value:90, name:'价值认知型'},
+                {value:80, name:'品牌认知型'},
+                {value:85, name:'流行认知型'},
+                {value:70, name:'时间节省型'},
+                {value:75, name:'资讯困扰型'},
+                {value:60, name:'享乐主义型'},
+                {value:64, name:'习惯型'}
+            ]
         }
     ]
 };
