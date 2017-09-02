@@ -1,5 +1,5 @@
 (function ($) {
-optionbar11 = {
+optionbar12 = {
     tooltip : {
         trigger: 'axis'
     },
@@ -22,7 +22,7 @@ optionbar11 = {
         {
             type : 'category',
             splitLine : {show : false},
-            data : ['18-25岁','26-30岁','31-35岁','36-40岁','41-50岁','50岁以上']
+            data : ['20岁以下','21-25岁','26-30岁','31-35岁','36-40岁','41-50岁','50岁以上']
         }
     ],
     yAxis : [
@@ -35,7 +35,7 @@ optionbar11 = {
         {
             name:'各年龄消费占比',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30]
+            data:[180,320, 332, 301, 120, 90, 30]
         },
 
         {
@@ -55,7 +55,8 @@ optionbar11 = {
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             data:[
-                {value:1048, name:'18-25岁'},
+                {value:450, name:'20岁以下'},
+                {value:1048, name:'21-25岁'},
                 {value:251, name:'26-30岁'},
                 {value:147, name:'31-35岁'},
                 {value:102, name:'36-40岁'},
@@ -66,7 +67,7 @@ optionbar11 = {
     ]
 };
 
-optionbar12 = {
+optionbar21 = {
     tooltip : {
         trigger: 'axis'
     },
@@ -89,7 +90,7 @@ optionbar12 = {
         {
             type : 'category',
             splitLine : {show : false},
-            data : ['小学','初中','高中','中专/技校','大专','本科','硕士','博士','其他']
+            data : ['未知','初中以下','高中','中专/技校','大专','本科','硕士','博士','其他']
         }
     ],
     yAxis : [
@@ -122,8 +123,8 @@ optionbar12 = {
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             data:[
-                {value:1048, name:'小学'},
-                {value:251, name:'初中'},
+                {value:1048, name:'未知'},
+                {value:251, name:'初中以下'},
                 {value:147, name:'高中'},
                 {value:102, name:'中专/技校'},
                 {value:102, name:'大专'},
@@ -136,7 +137,7 @@ optionbar12 = {
     ]
 };            
 		
-optionbar21 = {
+optionbar31 = {
     tooltip : {
         trigger: 'axis'
     },
@@ -225,7 +226,7 @@ optionbar22 = {
         {
             type : 'category',
             splitLine : {show : false},
-            data : ['国家机关','党群组织','企业','事业单位负责人','专业技术人员','办事人员','商业','服务业人员','农林牧渔水利业生产人员','生产','军人']
+            data : ['国家机关','党群组织','企业','事业单位负责人','专业技术人员','办事人员','商业','服务业人员','农林牧渔水利业生产人员','生产','运输设备操作人员及有关人员','军人','其他']
         }
     ],
     yAxis : [
@@ -238,7 +239,7 @@ optionbar22 = {
         {
             name:'不同职业消费人群',
             type:'bar',
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30, 30]
+            data:[320, 332, 301, 120, 90, 30, 70, 50, 30, 30, 30, 30]
         },
 
         {
@@ -268,13 +269,15 @@ optionbar22 = {
                 {value:102, name:'服务业人员'},
                 {value:102, name:'农林牧渔水利业生产人员'},
                 {value:102, name:'生产'},
-                {value:102, name:'军人'}
+                {value:60, name:'运输设备操作人员及有关人员'},
+                {value:60, name:'军人'},
+                {value:50, name:'其他'}
             ]
         }
     ]
 };
 		
-optionbar31 = {
+optionbar11 = {
     tooltip : {
         trigger: 'axis'
     },
@@ -467,6 +470,71 @@ optionbar41 = {
         }
     ]
 };	
+optionbar42 = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    toolbox: {
+        show : true,
+        y: 'bottom',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    legend: {
+        data:['不同家庭月收入消费人群']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            splitLine : {show : false},
+            data : ['5000元以下','5001-10000元','10001-20000元','20001-50000元','50001元以上']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            position: 'left'
+        }
+    ],
+    series : [
+        {
+            name:'不同家庭月收入消费人群',
+            type:'bar',
+            data:[332, 301, 120, 90, 30]
+        },
+
+        {
+            center: [400,120],
+            radius : [0, 50],
+            itemStyle :　{
+                normal : {
+                    labelLine : {
+                        length : 20
+                    }
+                }
+            },
+            name:'不同家庭月收入消费人群',
+            type:'pie',
+            tooltip : {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            data:[
+                {value:1048, name:'5000元以下'},
+                {value:251, name:'5001-1000元'},
+                {value:251, name:'10001-20000元'},
+                {value:251, name:'20001-50000元'},
+                {value:251, name:'50001元以上'}
+            ]
+        }
+    ]
+};	
 var myChart11 = echarts.init(document.getElementById('bar11'));
 myChart11.setOption(optionbar11);
 var myChart12 = echarts.init(document.getElementById('bar12'));
@@ -481,6 +549,8 @@ var myChart32 = echarts.init(document.getElementById('bar32'));
 myChart32.setOption(optionbar32);
 var myChart41 = echarts.init(document.getElementById('bar41'));
 myChart41.setOption(optionbar41);
+var myChart42 = echarts.init(document.getElementById('bar42'));
+myChart42.setOption(optionbar42);
 
 })(jQuery);
 
