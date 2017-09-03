@@ -228,8 +228,8 @@ optionbar12 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
 			
         }
@@ -283,8 +283,8 @@ optionbar21 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -605,8 +605,8 @@ optionbar22 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -632,7 +632,7 @@ optionbar22 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30, 30, 30, 30]
+            data:[320, 332, 301, 120, 90, 30, 170, 50, 220, 90, 120, 30, 70]
         }
     ]
 };
@@ -665,11 +665,11 @@ optionbar11 = {
             type:'pie',
             tooltip : {
                 trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
+                formatter: '{a} <br/>{b} : {c}人 ({d}%)'
             },
             data:[
-                {value:1048, name:'男'},
-                {value:251, name:'女'}
+                {value:1048, name:'男 80.68%'},
+                {value:251, name:'女 19.32%'}
             ]
         }
     ]
@@ -696,8 +696,8 @@ optionbar32 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -750,8 +750,8 @@ optionbar41 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -803,8 +803,8 @@ optionbar42 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],

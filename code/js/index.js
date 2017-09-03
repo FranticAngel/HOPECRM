@@ -133,6 +133,35 @@ function showSubMenu(obj){
 	$(obj).next().css("display","block")
 }
 
+function showSubMenu(obj){
+	$(obj).next().css("display","block")
+}
+function gotoMemberPageChart(height_,div_){
+	gotoMemberPage();
+	setTimeout(function(){
+		$('.change_sheet').click();
+		if(div_){
+			$($("ul > li > a").filter(function(index){ return $(this).html()==div_})[0]).click();
+			setTimeout(function(){
+				$(document).scrollTop(height_);
+			},500)
+			return ;
+		}
+		$(document).scrollTop(height_);
+	},500)
+}
+function gotoMemberLifeCyclePageChart(height_){
+	 gotoMemberLifeCyclePage();
+	setTimeout(function(){
+		$(document).scrollTop(height_);
+	},500)
+}
+function gotoMemberLifeChartChart(height_){
+	 gotoMemberLifeChart();
+	setTimeout(function(){
+		$(document).scrollTop(height_);
+	},500)
+}
 
 
 // 生成随机姓名

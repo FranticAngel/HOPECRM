@@ -35,12 +35,12 @@ Array.prototype.remove = function(val) {
     }
 };
 var myDate = new Date(); //获取今天日期
-myDate.setDate(myDate.getDate() - 7);
+myDate.setDate(myDate.getDate() - 700);
 var dateArray = [];
 var dateTemp;
-var flag = 1;
+var flag = 100;
 for (var i = 0; i < 7; i++) {
-    dateTemp = (myDate.getMonth()+1)+"-"+myDate.getDate();
+    dateTemp = myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
     dateArray.push(dateTemp);
     myDate.setDate(myDate.getDate() + flag);
 }
@@ -48,9 +48,6 @@ optionLine = {
     color: ['#3398DB'],
 	 title: {
         text: '消费记录'
-    },
-    legend: {
-        data:['客户流量人数']
     },
     tooltip : {
         trigger: 'axis',
@@ -75,6 +72,7 @@ optionLine = {
     ],
     yAxis : [
         {
+			name : '单位：万元',
             type : 'value'
         }
     ],
@@ -83,7 +81,7 @@ optionLine = {
             name:'消费记录',
             type:'line',
             barWidth: '60%',
-            data:[432, 489, 330, 490, 478, 475,432]
+            data:[1, 2, 3, 1, 5, 0.6,2]
         }
     ]
 };
@@ -99,8 +97,8 @@ $(function(){
         ["戒指","对戒","男戒","女戒","项链","吊坠","链牌","耳钉/环","手镯","手链","脚链","婚嫁套饰","宝宝金","金条","金币","元宝","财神","生肖","发财树"],
         ["戒指","项链","吊坠","耳钉/环","胸针","套装"],
         ["戒指","对戒","男戒","女戒","项链","吊坠","链牌","耳钉/环","手镯","手链","脚链","套装","宝宝金"],
-        ["时期"],
-        ["价格"]
+        ["3个月内","3-6个月","半年-1年","1-3年","3年以上","自定义"],
+        ["1千以下","1千-5千","5千-1万","1万-5万","5万以上","自定义"]
     ];
     /*个人信息筛选条件*/
     var client_filter_data=[
@@ -191,14 +189,14 @@ $(function(){
         function show_selected_commodity_data(data) {
             var first_category;
             var html ="";
-            var selected_data = !!data?data:selected_commodity_data;
+            var selected_data = !!data?data:selected_commodity_data;//如果有传入勾选数据则使用该数据
             for( first_category in selected_data){
                 if(selected_data[first_category].length===select_options[select_data.indexOf(first_category)].length){//如果长度一样说明该一级分类为全选
-                    html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+"全部");
+                    html+='<div class="selected_data">{0}</div>'.format(first_category+":"+"全部");
 
                 }else {
                     selected_data[first_category].forEach(function (second_category) {
-                        html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+second_category);
+                        html+='<div class="selected_data">{0}</div>'.format(first_category+":"+second_category);
                     })
                 }
             }
@@ -216,13 +214,15 @@ $(function(){
             // });
             if(type==="add"){
                 selected_commodity_data[first_category].push(second_category);//添加选项到已勾选商品数组
-            }else {
+            }else if(type==="remove"){
                 if(second_category==='全部'){
                     selected_commodity_data[first_category].splice(0,selected_commodity_data[first_category].length)
                 }else{
                     selected_commodity_data[first_category].remove(second_category);//删除选项已勾选商品数组
                 }
                 sync_selected_commodity_option(selected_commodity_data);
+            }else if(type==="all"){
+                selected_commodity_data[first_category]=select_options[select_data.indexOf(first_category)].slice();
             }
             show_selected_commodity_data();
         }
@@ -233,17 +233,27 @@ $(function(){
         });
         /*商品品类下拉框选项勾选与取消事件*/
         $(".content .select ul li").click(function(e){
-            // var _this=$(this);
-//                $(".select > p").text(_this.attr('data-value'));
-//         _this.addClass("selected").siblings().removeClass("selected");
-//                $(".select").removeClass("open");
-            $(this).toggleClass('selected');
+
             var first_category = $(this).parent().prev().text();
             var second_category = $(this).text();
-            if( $(this).hasClass('selected')){
-                sync_selected_commodity_data('add',first_category,second_category)
-            }else{
-                sync_selected_commodity_data('remove',first_category,second_category)
+            if($(this).text()==="自定义"){
+                $(".select").removeClass("open");
+                $(this).siblings().removeClass('selected').addClass('selected');
+                sync_selected_commodity_data('all',first_category);
+                if(first_category ==="时期"){
+                    var custom_input = '时期:<input class="laydate-icon" onclick="laydate()"> - <input class="laydate-icon" onclick="laydate()">';
+                    $(".selected_data:contains('时期:全部')").html(custom_input);
+                }else if(first_category ==="价格"){
+                    custom_input ='价格:<input class="price_input"> - <input class="price_input">';
+                    $(".selected_data:contains('价格:全部')").html(custom_input);
+                }
+            }else {
+                $(this).toggleClass('selected');
+                if( $(this).hasClass('selected')){
+                    sync_selected_commodity_data('add',first_category,second_category)
+                }else{
+                    sync_selected_commodity_data('remove',first_category,second_category)
+                }
             }
             selected_commodity_div.find(".op_btn").css("display","inline-block");//显示确认取消按钮
             e.stopPropagation();
@@ -282,11 +292,15 @@ $(function(){
 
         //快速取消x按钮
         selected_commodity_div.on('click',".selected_data",function () {
+            if($(this).find("input").length!==0){
+                return;
+            }
             var first_category=$(this).text().split(':')[0];
-            var second_category=$(this).text().split(':')[1].slice(0,-1);
+            var second_category=$(this).text().split(':')[1];
             sync_selected_commodity_data('remove',first_category,second_category);
             selected_commodity_div.find(".op_btn").css("display","inline-block");
             $(this).remove();
+            
         })
 
 
@@ -344,6 +358,7 @@ $(function(){
     var operation=$(".operation ");
     change_sheet.text("显示图表");
     operation.show();
+    change_sheet.show();
     change_sheet.unbind("click");
     change_sheet.click(function(){
         if(change_sheet.text().trim()==="显示表格"){
@@ -524,6 +539,7 @@ $(function(){
 
     /*客户记录点击切换到详细客户信息页面*/
     client_table.on('click','tr:not(.new_row)>td:nth-child(2)',function () {
+        operation.hide();
         client_info.show();
         client_info.siblings(".client_container").hide();
         $(".change_sheet").hide();
@@ -565,6 +581,7 @@ $(function(){
     //返回按钮
     client_info.find(".return").click(function () {
         $(".change_sheet").show();
+        operation.show();
         client_table.show();
         client_table.siblings(".client_container").hide();
     });

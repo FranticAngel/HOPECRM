@@ -43,6 +43,7 @@ optionbar11 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
             position: 'left'
         }
@@ -51,35 +52,12 @@ optionbar11 = {
         {
             name:'信用度',
             type:'bar',
-            data:[320, 80, 30]
+            data:[32000, 8000, 3000]
         },
         {
             name:'忠诚度',
             type:'bar',
-            data:[489, 149, 50]
-        },
-
-        {
-            center: [400,120],
-            radius : [0, 50],
-            itemStyle :　{
-                normal : {
-                    labelLine : {
-                        length : 20
-                    }
-                }
-            },
-            name:'信用度',
-            type:'pie',
-            tooltip : {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
-            },
-            data:[
-                {value:1048, name:'高'},
-                {value:251, name:'中'},
-                {value:147, name:'低'}
-            ]
+            data:[48900, 14900, 5000]
         }
     ]
 };
@@ -224,8 +202,8 @@ optionbar21 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -251,7 +229,7 @@ optionbar21 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
+            data:[32000, 33200, 30100, 12000, 9000, 3000, 7000, 5000, 3000, 2000]
         }
     ]
 };
@@ -265,7 +243,7 @@ optionbar22 =  {
         trigger: 'axis'
     },
     legend: {
-        x: 'bottom',
+        x: 'left',
         data:['购物偏好','高关注度商品']
     },
     radar: [
@@ -392,8 +370,8 @@ optionbar41 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -419,7 +397,7 @@ optionbar41 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90]
+            data:[32000, 33200, 30001, 12000, 9000]
         }
     ]
 };
@@ -447,38 +425,83 @@ optionbar51 = {
                 value: 10000,
                 itemStyle: {
                     normal: {
-                        color: 'black'
+                        color: 'yellow'
                     }
                 }
             },
             {
-                name: "一枚婚戒，一个故事、一生一戒",
-                value: 2467,
+                name: "一枚婚戒",
+                value: 2463,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "每一颗珍珠里都筑着一个少女梦",
-                value: 2467,
+                name: "一个故事 一生一戒",
+                value: 2463,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "And after all this time,you’re still one I love",
-                value: 6181,
+                name: "一生一戒",
+                value: 2463,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "经过这么长时间，你仍是我的爱人",
+                name: "每一颗珍珠",
+                value: 2462,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "里都筑着",
+                value: 2462,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "一个少女梦",
+                value: 2462,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "经过这么长时间",
                 value: 4386,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "爱 伴你一生，因为爱很美",
+                name: "你仍是我的爱人",
+                value: 4386,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "爱",
+                value: 40505,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "伴你一生",
                 value: 4055,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "缔造一生的承诺，纵享恒久的情缘",
+                name: "因为爱很美",
+                value: 4055,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "缔造一生的承诺",
                 value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "纵享恒久的情缘",
+                value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "And after all this time",
+                value: 6181,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "you are still one I love",
+                value: 6181,
                 itemStyle: createRandomItemStyle()
             }
         ]
@@ -683,21 +706,32 @@ optionbar52 =  {
         },
         data: [
             {
-                name: "提高售后服务质量、",
-                value: 10000,
-                itemStyle: {
-                    normal: {
-                        color: 'black'
-                    }
-                }
+                name: "提高售后",
+                value: 9999,
+                itemStyle: createRandomItemStyle()
             },
             {
-                name: "导购态度需要改进",
+                name: "服务质量",
+                value: 9999,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "导购态度",
                 value: 6181,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "期待更加精致的工艺、",
+                name: "需要改进",
+                value: 6181,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "精致的工艺",
+                value: 4386,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "期待更加",
                 value: 4386,
                 itemStyle: createRandomItemStyle()
             },
@@ -707,7 +741,12 @@ optionbar52 =  {
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "官网感觉产品不齐全",
+                name: "官网感觉",
+                value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "产品不齐全",
                 value: 2467,
                 itemStyle: createRandomItemStyle()
             }

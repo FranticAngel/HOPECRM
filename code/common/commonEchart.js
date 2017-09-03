@@ -22,14 +22,17 @@ option = {
         }
     },
     xAxis3D: {
+		name : '品类',
         type: 'category',
         data: hours
     },
     yAxis3D: {
+		name : '饰品',
         type: 'category',
         data: days
     },
     zAxis3D: {
+		name : '销量',
         type: 'value'
     },
     grid3D: {
