@@ -39,7 +39,7 @@ option = {
             name:'消费者',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {color: ['rgba(250,250,250,0.3)','rgba(200,200,200,0.3)']}}},
+            itemStyle: {normal: {areaStyle: {color: ['#C1232B','#C1232B']}}},
             data:[10, 250, 51, 254, 10, 130, 50, 190, 50, 31, 104, 50]
         },
         {
