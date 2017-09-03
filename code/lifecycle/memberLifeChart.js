@@ -71,8 +71,8 @@ option = {
             name:'流失会员',
             type:'line',
             smooth:true,
-			color: ['#9BCA63'],
-            itemStyle: {normal: {areaStyle: {color: ['#9BCA63']}}},
+			color: ['#00A9E0'],
+            itemStyle: {normal: {areaStyle: {color: ['#00A9E0']}}},
             data:[10, 250, 51, 254, 10, 130, 50, 190, 50, 130,190, 50]
         }
     ]
