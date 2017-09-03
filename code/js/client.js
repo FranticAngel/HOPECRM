@@ -296,10 +296,11 @@ $(function(){
                 return;
             }
             var first_category=$(this).text().split(':')[0];
-            var second_category=$(this).text().split(':')[1].slice(0,-1);
+            var second_category=$(this).text().split(':')[1];
             sync_selected_commodity_data('remove',first_category,second_category);
             selected_commodity_div.find(".op_btn").css("display","inline-block");
             $(this).remove();
+            
         })
 
 
@@ -383,7 +384,7 @@ $(function(){
         var client_tbody=$("#client_tbody");
         client_tbody.html("");
         var client_info_html="";
-        for (i=0;i<12;i++){
+        for (i=0;i<10;i++){
             client_info_html+='<tr>\
                 <td>{0}</td>\
                 <td >{1}</td>\
@@ -544,7 +545,7 @@ $(function(){
         $(".change_sheet").hide();
 		var tr = $(this).parent().children('td');
 		var hide = $(this).parent().find('[style]');
-		debugger;
+		//debugger;
 		if(hide.length==0){
 			var base = $('#base-vip');
 			var cst = $('#cst-vip');
@@ -644,36 +645,41 @@ function exparent(id){
 }
 $(function(){
 	$(".single-baseinfo-record-sort").children('div').on("click",function(){
-		$(this).parent().children("div").removeClass();
-		$(this).attr("class","single-baseinfo-record-sort-selected");
-		
+		debugger;
+		$(this).parent().children("div").removeClass("single-baseinfo-record-sort-selected");
+		//$(this).attr("class","single-baseinfo-record-sort-selected");
+		$('#record').find('.single-baseinfo-record-list').css('display','none');
 		if($(this).text()=='电话记录'){
-			$('.single-baseinfo-record-list').css('display','none');
+			
 			$('.single-baseinfo-record-list#phonerecord').css('display','block');
+			$(this).addClass("single-baseinfo-record-sort-selected");
 			return;
 		}
 		if($(this).text()=='短信记录'){
-			$('.single-baseinfo-record-list').css('display','none');
+			//$('.single-baseinfo-record-list').css('display','none');
 			$('.single-baseinfo-record-list#msgrecord').css('display','block');
+			$(this).addClass("single-baseinfo-record-sort-selected");
 			return;
 		}
 		
 		if($(this).text()=='客户来访记录'){
-			$('.single-baseinfo-record-list').css('display','none');
+			//$('.single-baseinfo-record-list').css('display','none');
 			$('.single-baseinfo-record-list#vstrecord').css('display','block');
+			$(this).addClass("single-baseinfo-record-sort-selected");
 			return;
 		}
 		
 		if($(this).text()=='微信动态'){
-			$('.single-baseinfo-record-list').css('display','none');
+			//$('.single-baseinfo-record-list').css('display','none');
 			$('.single-baseinfo-record-list#wxstatus').css('display','block');
+			$(this).addClass("single-baseinfo-record-sort-selected");
 			return;
 		}
 	})
 })
 
 function exvip(obj){
-	debugger;
+	//debugger;
 	if($(obj).css('class')=='active'){
 		return;
 	}else{
