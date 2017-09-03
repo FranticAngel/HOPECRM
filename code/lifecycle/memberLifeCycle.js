@@ -8,46 +8,104 @@ for (var i = 0; i < 7; i++) {
     dateArray.push(dateTemp);
     myDate.setDate(myDate.getDate() + flag);
 }
-option = {
-    color: ['#3398DB'],
-	 title: {
-        text: '会员生命周期走势图'
-    },
-    legend: {
-        data:['人数']
+option =  {
+    title : {
+        text: '现有会员生命周期阶段形态',
+        x:'center'
     },
     tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['新会员', '活跃会员', '沉默会员', '休眠会员','流失会员']
+    },
+    calculable : true,
+    series : [
+        {
+            name:'会员类型占比',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', 225],
+            data:[
+                {value:335, name:'新会员'},
+                {value:310, name:'活跃会员'},
+                {value:234, name:'沉默会员'},
+                {value:135, name:'休眠会员'},
+                {value:38, name:'流失会员'}
+            ]
+        }
+    ]
+};
+option2 = {
+    tooltip : {
         trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        axisPointer : {
+            type: 'shadow'
         }
     },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
+    legend: {
+        data:['新会员', '活跃会员', '沉默会员', '休眠会员','流失会员']
     },
+    toolbox: {
+        show : true,
+        orient : 'vertical',
+        y : 'center',
+        feature : {
+            mark : {show: true},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
     xAxis : [
         {
             type : 'category',
-            data : ['消费者', '顾客', '新会员', '活跃会员', '沉默会员', '休眠会员'],
-            axisTick: {
-                alignWithLabel: true
-            }
+            data : ['周一','周二','周三','周四','周五','周六','周日']
         }
     ],
     yAxis : [
         {
-            type : 'value'
+            type : 'value',
+            splitArea : {show : true}
         }
     ],
+    grid: {
+        x2:40
+    },
     series : [
         {
-            name:'会员生命周期走势图',
+            name:'新会员',
             type:'bar',
-            barWidth: '60%',
-            data:[10, 52, 200, 334, 250, 150]
+            stack: '总量',
+            data:[320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name:'活跃会员',
+            type:'bar',
+            stack: '总量',
+            data:[120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name:'沉默会员',
+            type:'bar',
+            stack: '总量',
+            data:[220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name:'休眠会员',
+            type:'bar',
+            stack: '总量',
+            data:[150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name:'流失会员',
+            type:'bar',
+            stack: '总量',
+            data:[820, 932, 901, 934, 1290, 1330, 1320]
         }
     ]
 };
@@ -180,8 +238,10 @@ var myChart1 = echarts.init(document.getElementById('line1'));
 var myChart2 = echarts.init(document.getElementById('line2'));
 var myChart3 = echarts.init(document.getElementById('line3'));
 (function ($) {
-	var myChart = echarts.init(document.getElementById('mainContainer'));
-	myChart.setOption(option);
+	var main1 = echarts.init(document.getElementById('main1'));
+	main1.setOption(option);
+	var main2 = echarts.init(document.getElementById('main2'));
+	main2.setOption(option2);
 
 	myChart1.setOption(optionLine1);
 	myChart2.setOption(optionLine2);
