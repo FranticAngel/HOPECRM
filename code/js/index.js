@@ -136,10 +136,17 @@ function showSubMenu(obj){
 function showSubMenu(obj){
 	$(obj).next().css("display","block")
 }
-function gotoMemberPageChart(height_){
+function gotoMemberPageChart(height_,div_){
 	gotoMemberPage();
 	setTimeout(function(){
 		$('.change_sheet').click();
+		if(div_){
+			$($("ul > li > a").filter(function(index){ return $(this).html()==div_})[0]).click();
+			setTimeout(function(){
+				$(document).scrollTop(height_);
+			},500)
+			return ;
+		}
 		$(document).scrollTop(height_);
 	},500)
 }
