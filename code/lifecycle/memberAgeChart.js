@@ -229,7 +229,6 @@ optionbar12 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
 			
         }
@@ -284,7 +283,6 @@ optionbar21 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -606,7 +604,6 @@ optionbar22 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -632,7 +629,7 @@ optionbar22 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30, 30, 30, 30]
+            data:[320, 332, 301, 120, 90, 30, 170, 50, 220, 90, 120, 30]
         }
     ]
 };
@@ -668,8 +665,8 @@ optionbar11 = {
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
             },
             data:[
-                {value:1048, name:'男'},
-                {value:251, name:'女'}
+                {value:1048, name:'男 80.68%'},
+                {value:251, name:'女 19.32%'}
             ]
         }
     ]
@@ -697,7 +694,6 @@ optionbar32 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -751,7 +747,6 @@ optionbar41 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -804,7 +799,6 @@ optionbar42 = {
     yAxis : [
         {
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
