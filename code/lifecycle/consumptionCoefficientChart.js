@@ -43,6 +43,7 @@ optionbar11 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
             position: 'left'
         }
@@ -51,12 +52,12 @@ optionbar11 = {
         {
             name:'信用度',
             type:'bar',
-            data:[320, 80, 30]
+            data:[32000, 8000, 3000]
         },
         {
             name:'忠诚度',
             type:'bar',
-            data:[489, 149, 50]
+            data:[48900, 14900, 5000]
         }
     ]
 };
@@ -201,8 +202,8 @@ optionbar21 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -228,7 +229,7 @@ optionbar21 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90, 30, 70, 50, 30]
+            data:[32000, 33200, 30100, 12000, 9000, 3000, 7000, 5000, 3000]
         }
     ]
 };
@@ -242,7 +243,7 @@ optionbar22 =  {
         trigger: 'axis'
     },
     legend: {
-        x: 'bottom',
+        x: 'left',
         data:['购物偏好','高关注度商品']
     },
     radar: [
@@ -369,8 +370,8 @@ optionbar41 = {
     ],
     yAxis : [
         {
+			name : '单位（RMB）',
             type : 'value',
-			show: false,
             position: 'left'
         }
     ],
@@ -396,7 +397,7 @@ optionbar41 = {
                     }
                 }
             },
-            data:[320, 332, 301, 120, 90]
+            data:[32000, 33200, 30001, 12000, 9000]
         }
     ]
 };
@@ -424,18 +425,18 @@ optionbar51 = {
                 value: 10000,
                 itemStyle: {
                     normal: {
-                        color: 'black'
+                        color: 'yellow'
                     }
                 }
             },
             {
-                name: "一枚婚戒，一个故事、一生一戒",
-                value: 2467,
+                name: "一枚婚戒 一个故事 一生一戒",
+                value: 2463,
                 itemStyle: createRandomItemStyle()
             },
             {
                 name: "每一颗珍珠里都筑着一个少女梦",
-                value: 2467,
+                value: 2462,
                 itemStyle: createRandomItemStyle()
             },
             {
@@ -444,17 +445,17 @@ optionbar51 = {
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "经过这么长时间，你仍是我的爱人",
+                name: "经过这么长时间 你仍是我的爱人",
                 value: 4386,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "爱 伴你一生，因为爱很美",
+                name: "爱 伴你一生 因为爱很美",
                 value: 4055,
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "缔造一生的承诺，纵享恒久的情缘",
+                name: "缔造一生的承诺 纵享恒久的情缘",
                 value: 2467,
                 itemStyle: createRandomItemStyle()
             }
@@ -660,7 +661,7 @@ optionbar52 =  {
         },
         data: [
             {
-                name: "提高售后服务质量、",
+                name: "提高售后服务质量",
                 value: 10000,
                 itemStyle: {
                     normal: {
@@ -674,7 +675,7 @@ optionbar52 =  {
                 itemStyle: createRandomItemStyle()
             },
             {
-                name: "期待更加精致的工艺、",
+                name: "期待更加精致的工艺",
                 value: 4386,
                 itemStyle: createRandomItemStyle()
             },

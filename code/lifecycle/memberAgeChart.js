@@ -228,6 +228,7 @@ optionbar12 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
 			
@@ -282,6 +283,7 @@ optionbar21 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
         }
@@ -603,6 +605,7 @@ optionbar22 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
         }
@@ -662,7 +665,7 @@ optionbar11 = {
             type:'pie',
             tooltip : {
                 trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} ({d}%)'
+                formatter: '{a} <br/>{b} : {c}人 ({d}%)'
             },
             data:[
                 {value:1048, name:'男 80.68%'},
@@ -693,6 +696,7 @@ optionbar32 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
         }
@@ -746,6 +750,7 @@ optionbar41 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
         }
@@ -798,6 +803,7 @@ optionbar42 = {
     ],
     yAxis : [
         {
+			name : '单位（人）',
             type : 'value',
             position: 'left'
         }
