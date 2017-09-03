@@ -468,15 +468,6 @@ optionbar52 =  {
     grid: {
         bottom: 80
     },
-    toolbox: {
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            restore: {},
-            saveAsImage: {}
-        }
-    },
     tooltip : {
         trigger: 'axis',
         axisPointer: {
