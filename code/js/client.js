@@ -72,7 +72,7 @@ optionLine = {
     ],
     yAxis : [
         {
-			name : '单位（RMB）',
+			name : '单位：万元',
             type : 'value'
         }
     ],
@@ -81,7 +81,7 @@ optionLine = {
             name:'消费记录',
             type:'line',
             barWidth: '60%',
-            data:[432, 489, 330, 490, 478, 475,432]
+            data:[1, 2, 3, 1, 5, 0.6,2]
         }
     ]
 };

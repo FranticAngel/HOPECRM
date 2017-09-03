@@ -69,6 +69,7 @@ option2 = {
     ],
     yAxis : [
         {
+			name:'单位：人',
             type : 'value',
             splitArea : {show : true}
         }
