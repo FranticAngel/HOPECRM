@@ -39,35 +39,40 @@ option = {
             name:'新增会员',
             type:'line',
             smooth:true,
-            temStyle: {normal: {areaStyle: {color: ['#B5C334','#B5C334']}}},
+			color: ['#FE8463'],
+            itemStyle: {normal: {areaStyle: {color: ['#FE8463']}}},
             data:[30, 130, 11, 134, 70, 150, 60, 200, 20, 31, 104, 50]
         },
         {
             name:'活跃会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#FCCE10'],
+            itemStyle: {normal: {areaStyle: {color: ['#FCCE10']}}},
             data:[10, 250, 51, 254, 10, 130, 50, 190, 50, 70, 150, 80]
         },
         {
             name:'沉默会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#E87C25'],
+            itemStyle: {normal: {areaStyle: {color: ['#E87C25']}}},
             data:[20, 150, 31, 104, 50, 180, 70, 150, 80, 60, 200, 20]
         },
         {
             name:'休眠会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#F3A43B'],
+            itemStyle: {normal: {areaStyle: {color: ['#F3A43B']}}},
             data:[30, 130, 11, 134, 70, 150, 60, 200, 20, 50, 190, 50]
         },
         {
             name:'流失会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#9BCA63'],
+            itemStyle: {normal: {areaStyle: {color: ['#9BCA63']}}},
             data:[10, 250, 51, 254, 10, 130, 50, 190, 50, 130,190, 50]
         }
     ]

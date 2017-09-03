@@ -327,7 +327,7 @@ optionbar31 = {
     tooltip: {
         trigger: 'item',
         formatter: function (params) {
-            return params.name + ' : ' + params.value[2];
+            return params.name + ' : ' + params.value[2]+"人";
         }
     },
     legend: {
@@ -365,7 +365,7 @@ optionbar31 = {
             }
         },
 		left:350,
-		top:200,
+		top:150,
 		zoom:0.2
     },
     series: [

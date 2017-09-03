@@ -39,21 +39,24 @@ option = {
             name:'当前价值',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#00A9E0'],
+            itemStyle: {normal: {areaStyle: {color: ['#00A9E0']}}},
             data:[10, 250, 51, 254, 10, 130, 50, 190, 50]
         },
         {
             name:'历史价值',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#FE8463'],
+            itemStyle: {normal: {areaStyle: {color: ['#FE8463']}}},
             data:[20, 150, 31, 104, 50, 180, 70, 150, 80]
         },
         {
             name:'潜在价值',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			color: ['#C6E579'],
+            itemStyle: {normal: {areaStyle: {color: ['#C6E579']}}},
             data:[30, 130, 11, 134, 70, 150, 60, 200, 20]
         }
     ]
