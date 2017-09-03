@@ -39,7 +39,7 @@ option = {
             name:'新增会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            temStyle: {normal: {areaStyle: {color: ['#B5C334','#B5C334']}}},
             data:[30, 130, 11, 134, 70, 150, 60, 200, 20, 31, 104, 50]
         },
         {
