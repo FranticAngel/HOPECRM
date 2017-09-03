@@ -99,8 +99,8 @@ $(function(){
         ["戒指","对戒","男戒","女戒","项链","吊坠","链牌","耳钉/环","手镯","手链","脚链","婚嫁套饰","宝宝金","金条","金币","元宝","财神","生肖","发财树"],
         ["戒指","项链","吊坠","耳钉/环","胸针","套装"],
         ["戒指","对戒","男戒","女戒","项链","吊坠","链牌","耳钉/环","手镯","手链","脚链","套装","宝宝金"],
-        ["时期"],
-        ["价格"]
+        ["3个月内","3-6个月","半年-1年","1-3年","3年以上","自定义"],
+        ["1千以下","1千-5千","5千-1万","1万-5万","5万以上","自定义"]
     ];
     /*个人信息筛选条件*/
     var client_filter_data=[
@@ -191,14 +191,14 @@ $(function(){
         function show_selected_commodity_data(data) {
             var first_category;
             var html ="";
-            var selected_data = !!data?data:selected_commodity_data;
+            var selected_data = !!data?data:selected_commodity_data;//如果有传入勾选数据则使用该数据
             for( first_category in selected_data){
                 if(selected_data[first_category].length===select_options[select_data.indexOf(first_category)].length){//如果长度一样说明该一级分类为全选
-                    html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+"全部");
+                    html+='<div class="selected_data">{0}</div>'.format(first_category+":"+"全部");
 
                 }else {
                     selected_data[first_category].forEach(function (second_category) {
-                        html+='<div class="selected_data">{0}<div class="x">X</div></div>'.format(first_category+":"+second_category);
+                        html+='<div class="selected_data">{0}</div>'.format(first_category+":"+second_category);
                     })
                 }
             }
@@ -216,13 +216,15 @@ $(function(){
             // });
             if(type==="add"){
                 selected_commodity_data[first_category].push(second_category);//添加选项到已勾选商品数组
-            }else {
+            }else if(type==="remove"){
                 if(second_category==='全部'){
                     selected_commodity_data[first_category].splice(0,selected_commodity_data[first_category].length)
                 }else{
                     selected_commodity_data[first_category].remove(second_category);//删除选项已勾选商品数组
                 }
                 sync_selected_commodity_option(selected_commodity_data);
+            }else if(type==="all"){
+                selected_commodity_data[first_category]=select_options[select_data.indexOf(first_category)].slice();
             }
             show_selected_commodity_data();
         }
@@ -233,17 +235,27 @@ $(function(){
         });
         /*商品品类下拉框选项勾选与取消事件*/
         $(".content .select ul li").click(function(e){
-            // var _this=$(this);
-//                $(".select > p").text(_this.attr('data-value'));
-//         _this.addClass("selected").siblings().removeClass("selected");
-//                $(".select").removeClass("open");
-            $(this).toggleClass('selected');
+
             var first_category = $(this).parent().prev().text();
             var second_category = $(this).text();
-            if( $(this).hasClass('selected')){
-                sync_selected_commodity_data('add',first_category,second_category)
-            }else{
-                sync_selected_commodity_data('remove',first_category,second_category)
+            if($(this).text()==="自定义"){
+                $(".select").removeClass("open");
+                $(this).siblings().removeClass('selected').addClass('selected');
+                sync_selected_commodity_data('all',first_category);
+                if(first_category ==="时期"){
+                    var custom_input = '时期:<input class="laydate-icon" onclick="laydate()"> - <input class="laydate-icon" onclick="laydate()">';
+                    $(".selected_data:contains('时期:全部')").html(custom_input);
+                }else if(first_category ==="价格"){
+                    custom_input ='价格:<input class="price_input"> - <input class="price_input">';
+                    $(".selected_data:contains('价格:全部')").html(custom_input);
+                }
+            }else {
+                $(this).toggleClass('selected');
+                if( $(this).hasClass('selected')){
+                    sync_selected_commodity_data('add',first_category,second_category)
+                }else{
+                    sync_selected_commodity_data('remove',first_category,second_category)
+                }
             }
             selected_commodity_div.find(".op_btn").css("display","inline-block");//显示确认取消按钮
             e.stopPropagation();
@@ -282,6 +294,9 @@ $(function(){
 
         //快速取消x按钮
         selected_commodity_div.on('click',".selected_data",function () {
+            if($(this).find("input").length!==0){
+                return;
+            }
             var first_category=$(this).text().split(':')[0];
             var second_category=$(this).text().split(':')[1].slice(0,-1);
             sync_selected_commodity_data('remove',first_category,second_category);
@@ -344,6 +359,7 @@ $(function(){
     var operation=$(".operation ");
     change_sheet.text("显示图表");
     operation.show();
+    change_sheet.show();
     change_sheet.unbind("click");
     change_sheet.click(function(){
         if(change_sheet.text().trim()==="显示表格"){
@@ -524,13 +540,49 @@ $(function(){
 
     /*客户记录点击切换到详细客户信息页面*/
     client_table.on('click','tr:not(.new_row)>td:nth-child(2)',function () {
+        operation.hide();
         client_info.show();
         client_info.siblings(".client_container").hide();
         $(".change_sheet").hide();
+		var tr = $(this).parent().children('td');
+		var hide = $(this).parent().find('[style]');
+		debugger;
+		if(hide.length==0){
+			var base = $('#base-vip');
+			var cst = $('#cst-vip');
+			var name = tr.eq(1).children('input').val();
+			base.find('#name').text(name);
+			base.find('#vipid').text(tr.eq(2).text());
+			cst.find('#vipid').text(tr.eq(2).text());
+			base.find('#gender').text(tr.eq(3).text());
+			base.find('#age').text(tr.eq(4).text());
+			base.find('#phonenumber').text(tr.eq(5).text());
+			base.find('#sch').text(tr.eq(6).text());
+			base.find('#job').text(tr.eq(7).text());
+			//base.children('parch').text(tr.eq(9).text());
+			cst.find('#regp').text(tr.eq(9).text());
+			base.find('#city').text(tr.eq(12).text());
+			$('#base-vip').show();
+			$('#base-unvip').hide();
+		}else{
+			var base = $('#base-unvip');
+			var cst = $('#cst-unvip');
+			base.find('#name').text(tr.eq(1).children('input').val());
+			base.find('#gender').text(tr.eq(3).text());
+			base.find('#age').text(tr.eq(4).text());
+			base.find('#phonenumber').text(tr.eq(5).text());
+			base.find('#sch').text(tr.eq(6).text());
+			base.find('#job').text(tr.eq(7).text());
+			//base.children('parch').text(tr.eq(9).text());
+			base.find('#city').text(tr.eq(12).text());
+			$('#base-vip').hide();
+			$('#base-unvip').show();
+		}
     });
     //返回按钮
     client_info.find(".return").click(function () {
         $(".change_sheet").show();
+        operation.show();
         client_table.show();
         client_table.siblings(".client_container").hide();
     });
@@ -579,13 +631,62 @@ function gameRocordEx(msg){
 	}
 }
 
+
+
+function exparent(id){
+	//debugger;
+	var arr = ['record','selplan','relcont'];
+	for(var i =0;i<arr.length;i++){
+		if(arr[i]==id){
+			$('#'+arr[i]).css('display','block');
+		}else{
+			$('#'+arr[i]).css('display','none');
+		}
+	}
+}
 $(function(){
 	$(".single-baseinfo-record-sort").children('div').on("click",function(){
 		$(this).parent().children("div").removeClass();
 		$(this).attr("class","single-baseinfo-record-sort-selected");
+		
+		if($(this).text()=='电话记录'){
+			$('.single-baseinfo-record-list').css('display','none');
+			$('.single-baseinfo-record-list#phonerecord').css('display','block');
+			return;
+		}
+		if($(this).text()=='短信记录'){
+			$('.single-baseinfo-record-list').css('display','none');
+			$('.single-baseinfo-record-list#msgrecord').css('display','block');
+			return;
+		}
+		
+		if($(this).text()=='客户来访记录'){
+			$('.single-baseinfo-record-list').css('display','none');
+			$('.single-baseinfo-record-list#vstrecord').css('display','block');
+			return;
+		}
+		
+		if($(this).text()=='微信动态'){
+			$('.single-baseinfo-record-list').css('display','none');
+			$('.single-baseinfo-record-list#wxstatus').css('display','block');
+			return;
+		}
 	})
 })
 
-
+function exvip(obj){
+	debugger;
+	if($(obj).css('class')=='active'){
+		return;
+	}else{
+		if($('#base-vip').is(":hidden")){
+			$('#cst-vip').hide();
+			$('#cst-unvip').show();
+		}else{
+			$('#cst-vip').show();
+		$('#cst-unvip').hide();
+		}
+	}
+}
 
 
