@@ -35,12 +35,12 @@ Array.prototype.remove = function(val) {
     }
 };
 var myDate = new Date(); //获取今天日期
-myDate.setDate(myDate.getDate() - 7);
+myDate.setDate(myDate.getDate() - 700);
 var dateArray = [];
 var dateTemp;
-var flag = 1;
+var flag = 100;
 for (var i = 0; i < 7; i++) {
-    dateTemp = (myDate.getMonth()+1)+"-"+myDate.getDate();
+    dateTemp = myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
     dateArray.push(dateTemp);
     myDate.setDate(myDate.getDate() + flag);
 }
@@ -48,9 +48,6 @@ optionLine = {
     color: ['#3398DB'],
 	 title: {
         text: '消费记录'
-    },
-    legend: {
-        data:['客户流量人数']
     },
     tooltip : {
         trigger: 'axis',
@@ -75,6 +72,7 @@ optionLine = {
     ],
     yAxis : [
         {
+			name : '单位：万元',
             type : 'value'
         }
     ],
@@ -83,7 +81,7 @@ optionLine = {
             name:'消费记录',
             type:'line',
             barWidth: '60%',
-            data:[432, 489, 330, 490, 478, 475,432]
+            data:[1, 2, 3, 1, 5, 0.6,2]
         }
     ]
 };

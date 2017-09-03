@@ -9,7 +9,7 @@ option = {
         trigger: 'axis'
     },
     legend: {
-        data:['消费者','顾客','新增会员','活跃会员','沉默会员','休眠会员','流失会员']
+        data:['新增会员','活跃会员','沉默会员','休眠会员','流失会员']
     },
     toolbox: {
         show : true,
@@ -36,24 +36,10 @@ option = {
     ],
     series : [
         {
-            name:'消费者',
-            type:'line',
-            smooth:true,
-            itemStyle: {normal: {areaStyle: {color: ['rgba(250,250,250,0.3)','rgba(200,200,200,0.3)']}}},
-            data:[10, 250, 51, 254, 10, 130, 50, 190, 50, 31, 104, 50]
-        },
-        {
-            name:'顾客',
-            type:'line',
-            smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data:[20, 150, 31, 104, 50, 180, 70, 150, 80, 50, 190, 50]
-        },
-        {
             name:'新增会员',
             type:'line',
             smooth:true,
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            temStyle: {normal: {areaStyle: {color: ['#B5C334','#B5C334']}}},
             data:[30, 130, 11, 134, 70, 150, 60, 200, 20, 31, 104, 50]
         },
         {
