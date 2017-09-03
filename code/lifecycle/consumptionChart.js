@@ -343,7 +343,7 @@ optionbar41 = {
     ],
     yAxis : [
         {
-			name : '单位：RMB',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }

@@ -240,7 +240,7 @@ optionbar22 =  {
         x: 'center',
     },
     tooltip: {
-        trigger: 'axis'
+        trigger: 'item'
     },
     legend: {
         x: 'left',
