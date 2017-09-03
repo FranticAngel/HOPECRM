@@ -47,11 +47,7 @@ for (var i = 0; i < 7; i++) {
 optionLine = {
     color: ['#3398DB'],
 	 title: {
-        text: '消费记录',
-		x:'center'
-    },
-    legend: {
-        data:['消费记录']
+        text: '消费记录'
     },
     tooltip : {
         trigger: 'axis',
