@@ -298,10 +298,11 @@ $(function(){
                 return;
             }
             var first_category=$(this).text().split(':')[0];
-            var second_category=$(this).text().split(':')[1].slice(0,-1);
+            var second_category=$(this).text().split(':')[1];
             sync_selected_commodity_data('remove',first_category,second_category);
             selected_commodity_div.find(".op_btn").css("display","inline-block");
             $(this).remove();
+            
         })
 
 
