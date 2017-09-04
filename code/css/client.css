@@ -920,7 +920,7 @@ body {
 .cst-value{
     font-size:10px;
     font-family: "微软雅黑", serif;
-    color:#ccc;
+    color:#5b5151;
 }
 
 
@@ -932,7 +932,7 @@ body {
 }
 .game-record-tab td{
 	width:60%;
-    color: rgb(204, 204, 204);
+    color: #5b5151;
 }
 
 .game-info-name{

@@ -2,6 +2,11 @@
  * Created by Administrator on 2017/8/26.
  */
 
+/*
+*
+* 工作圈  设置页面js
+* */
+
 /*字符串格式化函数*/
 String.prototype.format = function(args) {
     if (arguments.length > 0) {
@@ -33,7 +38,7 @@ $(function(){
         $(this).toggleClass("blue_input_checked");
     });
     var config_0=$("#config_0");
-    config_0.on('click',".depart",function () {
+    config_0.on('click',".depart",function () {//选中效果切换
         if ( !$(this).hasClass("active")){
             $(".depart").find(".operation").appendTo($(this).find("div"));
             $(this).addClass("active");
@@ -41,7 +46,7 @@ $(function(){
             showTableRows();
         }
     });
-    config_0.on('click','.blue_input',function (e) {
+    config_0.on('click','.blue_input',function (e) {//单选框选中效果
         $(this).toggleClass("blue_input_checked");
         if($(this).attr('id')==="select_all"){
             if($(this).hasClass("blue_input_checked")){
@@ -51,13 +56,13 @@ $(function(){
             }
         }
         var selected_num =config_0.find('.blue_input_checked').filter("[id!='select_all']").length;
-        $(".selected_num").text(selected_num);
+        $(".selected_num").text(selected_num);//显示被选中数目
         e.stopPropagation();
     });
 
 
     var config_1=$("#config_1");
-    config_1.on('click',".depart",function () {
+    config_1.on('click',".depart",function () {//单选框选中效果
         if ( !$(this).hasClass("active")){
             $(this).addClass("active");
             $(this).siblings(".depart").removeClass("active");
@@ -137,7 +142,7 @@ $(function(){
     });
 
     var config_3 =$("#config_3");
-    config_3.find(".yellow_btn").on('click',function () {
+    config_3.find(".yellow_btn").on('click',function () {//编辑保存按钮
         config_3.find(".config_option_tile:gt(0),.hint").toggleClass('edit_hide');
         if($(this).text()==="编辑"){
             $(this).text("保存");
@@ -147,7 +152,7 @@ $(function(){
     });
 
     var config_4 =$("#config_4");
-    config_4.find(".yellow_btn").on('click',function () {
+    config_4.find(".yellow_btn").on('click',function () {//编辑保存按钮
         config_4.find(".config_option_tile,.hint").toggleClass('edit_hide');
         if($(this).text()==="编辑"){
             $(this).text("保存");
@@ -291,7 +296,7 @@ $(function(){
         }
     });
 
-    config_3.find(".config_option_tile").eq(0).find("img").on('click',function () {
+    config_3.find(".config_option_tile").eq(0).find("img").on('click',function () {//上传效果
         $("[type='file']").click();
     })
 
