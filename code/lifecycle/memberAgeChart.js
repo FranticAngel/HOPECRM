@@ -221,7 +221,6 @@ optionbar12 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['20岁以下','21-25岁','26-30岁','31-35岁','36-40岁','41-50岁','50岁以上']
         }
@@ -252,7 +251,7 @@ optionbar12 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -276,7 +275,6 @@ optionbar21 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['未知','初中以下','高中','中专/技校','大专','本科','硕士','博士','其他']
         }
@@ -306,7 +304,7 @@ optionbar21 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -598,7 +596,6 @@ optionbar22 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['国家机关','党群组织','企业','事业单位负责人','专业技术人员','办事人员','商业','服务业人员','农林牧渔水利业生产人员','生产','运输设备操作人员及有关人员','军人','其他']
         }
@@ -628,7 +625,7 @@ optionbar22 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -689,7 +686,6 @@ optionbar32 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['象征性价值观','体验性价值观','享乐型价值观','经济型价值观','功能型价值观']
         }
@@ -719,7 +715,7 @@ optionbar32 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -743,7 +739,6 @@ optionbar41 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['5000元以下','5001-8000元','8001-12000元','12001-20000元','20001元以上']
         }
@@ -773,7 +768,7 @@ optionbar41 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -797,7 +792,6 @@ optionbar42 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['5000元以下','5001-10000元','10001-20000元','20001-50000元','50001元以上']
         }
     ],
@@ -826,7 +820,7 @@ optionbar42 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },

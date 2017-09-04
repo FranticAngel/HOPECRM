@@ -26,7 +26,6 @@ optionbar11 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['铁牌会员','铜牌会员','银牌会员','金牌会员','钻石会员','皇冠会员']
         }
     ],
@@ -55,7 +54,7 @@ optionbar11 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -80,7 +79,6 @@ optionbar12 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['1年以内','1-2年','2-3年','3-5年','5年以上']
         }
     ],
@@ -109,7 +107,7 @@ optionbar12 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -134,7 +132,6 @@ optionbar21 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['100分以内','101-500分','501-1000分','1001-2000分','2001分以上']
         }
     ],
@@ -163,7 +160,7 @@ optionbar21 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -187,7 +184,6 @@ optionbar22 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['1000元以下','1001-5000元','5001-10000元','10001-20000元','20001-50001元','50001-10万元','10万以上']
         }
     ],
@@ -216,7 +212,7 @@ optionbar22 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -283,7 +279,6 @@ optionbar32 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['自我犒赏','节俗性需求','结婚','生日','社交赠礼','投资']
         }
     ],
@@ -312,7 +307,7 @@ optionbar32 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -336,7 +331,6 @@ optionbar41 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['1000元以下','1001-5000元','5001-10000元','10001-20000元','20001-50001元','50001-10万元','10万以上']
         }
@@ -366,7 +360,7 @@ optionbar41 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -390,7 +384,6 @@ optionbar42 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['一年3次以上','一年2次','一年一次','两年一次','三年以上一次']
         }
     ],
@@ -419,7 +412,7 @@ optionbar42 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },

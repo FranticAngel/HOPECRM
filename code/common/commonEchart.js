@@ -14,7 +14,6 @@ option = {
 	title: {
         text: '商品购买率与平均值之差'
     },
-    tooltip: {},
     visualMap: {
         max: 100,
         inRange: {
@@ -27,13 +26,18 @@ option = {
         data: hours
     },
     yAxis3D: {
-		name : '饰品',
+		name : '款式',
         type: 'category',
         data: days
     },
     zAxis3D: {
 		name : '销量',
-        type: 'value'
+        type: 'value',
+		axisLabel:{
+			formatter: function(value,index){
+				return value+"%";
+			}
+		}
     },
     grid3D: {
         boxWidth: 200,

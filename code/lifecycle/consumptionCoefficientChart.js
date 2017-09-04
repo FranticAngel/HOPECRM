@@ -196,7 +196,6 @@ optionbar21 = {
         {
             type : 'category',
             splitLine : {show : false},
-			show: false,
             data : ['1分','2分','3分','4分','5分','6分','7分','8分','9分','10分']
         }
     ],
@@ -225,7 +224,7 @@ optionbar21 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
@@ -363,7 +362,6 @@ optionbar41 = {
     xAxis : [
         {
             type : 'category',
-			show: false,
             splitLine : {show : false},
             data : ['朋友介绍','自主逛街','电视广告','社交平台','品牌忠诚者']
         }
@@ -393,7 +391,7 @@ optionbar41 = {
                     label: {
                         show: true,
                         position: 'top',
-                        formatter: '{b}\n{c}'
+                        formatter: '{c}'
                     }
                 }
             },
