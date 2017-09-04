@@ -2,6 +2,12 @@
  * Created by Administrator on 2017/8/13.
  */
 
+/*
+*
+* 客户人群页面js
+* */
+
+
 
 /*字符串格式化函数*/
 String.prototype.format = function(args) {
@@ -90,7 +96,7 @@ $(function(){
 	myChart.setOption(optionLine);
     /*商品信息筛选条件*/
     var select_data=["翡翠&玉","彩宝","钻石","黄金","珍珠","饰品","时期","价格"];
-    var select_options=[
+    var select_options=[//下拉选项,与select_data一一对应
         ["戒指","项链","吊坠","链牌","耳钉/环","手镯","手链"],
         ["戒指","吊坠","链牌","耳钉","手链","套装"],
         ["戒指","对戒","男戒","项链","吊坠","链牌","耳钉/环","手镯","手链","脚链","婚嫁套饰","戒指","对戒","项链","耳钉/环","手链","脚链"],
@@ -105,7 +111,7 @@ $(function(){
         ["性别","年龄","职业","收入"],
         ["价值取向","消费频次","会员等级","忠诚度","客户来源渠道"]
     ];
-    var client_filter_option=[
+    var client_filter_option=[//与client_filter_data一一对应
         [
             ["男","女"],
             ["20岁以下","21-25岁","26-30岁","31-35岁","36-45岁","46-50岁","51岁以上"],
@@ -417,7 +423,7 @@ $(function(){
     }
 
 
-
+    /*生成一行记录*/
     function generateRow(input_text,type) {
         var html= '<tr>\
                 <td>{0}</td>\
@@ -471,7 +477,7 @@ $(function(){
         $(this).parent().parent().parent().parent().fadeOut(300);
     });
 
-
+    //页面切换效果
     var page_div = $(".am-pagination");
     page_div.on('click','a',function () {
         if($(this).parent().hasClass("am-active")){
