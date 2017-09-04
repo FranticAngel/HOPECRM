@@ -228,7 +228,7 @@ optionbar12 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
 			
@@ -283,7 +283,7 @@ optionbar21 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -327,7 +327,7 @@ optionbar31 = {
     tooltip: {
         trigger: 'item',
         formatter: function (params) {
-            return params.name + ' : ' + params.value[2];
+            return params.name + ' : ' + params.value[2]+"人";
         }
     },
     legend: {
@@ -365,7 +365,7 @@ optionbar31 = {
             }
         },
 		left:350,
-		top:200,
+		top:150,
 		zoom:0.2
     },
     series: [
@@ -605,7 +605,7 @@ optionbar22 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -696,7 +696,7 @@ optionbar32 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -750,7 +750,7 @@ optionbar41 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -803,7 +803,7 @@ optionbar42 = {
     ],
     yAxis : [
         {
-			name : '单位（人）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }

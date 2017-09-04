@@ -43,7 +43,7 @@ optionbar11 = {
     ],
     yAxis : [
         {
-			name : '单位（RMB）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -202,7 +202,7 @@ optionbar21 = {
     ],
     yAxis : [
         {
-			name : '单位（RMB）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
@@ -240,7 +240,7 @@ optionbar22 =  {
         x: 'center',
     },
     tooltip: {
-        trigger: 'axis'
+        trigger: 'item'
     },
     legend: {
         x: 'left',
@@ -370,7 +370,7 @@ optionbar41 = {
     ],
     yAxis : [
         {
-			name : '单位（RMB）',
+			name : '单位：人',
             type : 'value',
             position: 'left'
         }
