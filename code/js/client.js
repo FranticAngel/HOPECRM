@@ -645,7 +645,7 @@ function exparent(id){
 }
 $(function(){
 	$(".single-baseinfo-record-sort").children('div').on("click",function(){
-		debugger;
+		//debugger;
 		$(this).parent().children("div").removeClass("single-baseinfo-record-sort-selected");
 		//$(this).attr("class","single-baseinfo-record-sort-selected");
 		$('#record').find('.single-baseinfo-record-list').css('display','none');
