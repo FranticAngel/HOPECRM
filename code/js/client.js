@@ -431,7 +431,7 @@ $(".band").html('<div class="center-block" style="min-height:400px;width:77%;">\
     operation.show();
     change_sheet.show();
     change_sheet.unbind("click").click(function(){
-        console.log("click...");
+        // console.log("click...");
         if(change_sheet.text().trim()==="显示表格"){
             change_sheet.text("显示图表");
             operation.show();
