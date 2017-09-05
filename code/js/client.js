@@ -398,7 +398,28 @@ $(function(){
     });
 
 
-
+$(".band").html('<div class="center-block" style="min-height:400px;width:77%;">\
+    <div class="pull-left">\
+        <div class="card"></div>\
+        <div class="client_info">\
+        客户信息\
+        </div>\
+        </div>\
+        <div class="pull-right">\
+        <div class="change_sheet">\
+        显示图表\
+        </div>\
+        </div>\
+        <div class="operation pull-right">\
+        <label class="search">\
+        <input class="search_input" placeholder="请输入姓名、会员编码、电话">\
+        <div class="input_search"></div>\
+        </label>\
+        <div class="operate" style="background-image: url(img/1.png)"></div>\
+        <div class="operate" style="background-image: url(img/6.png)" data-toggle="modal" data-target="#downUpload_modal"></div>\
+        <div class="operate" style="background-image: url(img/9.png)"></div>\
+        </div>\
+        </div>');
 
      /*图表与表格切换*/
     var change_sheet=$(".change_sheet");
@@ -409,8 +430,8 @@ $(function(){
     change_sheet.text("显示图表");
     operation.show();
     change_sheet.show();
-    change_sheet.unbind("click");
-    change_sheet.click(function(){
+    change_sheet.unbind("click").click(function(){
+        console.log("click...");
         if(change_sheet.text().trim()==="显示表格"){
             change_sheet.text("显示图表");
             operation.show();
@@ -635,8 +656,7 @@ $(function(){
         client_table.show();
         client_table.siblings(".client_container").hide();
     });
-
-
+    console.log("load client.js complete...")
 });
 function scrollToEnd(){//滚动到底部
     var h = $(document).height()-$(window).height();
